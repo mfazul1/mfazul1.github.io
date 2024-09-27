@@ -23,9 +23,8 @@
   background-repeat: no-repeat;
   width: 100%;
   font-size: 16px;
-  padding: 12px 20px 12px 40px;
+  padding: 8px 8px 8px 40px;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
 }
 
 th, td {
@@ -45,10 +44,10 @@ tr:hover {background-color: #d8d6ee;}
 
 .hide-bg{
   mix-blend-mode: multiply;
-  filter: contrast(1);/*edit to 2 to see effect*/
-  width: 90px;
+  filter: contrast(2);/*edit to 2 to see effect*/
+  width: 80px;
   align:left;
-  height:30px;
+  height:20px;
 }
     </style> 
 </head> 
@@ -71,12 +70,12 @@ tr:hover {background-color: #d8d6ee;}
 
 import jsonData from 'https://api.npoint.io/cd68855e120deda6905a' with  { type: 'json' };
 
-console.log(jsonData.repsonse);
+// console.log(jsonData.repsonse);
 
         //const jsonData = await fetchJSONData().json();
         const obj = JSON.parse(JSON.stringify(jsonData));
         let data=obj['Sheet1'];
-        console.log(data);
+        // console.log(data);
         
   
         const rowsPerPage = 10; 
