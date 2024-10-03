@@ -141,6 +141,13 @@ hr.light-100 {
   height: 30px;
 }
 
+.align-text-center{
+  text-align:center;
+}
+
+.align-text-right{
+  text-align:right;
+}
 
 /*---Media Queries --*/
 @media (max-width: 1500px){
