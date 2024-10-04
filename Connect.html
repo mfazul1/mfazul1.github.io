@@ -55,54 +55,6 @@
 
 		gtag('config', 'G-VJG4F1NRM9');
 	</script>
-	    <title>Free JEE IIT Books Download for In-Depth Preparation</title> 
-    <style> 
-        table {
-  border-collapse: collapse;
-  width: 100%;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
-     0px 10px 20px rgba(0,0,0,0.05),
-     0px 20px 20px rgba(0,0,0,0.05),
-     0px 30px 20px rgba(0,0,0,0.05);
-     font-family: 'Arial';
-  margin: 25px auto;
-  border: 1px solid #eee;
-  /* border-bottom: 2px solid #00cccc; */
-}
-
-#myInput {
-  background-image: url('img/search.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 8px 8px 8px 40px;
-  border: 1px solid #ddd;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 3px solid #DDD;
-  width: 30px; overflow: hidden;
-}
-th {
-    background: #00cccc;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 12px;    
-    }
-
-tr:hover {background-color: #d8d6ee;}
-
-.hide-bg{
-  mix-blend-mode: multiply;
-  filter: contrast(2);/*edit to 2 to see effect*/
-  width: 80px;
-  align:left;
-  height:20px;
-}
-    </style> 
 </head>
 <body oncontextmenu="return false">
 
@@ -155,118 +107,72 @@ document.write('<img src="https://www.coolseotools.com/website-visitor-counter/c
 }
 
 </script>
-<!---  Documents Section -->
-<div id="documents" class="container-fluid padding" data-aos="fade-up"
+<!--- Connect Section -->
+<div id="Connect" class="container-fluid padding" data-aos="fade-up"
 data-aos-offset="200"
 data-aos-delay="50"
 data-aos-duration="1000">
-	
-<h3 class="display-9 align-text-center">Documents </h3>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-
-    <table id="myTable"> 
-        <tr> 
-            <th>Name</th> 
-            <th>Author</th> 
-            <th>Download</th> 
-        </tr> 
-        <!-- Table rows will be added dynamically -->
-    </table> 
-    <div class="align-text-center" id="pagination"></div> 
-    <!-- <p class="align-text-right"><a href="index.html">HOME</a>
-    </p> -->
-
-
-    <script type="module" crossorigin="anonymous|use-credentials"> 
-
-import jsonData from 'https://api.npoint.io/cd68855e120deda6905a' with  { type: 'json' };
-
-// console.log(jsonData.repsonse);
-
-        //const jsonData = await fetchJSONData().json();
-        const obj = JSON.parse(JSON.stringify(jsonData));
-        let data=obj['Sheet1'];
-        // console.log(data);
-        
-  
-        const rowsPerPage = 10; 
-        let currentPage = 1; 
-  
-        function displayTable(page) { 
-            const table = document.getElementById("myTable"); 
-            const startIndex = (page - 1) * rowsPerPage; 
-            const endIndex = startIndex + rowsPerPage; 
-            const slicedData = data.slice(startIndex, endIndex); 
-  
-            // Clear existing table rows 
-            table.innerHTML = ` 
-        <tr> 
-            <th>Name</th> 
-            <th>Author</th> 
-            <th>Download</th> 
-        </tr> 
-    `; 
-  
-            // Add new rows to the table 
-            slicedData.forEach(item => { 
-                const row = table.insertRow(); 
-                const nameCell = row.insertCell(0); 
-                const AuthorCell = row.insertCell(1); 
-                const DownloadCell = row.insertCell(2); 
-                nameCell.innerHTML = item.name; 
-                AuthorCell.innerHTML = item.Author; 
-                DownloadCell.innerHTML = item.Download; 
-            }); 
-  
-            // Update pagination 
-            updatePagination(page); 
-        } 
-  
-        function updatePagination(currentPage) { 
-            const pageCount = Math.ceil(data.length / rowsPerPage); 
-            const paginationContainer = document.getElementById("pagination"); 
-            paginationContainer.innerHTML = ""; 
-  
-            for (let i = 1; i <= pageCount; i++) { 
-                const pageLink = document.createElement("a"); 
-                pageLink.href = "index.html#Team"; 
-                pageLink.innerText = i; 
-                pageLink.onclick = function () { 
-                    displayTable(i); 
-                }; 
-                if (i === currentPage) { 
-                    pageLink.style.fontWeight = "bold"; 
-                } 
-                paginationContainer.appendChild(pageLink); 
-                paginationContainer.appendChild(document.createTextNode(" ")); 
-            } 
-        } 
-  
-        // Initial display 
-        displayTable(currentPage); 
-       
-    </script> 
-<script>
-     function myFunction() {
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
-                }       
-            }
-            }
-</script>
+	<div class="row text-center padding">
+		<div class="col-12">
+			<h3 class="display-9 align-text-center">Connect</h3>
+            <hr>
+		</div>
+		<div class="col-12 social padding">
+			<a href="https://www.facebook.com/profile.php?id=61566435388534" target="_blank"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-google-plus-g"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		</div>
+	</div>
 </div>
+
+
+<!--- Footer Section -->
+<footer>
+	<div class="container-fluid padding" data-aos="fade-up"
+		data-aos-offset="200"
+		data-aos-delay="50"
+		data-aos-duration="1000">
+		<div class="row text-center">
+			<div class="col-md-4 pt-0">
+				<div class="footer-image">
+				<img alt="Jee IIT Books" src="img/logo.png"></div>
+				<hr class="light">
+				<p>xxxxxxxxxxxxxxxx</p>
+				<p><a href="mailto:jeeiitianbooks@gmail.com">
+					<div class="email-image">
+					<img alt="Jee IIT Books" src="img/email.png"></div></a></p>
+				<p>South</p>
+				<p>Bangalore, Karnataka, 560068</p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Our hours</h5>
+				<hr class="light">
+				<p>Monday: 9am - 5pm</p>
+				<p>Saturday: 10am - 4pm</p>
+				<p>Sunday: Closed</p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Service Area</h5>
+				<hr class="light">
+				<p>Bangalore, Karnataka, 560068</p>
+				<p>-</p>
+				<p>-</p>
+				<p>-</p>
+			</div>
+			<div class="col-12">
+				<hr class="light-100">
+				<h5>&copy; IIT-JEE-ASPIRANTS HUB </h5>
+			</div>
+		</div>
+		<!-- <p class="align-text-right"><a href="index.html" >HOME</a>
+		</p> -->
+	</div>
+</footer>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 AOS.init();
@@ -277,6 +183,5 @@ AOS.init();
         "name" : "JEEIITIANBOOKS.IN",
         "url" : "https://www.jeeiitianbooks.in/"
         }</script>
-        
 </body>
 </html>

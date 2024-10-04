@@ -228,6 +228,11 @@ hr.light-100 {
   }
 }
 
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
 
 
 /*---Firefox Bug Fix --*/
@@ -235,7 +240,7 @@ hr.light-100 {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
+  -webkit-backface-visibility: visible; 
   backface-visibility: visible;
 }
 
@@ -244,7 +249,13 @@ hr.light-100 {
     padding: 1rem;
 }
 
-
+.h1-style{
+  background-color:rgb(125, 28, 160);
+  font-family:Lucida;
+  font-size: 200%;
+  color: rgb(255, 255, 255);;
+  text-shadow: 4px 4px #040606;
+}
 
 
 
