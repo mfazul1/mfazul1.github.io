@@ -168,107 +168,107 @@ data-aos-duration="1000">
 <h3 class="display-9 align-text-center">Books </h3>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
-    <table id="myTable"> 
-        <tr> 
-            <th>Name</th> 
-            <th>Author</th> 
-            <th>Download</th> 
-        </tr> 
-        <!-- Table rows will be added dynamically -->
-    </table> 
-    <div class="align-text-center" id="pagination"></div> 
-    <!-- <p class="align-text-right"><a href="index.html">HOME</a>
-    </p> -->
+<table id="myTable"> 
+	<tr> 
+		<th>Name</th> 
+		<th>Author</th> 
+		<th>Download</th> 
+	</tr> 
+	<!-- Table rows will be added dynamically -->
+</table> 
+<div class="align-text-center" id="pagination"></div> 
+<!-- <p class="align-text-right"><a href="index.html">HOME</a>
+</p> -->
 
 
-    <script type="module" crossorigin="anonymous|use-credentials"> 
+<script type="module" crossorigin="anonymous|use-credentials"> 
 
 import jsonData from 'https://api.npoint.io/cd68855e120deda6905a' with  { type: 'json' };
 
 // console.log(jsonData.repsonse);
 
-        //const jsonData = await fetchJSONData().json();
-        const obj = JSON.parse(JSON.stringify(jsonData));
-        let data=obj['Sheet1'];
-        // console.log(data);
-        
-  
-        const rowsPerPage = 10; 
-        let currentPage = 1; 
-  
-        function displayTable(page) { 
-            const table = document.getElementById("myTable"); 
-            const startIndex = (page - 1) * rowsPerPage; 
-            const endIndex = startIndex + rowsPerPage; 
-            const slicedData = data.slice(startIndex, endIndex); 
-  
-            // Clear existing table rows 
-            table.innerHTML = ` 
-        <tr> 
-            <th>Name</th> 
-            <th>Author</th> 
-            <th>Download</th> 
-        </tr> 
-    `; 
-  
-            // Add new rows to the table 
-            slicedData.forEach(item => { 
-                const row = table.insertRow(); 
-                const nameCell = row.insertCell(0); 
-                const AuthorCell = row.insertCell(1); 
-                const DownloadCell = row.insertCell(2); 
-                nameCell.innerHTML = item.name; 
-                AuthorCell.innerHTML = item.Author; 
-                DownloadCell.innerHTML = item.Download; 
-            }); 
-  
-            // Update pagination 
-            updatePagination(page); 
-        } 
-  
-        function updatePagination(currentPage) { 
-            const pageCount = Math.ceil(data.length / rowsPerPage); 
-            const paginationContainer = document.getElementById("pagination"); 
-            paginationContainer.innerHTML = ""; 
-  
-            for (let i = 1; i <= pageCount; i++) { 
-                const pageLink = document.createElement("a"); 
-                pageLink.href = "index.html#Team"; 
-                pageLink.innerText = i; 
-                pageLink.onclick = function () { 
-                    displayTable(i); 
-                }; 
-                if (i === currentPage) { 
-                    pageLink.style.fontWeight = "bold"; 
-                } 
-                paginationContainer.appendChild(pageLink); 
-                paginationContainer.appendChild(document.createTextNode(" ")); 
-            } 
-        } 
-  
-        // Initial display 
-        displayTable(currentPage); 
-       
-    </script> 
+	//const jsonData = await fetchJSONData().json();
+	const obj = JSON.parse(JSON.stringify(jsonData));
+	let data=obj['Sheet1'];
+	// console.log(data);
+	
+
+	const rowsPerPage = 10; 
+	let currentPage = 1; 
+
+	function displayTable(page) { 
+		const table = document.getElementById("myTable"); 
+		const startIndex = (page - 1) * rowsPerPage; 
+		const endIndex = startIndex + rowsPerPage; 
+		const slicedData = data.slice(startIndex, endIndex); 
+
+		// Clear existing table rows 
+		table.innerHTML = ` 
+	<tr> 
+		<th>Name</th> 
+		<th>Author</th> 
+		<th>Download</th> 
+	</tr> 
+`; 
+
+		// Add new rows to the table 
+		slicedData.forEach(item => { 
+			const row = table.insertRow(); 
+			const nameCell = row.insertCell(0); 
+			const AuthorCell = row.insertCell(1); 
+			const DownloadCell = row.insertCell(2); 
+			nameCell.innerHTML = item.name; 
+			AuthorCell.innerHTML = item.Author; 
+			DownloadCell.innerHTML = item.Download; 
+		}); 
+
+		// Update pagination 
+		updatePagination(page); 
+	} 
+
+	function updatePagination(currentPage) { 
+		const pageCount = Math.ceil(data.length / rowsPerPage); 
+		const paginationContainer = document.getElementById("pagination"); 
+		paginationContainer.innerHTML = ""; 
+
+		for (let i = 1; i <= pageCount; i++) { 
+			const pageLink = document.createElement("a"); 
+			pageLink.href = "readfiles.html#Team"; 
+			pageLink.innerText = i; 
+			pageLink.onclick = function () { 
+				displayTable(i); 
+			}; 
+			if (i === currentPage) { 
+				pageLink.style.fontWeight = "bold"; 
+			} 
+			paginationContainer.appendChild(pageLink); 
+			paginationContainer.appendChild(document.createTextNode(" ")); 
+		} 
+	} 
+
+	// Initial display 
+	displayTable(currentPage); 
+   
+</script> 
 <script>
-     function myFunction() {
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("myTable");
-            tr = table.getElementsByTagName("tr");
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
-                }       
-            }
-            }
+ function myFunction() {
+		var input, filter, table, tr, td, i, txtValue;
+		input = document.getElementById("myInput");
+		filter = input.value.toUpperCase();
+		table = document.getElementById("myTable");
+		tr = table.getElementsByTagName("tr");
+		for (i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[0];
+			if (td) {
+			txtValue = td.textContent || td.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";
+			} else {
+				tr[i].style.display = "none";
+			}
+			}       
+		}
+		}
 </script>
 </div>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
