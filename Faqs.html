@@ -55,6 +55,18 @@
 
 		gtag('config', 'G-VJG4F1NRM9');
 	</script>
+	 <script>
+		window.onload = function() {  
+		// alert(1);
+		if (navigator.onLine) {
+			// alert("You are online now!");
+            // window.location.href = "Faqs.html";
+		}else{
+			// alert("Oops! You are offline now!");
+			window.location.href = "offline.html";
+		}
+	};	
+	</script>
 </head>
 <body oncontextmenu="return false">
 <div class="bg"></div>
