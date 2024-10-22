@@ -32,6 +32,9 @@
 	<meta content='en' http-equiv='content-language'/>
 	<meta content='India' name='geo.placename'/>
 	<meta content='in' name='geo.country'/>
+	<!-- Allows XHRs only over HTTPS on the same domain. -->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:">
+	
 	<include expiration='7d' path='*.css'></include>
 	<include expiration='7d' path='*.js'></include>
 	<include expiration='3d' path='*.gif'></include>
