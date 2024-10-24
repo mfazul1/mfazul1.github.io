@@ -286,7 +286,7 @@ body {
   margin:0;
 }
 
-.bg {
+/* .bg {
   animation:slide 3s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, rgb(239, 239, 239) 50%, rgb(174, 129, 230) 50%);
   bottom:0;
@@ -331,7 +331,7 @@ h1 {
   100% {
     transform:translateX(25%);
   }
-}
+} */
 .wyg-img{
   width: 750px;
   height: 250px;
