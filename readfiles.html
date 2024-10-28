@@ -203,7 +203,7 @@ data-aos-duration="1000">
 	</tr> 
 	<!-- Table rows will be added dynamically -->
 </table> 
-<div class="align-text-center" id="pagination"></div> 
+<div class="pagin" id="pagination"></div> 
 <!-- <p class="align-text-right"><a href="index.html">HOME</a>
 </p> -->
 
@@ -266,7 +266,12 @@ import jsonData from 'https://api.npoint.io/cd68855e120deda6905a' with  { type: 
 				displayTable(i); 
 			}; 
 			if (i === currentPage) { 
+				pageLink.style.padding = "5px 10px"; 
+				pageLink.style.border = "1px solid #ddd;"; 
+				pageLink.style.display = "inline-block"; 
 				pageLink.style.fontWeight = "bold"; 
+				pageLink.style.backgroundColor = "powderblue";
+				pageLink.style.borderRadius = "5px"; 
 			} 
 			paginationContainer.appendChild(pageLink); 
 			paginationContainer.appendChild(document.createTextNode(" ")); 
