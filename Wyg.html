@@ -15,7 +15,16 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	
 	<link href="style.css" rel="stylesheet">
+	 <!-- Styles -->
+	 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700,700i&display=swap" rel="stylesheet">
+	 <link href="css/bootstrap.css" rel="stylesheet">
+	 <link href="css/fontawesome-all.css" rel="stylesheet">
+	 <link href="css/swiper.css" rel="stylesheet">
+	 <link href="css/magnific-popup.css" rel="stylesheet">
+	 <link href="css/styles.css" rel="stylesheet">
+	 
 	<meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <meta http-equiv="pragma" content="no-cache">
@@ -70,29 +79,78 @@
 
 		gtag('config', 'G-VJG4F1NRM9');
 	</script>
-	 <script>
+	<script>
 		window.onload = function() {  
 		// alert(1);
 		if (navigator.onLine) {
 			// alert("You are online now!");
-            // window.location.href = "Wyg.html";
+			// window.location.href = "index.html";
 		}else{
 			// alert("Oops! You are offline now!");
 			window.location.href = "offline.html";
 		}
-	};	
+	};
+	
 	</script>
+
+<style> 
+	table {
+border-collapse: collapse;
+width: 100%;
+box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+ 0px 10px 20px rgba(0,0,0,0.05),
+ 0px 20px 20px rgba(0,0,0,0.05),
+ 0px 30px 20px rgba(0,0,0,0.05);
+ font-family: 'Arial';
+margin: 25px auto;
+border: 1px solid #eee;
+/* border-bottom: 2px solid #00cccc; */
+}
+
+#myInput {
+background-image: url('img/search.png');
+background-position: 10px 10px;
+background-repeat: no-repeat;
+width: 100%;
+font-size: 16px;
+padding: 8px 8px 8px 40px;
+border: 1px solid #ddd;
+}
+
+th, td {
+padding: 8px;
+text-align: left;
+border-bottom: 3px solid #DDD;
+width: 30px; overflow: hidden;
+}
+th {
+background: #00cccc;
+color: #fff;
+text-transform: uppercase;
+font-size: 12px;    
+}
+
+tr:hover {background-color: #d8d6ee;}
+
+.hide-bg{
+mix-blend-mode: multiply;
+filter: contrast(2);/*edit to 2 to see effect*/
+width: 80px;
+align:left;
+height:20px;
+}
+</style> 
 </head>
 <body oncontextmenu="return false">
+	
 <div class="bg"></div>
 
 <div id="cnt"></div>
-<h1 class="text-center h1-style">JEE IITIAN BOOKS</h1>
-
+<!-- <h1 class="text-center h1-style">JEE IITIAN BOOKS</h1> -->
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#"><img alt="JEE IIT Books" src="img/logo.png"></a>
+		<a class="navbar-brand" href="#"><img alt="JEE IIT BOOKS" src="img/logo.png"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -108,7 +166,7 @@
 					<a class="nav-link" href="Wyg.html">What you Get?</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="readfiles.html">Books</a>
+					<a class="nav-link" href="readfiles.html">BOOKS</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="Faqs.html">FAQS</a>
@@ -120,31 +178,39 @@
 		</div>
 	</div>
 </nav>
-<div>
-<marquee width="100%" height="30%" bgcolor="orange">
-	<h6>Welcome to JEE IITian books, download your best resource for accessing high-quality study materials at no cost and registration</h6>
-</marquee>
-</div>
+
 <!-- AtoZSEOTools Counter Code START -->
 <script>
-//var Count = GetURLParameter('count');
-const params = new URLSearchParams(document.location.search);
-const count = params.get("count");
-	//document.write(count);
-if(count==1){
-	document.write('Total Visitors Count:');
-document.write('<img src="https://www.coolseotools.com/website-visitor-counter/count/&style=style4&show=u&num=9&uid=MX"  title="Web Counter" alt="AtoZSEOTools Web Counter" />')
-<!-- AtoZSEOTools Counter Code END -->
-}
+	//var Count = GetURLParameter('count');
+	const params = new URLSearchParams(document.location.search);
+	const count = params.get("count");
+		//document.write(count);
+	if(count==1){
+		document.write('Total Visitors Count:');
+	document.write('<img src="https://www.coolseotools.com/website-visitor-counter/count/&style=style4&show=u&num=9&uid=MX"  title="Web Counter" alt="AtoZSEOTools Web Counter" />')
+	<!-- AtoZSEOTools Counter Code END -->
+	}
+	
+	</script>
 
-</script>
+    <!-- Header -->
+    <header id="header" class="ex-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="white">What You Get?</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
 <!--- What You Get? Section -->
-<div id="Wyg" class="container-fluid" data-aos="fade-up"
+<div id="Wyg" class="container-fluid" data-aos="fade-down"
 		data-aos-offset="200"
 		data-aos-delay="50"
 		data-aos-duration="1000">
-			<h3 class="display-9 align-text-center">What You Get?</h3>
-<hr class="my-4">
+			<!-- <h3 class="display-9 align-text-center">What You Get?</h3> -->
+<!-- <hr class="my-4"> -->
  <div class="row">
 		<div class="col-md-12 col-lg-6">
 			<br>
@@ -161,10 +227,10 @@ document.write('<img src="https://www.coolseotools.com/website-visitor-counter/c
 
 		</div>
 		<div class="col-lg-6">
-			<img alt="free JEE IIT books download" src="img/IITJEE.jpg" class="img-fluid wyg-img" />
+			<img alt="free JEE IIT books download" src="img/IITJEE.jpg" class="wyg-img" />
 			<h4>About The Author</h4>
 		<div class="blog-author clearfix">
-		<div class="author-label"> <img class="lazy" src="img/1725358244347.jpg" src alt="author image" /> </div>
+		<div class="author-label"> <img class="lazy" src="img/1725358244347.jpg" alt="author image" /> </div>
 		<div class="author-details">
 		<h6><a href="#" class="inverse">
 		Mohammed Fazuluddin </a></h6>
@@ -176,7 +242,7 @@ document.write('<img src="https://www.coolseotools.com/website-visitor-counter/c
 	<!-- <p class="align-text-right"><a href="index.html" >HOME</a>
 	</p>		 -->
 </div>
-<hr class="my-4">
+<!-- <hr class="my-4"> -->
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
