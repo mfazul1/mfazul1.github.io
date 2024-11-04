@@ -141,43 +141,57 @@ height:20px;
 }
 </style> 
 </head>
-<body oncontextmenu="return false">
+<body data-spy="scroll" data-target=".fixed-top" oncontextmenu="return false">
 	
-<div class="bg"></div>
-
-<div id="cnt"></div>
-<!-- <h1 class="text-center h1-style">JEE IITIAN BOOKS</h1> -->
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="#"><img alt="JEE IIT BOOKS" src="img/logo.png"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="index.html">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="About.html">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="Wyg.html">What you Get?</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="readfiles.html">BOOKS</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="Faqs.html">FAQS</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="Connect.html">Connect</a>
-				</li>
-			</ul>
+	<div class="bg"></div>
+	
+	<div id="cnt"></div>
+	
+	 <!-- Preloader -->
+	 <div class="spinner-wrapper">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
 		</div>
 	</div>
-</nav>
+	
+	<!-- end of preloader -->
+	<!-- <h1 class="text-center h1-style">JEE IITIAN BOOKS</h1> -->
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+		<!-- <div class="container-fluid"> -->
+			<a class="navbar-brand" href="#"><img alt="JEE IIT BOOKS" src="img/logo.png" alt="alternative"></a> 
+		 <!-- Mobile Menu Toggle Button -->
+		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+        </button>
+			<!-- end of mobile menu toggle button -->
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="About.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Wyg.html">What you Get?</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="readfiles.html">BOOKS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Faqs.html">FAQS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Connect.html">Connect</a>
+					</li>
+				</ul>			 
+			</div>
+		<!-- </div> -->
+	</nav>
+	
 <!-- AtoZSEOTools Counter Code START -->
 <script>
 //var Count = GetURLParameter('count');
@@ -329,6 +343,17 @@ AOS.init();
         "name" : "JEEIITIANBOOKS.IN",
         "url" : "https://www.jeeiitianbooks.in/"
         }</script>
-        
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+<script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+<script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+<script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+<script src="js/jquery.countdown.min.js"></script> <!-- The Final Countdown plugin for jQuery -->
+<script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+<script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+<script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+<script src="js/scripts.js"></script> <!-- Custom scripts -->
+
 </body>
 </html>

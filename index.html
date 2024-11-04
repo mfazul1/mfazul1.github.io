@@ -14,7 +14,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
 	
 	<link href="style.css" rel="stylesheet">
 	 <!-- Styles -->
@@ -141,22 +141,35 @@ height:20px;
 }
 </style> 
 </head>
-<body oncontextmenu="return false">
+<body data-spy="scroll" data-target=".fixed-top" oncontextmenu="return false">
 	
 <div class="bg"></div>
 
 <div id="cnt"></div>
+
+ <!-- Preloader -->
+ <div class="spinner-wrapper">
+	<div class="spinner">
+		<div class="bounce1"></div>
+		<div class="bounce2"></div>
+		<div class="bounce3"></div>
+	</div>
+</div>
+
+<!-- end of preloader -->
 <!-- <h1 class="text-center h1-style">JEE IITIAN BOOKS</h1> -->
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="#"><img alt="JEE IIT BOOKS" src="img/logo.png"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
+	<!-- <div class="container-fluid"> -->
+		<a class="navbar-brand" href="#"><img alt="JEE IIT BOOKS" src="img/logo.png" alt="alternative"></a> 
+		 <!-- Mobile Menu Toggle Button -->
+		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
 					<a class="nav-link" href="index.html">Home</a>
 				</li>
 				<li class="nav-item">
@@ -174,9 +187,9 @@ height:20px;
 				<li class="nav-item">
 					<a class="nav-link" href="Connect.html">Connect</a>
 				</li>
-			</ul>
+			</ul>			 
 		</div>
-	</div>
+	<!-- </div> -->
 </nav>
 <header id="header" class="header">
 <div class="container">
@@ -497,6 +510,83 @@ import jsonData from 'https://api.npoint.io/cd68855e120deda6905a' with  { type: 
 		}
 		}
 </script>
+
+ <!-- Testimonials -->
+ <div class="slider-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h3>Check out our website users and thier valuable feedback</h3>
+
+				<!-- Text Slider -->
+				<div class="slider-container">
+					<div class="swiper-container text-slider">
+						<div class="swiper-wrapper">
+							
+							 <!-- Slide -->
+							 <div class="swiper-slide">
+								<div class="image-wrapper">
+									<img class="img-fluid" src="img/user.jpg" alt="alternative">
+								</div> <!-- end of image-wrapper -->
+								<div class="text-wrapper">
+									<div class="testimonial-text">I have gone through the free books and this website has the best collection of book PDF's to crack the JEE mains and advance</div>
+									<div class="testimonial-author">S.Kamalakar</div>
+								</div> <!-- end of text-wrapper -->
+							</div> <!-- end of swiper-slide -->
+							<!-- end of slide -->
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<div class="image-wrapper">
+									<img class="img-fluid" src="img/user.jpg" alt="alternative">
+								</div> <!-- end of image-wrapper -->
+								<div class="text-wrapper">
+									<div class="testimonial-text">One of the best website which I came across for the JEE and IIT exams and the quality of the books is awsome</div>
+									<div class="testimonial-author">Iqbal Sheik</div>
+								</div> <!-- end of text-wrapper -->
+							</div> <!-- end of swiper-slide -->
+							<!-- end of slide -->
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<div class="image-wrapper">
+									<img class="img-fluid" src="img/user.jpg" alt="alternative">
+								</div> <!-- end of image-wrapper -->
+								<div class="text-wrapper">
+									<div class="testimonial-text">Best website to download the PDF books and the best part is not registration or personal  details required to download books, thanks to JEEIITAINBOOKS website creator</div>
+									<div class="testimonial-author">Mrudala Kumari</div>
+								</div> <!-- end of text-wrapper -->
+							</div> <!-- end of swiper-slide -->
+							<!-- end of slide -->
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<div class="image-wrapper">
+									<img class="img-fluid" src="img/user.jpg" alt="alternative">
+								</div> <!-- end of image-wrapper -->
+								<div class="text-wrapper">
+									<div class="testimonial-text">This website really helped me to prepare for the JEE and IIT exams and I shared the same with my freinds to utilize this opportunity, thanks to JEEIITAINBOOKS website creator.</div>
+									<div class="testimonial-author">Jaspal Singh</div>
+								</div> <!-- end of text-wrapper -->
+							</div> <!-- end of swiper-slide -->
+							<!-- end of slide -->
+
+						</div> <!-- end of swiper-wrapper -->
+						
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+						<!-- end of add arrows -->
+
+					</div> <!-- end of swiper-container -->
+				</div> <!-- end of slider-container -->
+				<!-- end of text slider -->
+
+			</div> <!-- end of col -->
+		</div> <!-- end of row -->
+	</div> <!-- end of container -->
+</div> <!-- end of slider-2 -->
+<!-- end of testimonials -->
 
 <hr class="my-4">
 
