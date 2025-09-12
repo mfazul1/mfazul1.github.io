@@ -1,204 +1,394 @@
 {
-    "Sheet1":[
-     {
+  "Sheet1": [
+    {
+    "name": "Modern ABC Chemistry, Physics, Biology & Maths for Class 11 and 12 (Part 1 & 2)",
+    "Author": "Modern Publishers",
+    "Download": "<a href='https://www.jeebooks.in/2020/12/modern-abc-class-11-chemistry.html'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Disha 43 Years JEE Advanced + JEE Main Chemistry Chapterwise & Topicwise Solved Papers",
+    "Author": "Disha Experts",
+    "Download": "<a href='https://www.jeebooks.in/2021/03/43-years-jee-main-and-advanced-chemistry-solved-papers.html'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Disha 43 Years JEE Advanced + JEE Main Mathematics Chapterwise & Topicwise Solved Papers",
+    "Author": "Disha Experts",
+    "Download": "<a href='https://www.jeebooks.in/2021/03/43-years-jee-main-and-advanced-mathematics-solved-papers.html'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Problems in Physics for IIT-JEE Advanced",
+    "Author": "Shashi Bhushan Tiwari (McGraw Hill)",
+    "Download": "<a href='https://www.jeebooks.in/2020/09/problems-in-physics-for-ii-jee-advanced.html'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Disha 33 Years NEET Physics, Chemistry, and Biology Solved Papers",
+    "Author": "Disha Experts",
+    "Download": "<a href='https://www.jeebooks.in/2021/06/neet-physics-chemistry-biology-solved-papers.html'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Best Handwritten Short Notes for JEE Mains and Advanced | Quick Revision",
+    "Author": "Unknown",
+    "Download": "<a href='https://www.jeebooks.in/2021/07/jee-main-and-advanced-short-notes-pdf.html'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Disha Super 10 Mock Tests for NTA JEE Main 2021",
+    "Author": "Disha Experts",
+    "Download": "<a href='https://www.jeebooks.in/2021/05/super-10-jee-main-2021-mock-test.html'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Collection of IITJEE Physics Papers Since 1978",
+    "Author": "Jitender Singh",
+    "Download": "<a href='https://www.jeebooks.in/2021/05/collection-of-iit-jee-physics-papers.html'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "GRB 1000 Challenging Problems in Mathematics for JEE (Main & Advanced)",
+    "Author": "Sameer Bansal (GRB Publications)",
+    "Download": "<a href='https://www.jeebooks.in/2021/05/pdf-grb-1000-challenging-problems-in.html'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "100 Solved Problems on Dual Nature of Radiation and Matter",
+    "Author": "Jitender Singh",
+    "Download": "<a href='https://www.jeebooks.in/2021/06/pdf-100-solved-problems-on-dual-nature.html'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+    {
       "name": "Maths 41 Years PYQ's",
       "Author": "Mamata Batra",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/mathematics-41-years-1978-2018-jee-advanced-iit-jee-17-yrs-jee-main-2002-2018-e158327156.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/mathematics-41-years-1978-2018-jee-advanced-iit-jee-17-yrs-jee-main-2002-2018-e158327156.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Phys. 41 years PYQ's",
       "Author": "Sunil Batra",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/physics-41-years-1978-2018-jee-advanced-iit-jee-17-yrs-jee-main-2002-2018-e158469389.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://s1.welib-public.org/hs6/libgenrs_nonfiction/2229000/75229ceb1265447ce9bad2e32aacbf8d~/1757676115.3GY8tMBIfLWZWdkEebf0Vw/Physics 41 years (1978-2018) JEE Advanced (IIT-JEE) + 17 yrs -- Sunil Batra -- ( WeLib.org ).pdf'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Phy. 40 Years Topic Wise Sol. & Prob.",
       "Author": "Sunil Batra",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/40-years-jee-advanced-iit-jee-16-yrs-jee-main-aieee-physics-topic-wise-solved-papers-e158292317.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/40-years-jee-advanced-iit-jee-16-yrs-jee-main-aieee-physics-topic-wise-solved-papers-e158292317.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Chem.(D-F BLOCK ELEMENTS) Notes",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=1UXSRBauAWfPH6-6xZiT4pnmnQ1esEi8c'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=1UXSRBauAWfPH6-6xZiT4pnmnQ1esEi8c'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Chem.(HYDROGEN AND HYDRIDES) Notes",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=1Xnr3Y2mLVggkhqMOUzzwredblzXWWohc'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=1Xnr3Y2mLVggkhqMOUzzwredblzXWWohc'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Chem. 40 Years Topic Wise Sol. & Prob.",
       "Author": "Sunil Batra",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/chemistry-40-years-iit-jee-advanced-16-yrs-jee-main-topic-wise-chapterwise-solved-papers-e158295971.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/chemistry-40-years-iit-jee-advanced-16-yrs-jee-main-topic-wise-chapterwise-solved-papers-e158295971.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Mathematical Tricks",
       "Author": "Srijit Mondal",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/mathematical-tricks-a-must-for-all-competitive-exams-iit-jee-main-jee-advanced-bitsat-rmo-bstat-bmath-srijit-mondal-isi-forum-e187492019.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/mathematical-tricks-a-must-for-all-competitive-exams-iit-jee-main-jee-advanced-bitsat-rmo-bstat-bmath-srijit-mondal-isi-forum-e187492019.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Maths 41 Years IIT JEE PYQS",
       "Author": "Mamata Batra",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/41-years-iit-jee-mathematics-1978-2018-advanced-and-17-yrs-jee-main-2002-2018-e158334177.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/41-years-iit-jee-mathematics-1978-2018-advanced-and-17-yrs-jee-main-2002-2018-e158334177.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Phy.(ELECTROCHEMISTRY) Notes",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=16jWbNXpyBa4PJHEqxMVxaERkGc3Z1BTw'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=16jWbNXpyBa4PJHEqxMVxaERkGc3Z1BTw'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Phy.(GASEOUS STATE) Notes",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/file\/d\/1Q-YUOkgSZq1_TN5J-vrwd6hkEshbWuCv\/view?usp=sharing'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/file/d/1Q-YUOkgSZq1_TN5J-vrwd6hkEshbWuCv/view?usp=sharing'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Integral Calculus IIT JEE Main Advanced",
       "Author": "M S Chauhan",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/balaji-advanced-problems-in-organic-chemistry-part-1-upto-page-240-by-m-s-chouhan-for-iit-jee-main-advanced-and-chemistry-olympiad-nsec-incho-e158469753.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/balaji-advanced-problems-in-organic-chemistry-part-1-upto-page-240-by-m-s-chouhan-for-iit-jee-main-advanced-and-chemistry-olympiad-nsec-incho-e158469753.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Phy.(ATOMIC STRUCTURE) Notes",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=1L_8aagFIfsGz3uxQoZ5GexWGrYHxK6W_'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=1L_8aagFIfsGz3uxQoZ5GexWGrYHxK6W_'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Phy.(EQUILIBRIUM) Notes",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=1ZKbln3SogVWkMQ9ef8RncgRetbhH3L2L'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=1ZKbln3SogVWkMQ9ef8RncgRetbhH3L2L'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Phy.(DILUTE SOLUTION AND COLLIGATIVE PROPERTIES) Notes",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=1RsyDqZcW6zWCG3-7qwOObX6wPSvs6n1g'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=1RsyDqZcW6zWCG3-7qwOObX6wPSvs6n1g'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Vector and 3D Geometry Skills",
       "Author": " Trust Education",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/physics-mcqs-for-iit-jee-neet-ias-sat-mat-multiple-choice-questions-answers-fully-solved-iitjee-main-advanced-trust-education-e187454569.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/physics-mcqs-for-iit-jee-neet-ias-sat-mat-multiple-choice-questions-answers-fully-solved-iitjee-main-advanced-trust-education-e187454569.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Adv. Prob. in Organic Chemistry Part2",
       "Author": "Amit M Agarwal",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/amit-m-agarwal-integral-calculus-iit-jee-main-advanced-fully-revised-edition-for-iitjee-arihant-meerut-e158561936.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/amit-m-agarwal-integral-calculus-iit-jee-main-advanced-fully-revised-edition-for-iitjee-arihant-meerut-e158561936.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "PHYSICS MCQS",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=1veKUjvmhuxckiY9L3hbY8TpecJoC7A0c'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=1veKUjvmhuxckiY9L3hbY8TpecJoC7A0c'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Chem.(REDOX REACTIONS) Notes",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=1Uxm5HlTww6O4rq1NTJKst0Pp1b7zh-Ua'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=1Uxm5HlTww6O4rq1NTJKst0Pp1b7zh-Ua'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Prob. and Sol. in Inorganic Chemistry ",
       "Author": "Arihant",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/arihant-vector-and-3d-geometry-skills-in-mathematics-for-iit-jee-main-advanced-with-sessionwise-theory-exercises-amit-m-agarwal-e176284536.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/arihant-vector-and-3d-geometry-skills-in-mathematics-for-iit-jee-main-advanced-with-sessionwise-theory-exercises-amit-m-agarwal-e176284536.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Phy.(KINETICS AND NUCLEAR CHEMISTRY) Notes",
       "Author": "M S Chauhan",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/balaji-advanced-problems-in-organic-chemistry-part-2-upto-page-241-to-460-by-m-s-chouhan-for-iit-jee-main-advanced-and-chemistry-olympiad-nsec-incho-e158469144.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/balaji-advanced-problems-in-organic-chemistry-part-2-upto-page-241-to-460-by-m-s-chouhan-for-iit-jee-main-advanced-and-chemistry-olympiad-nsec-incho-e158469144.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Phy.(THERMODYNAMICS) Notes",
       "Author": " V Joshi Cengage",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/problems-and-solutions-in-inorganic-chemistry-for-iit-jee-main-and-advanced-by-v-joshi-cengage-part-1-upto-chapter-4-qualitative-inorganic-analysis-e158393229.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/problems-and-solutions-in-inorganic-chemistry-for-iit-jee-main-and-advanced-by-v-joshi-cengage-part-1-upto-chapter-4-qualitative-inorganic-analysis-e158393229.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Sol. and Prob. in General Physics Vol1",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=1K0H_kI7AkcAFZxVE9MgkUr0cLIai0n8q'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=1K0H_kI7AkcAFZxVE9MgkUr0cLIai0n8q'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Adv. Prob. in Organic Chemistry Part3",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=1nNUh-91zVKyeWPJO5xfIQ1hSsBUFayw-'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=1nNUh-91zVKyeWPJO5xfIQ1hSsBUFayw-'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Sol. to Adv. Prob. in Organic Chemistry-Part1",
       "Author": "Raj Kumar Sharma ",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/solution-of-i-e-irodov-s-problems-in-general-physics-vol-1-raj-kumar-sharma-b-tech-iit-ism-dhanbad-rk-publications-for-iit-jee-physics-olympiad-e176188699.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/solution-of-i-e-irodov-s-problems-in-general-physics-vol-1-raj-kumar-sharma-b-tech-iit-ism-dhanbad-rk-publications-for-iit-jee-physics-olympiad-e176188699.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Maths for IIT-JEE Main and Adv. Calculus Vol3",
       "Author": "M S Chauhan",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/balaji-advanced-problems-in-organic-chemistry-part-3-upto-page-461-to-624-by-m-s-chouhan-for-iit-jee-main-advanced-and-chemistry-olympiad-nsec-incho-e158474002.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/balaji-advanced-problems-in-organic-chemistry-part-3-upto-page-461-to-624-by-m-s-chouhan-for-iit-jee-main-advanced-and-chemistry-olympiad-nsec-incho-e158474002.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Chem.(CHEMICAL BONDING) Notes",
       "Author": "M S Chauhan",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/solution-to-advanced-problems-in-organic-chemistry-part-1-upto-page-137-alkenes-by-m-s-chouhan-vibrant-academy-kota-for-iit-jee-main-advanced-chemistry-olympiad-balaji-e158468073.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/solution-to-advanced-problems-in-organic-chemistry-part-1-upto-page-137-alkenes-by-m-s-chouhan-vibrant-academy-kota-for-iit-jee-main-advanced-chemistry-olympiad-balaji-e158468073.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Chem.(COORDINATION CHEMISTRY) Notes",
       "Author": "Dr. G S N Murti Dr. K",
-      "Download": "<a href='https:\/\/www.pdfdrive.com\/wiley-s-mathematics-for-iit-jee-main-and-advanced-calculus-vol-3-maestro-series-dr-g-s-n-murti-dr-k-p-r-sastry-e187761372.html'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.pdfdrive.com/wiley-s-mathematics-for-iit-jee-main-and-advanced-calculus-vol-3-maestro-series-dr-g-s-n-murti-dr-k-p-r-sastry-e187761372.html'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+      {
+    "name": "New Syllabus JEE Main Mock Test 2024",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2024/01/New-Syllabus-JEE-Main-Mock-Test_interior.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "BITSAT Solved Paper 2024 Session-II",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2024/10/BITSAT-2024-Session-II.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "BITSAT Solved Paper 2023 Session-II",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2024/10/BITSAT-2023-Session-II-1.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "JEE Main Sample Paper 2023 Solutions",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2023/10/1-Mock-Test-JEE-Main-Solution.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "JEE Physics Mind Map",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2023/10/Physics-Mind-Map.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "JEE Chemistry Mind Map",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2023/10/Chemistry-Mind-Map.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "JEE Mathematics Mind Map",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2023/10/Mathematics-Mind-Map.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Deep JEE Analysis Physics",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2023/10/Deep-JEE-Analysis-Physics.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Deep JEE Analysis Chemistry",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2023/10/Deep-JEE-Analysis-Chemistry.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Deep JEE Analysis Mathematics",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2023/10/Deep-JEE-Analysis-Math.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "JEE Study Planner 2023",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2023/10/JEE-STUDY-Planner-2023.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Formulae Book Physics",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2023/10/Formulae-Book-Physics.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Formulae Book Chemistry",
+    "Author": "Disha Publication",
+    "Download": "<a href='https://freedownloads.dishapublication.com/wp-content/uploads/2023/10/Formulae-Book-Chemistry.pdf'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+    {
       "name": "Chem.(P BLOCK ELEMENTS) Notes",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/file\/d\/1U1rsRyzQwuFMGYikODI8q6ZBFEJxRIXC\/view?usp=sharing'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/file/d/1U1rsRyzQwuFMGYikODI8q6ZBFEJxRIXC/view?usp=sharing'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Chem.(PERIODIC TABLE) Notes",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/file\/d\/1nIh6rpSe1gosjIZ21E94VFXhcbYqbE8S\/view?usp=sharing'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/file/d/1nIh6rpSe1gosjIZ21E94VFXhcbYqbE8S/view?usp=sharing'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Adv. Prob. in Organic Chemistry",
       "Author": "Jeemain Guru",
-      "Download": "<a href='https:\/\/drive.google.com\/open?id=1g1CRoYj-QSIt_j7r2lHPzKqzJ07SJH1c'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://drive.google.com/open?id=1g1CRoYj-QSIt_j7r2lHPzKqzJ07SJH1c'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "IIT JEE Study Guide",
       "Author": "SCRIBD",
-      "Download": "<a href='https:\/\/www.scribd.com\/doc\/242480763\/IIT-JEE-Study-Guide-EBook-1-pdf'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.scribd.com/doc/242480763/IIT-JEE-Study-Guide-EBook-1-pdf'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Maths For Jee Mains",
       "Author": "Siddhanth Naidu",
-      "Download": "<a href='https:\/\/www.scribd.com\/document\/434842331\/Maths-for-jee-mains'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.scribd.com/document/434842331/Maths-for-jee-mains'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Jee Main Success Mantra",
       "Author": "Shivam Kansagara",
-      "Download": "<a href='https:\/\/www.scribd.com\/document\/439212933\/Jee-main-success-mantra'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.scribd.com/document/439212933/Jee-main-success-mantra'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Mathematics JEE Mains and Advanced PYQs",
       "Author": "Maths Loop",
-      "Download": "<a href='https:\/\/www.scribd.com\/document\/386884572\/Mathematics-JEE-Mains-and-Advanced-previous-years-papers'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.scribd.com/document/386884572/Mathematics-JEE-Mains-and-Advanced-previous-years-papers'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Analysis of JEE Main",
       "Author": "Devansh Tanna",
-      "Download": "<a href='https:\/\/www.scribd.com\/presentation\/434423738\/Analysis-of-JEE-Main'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.scribd.com/presentation/434423738/Analysis-of-JEE-Main'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "30 Important Name Reactions Organic Chemistry For IIT JEE",
       "Author": "Yo",
-      "Download": "<a href='https:\/\/www.scribd.com\/document\/405562645\/30-Important-Name-Reactions-Organic-Chemistry-for-IIT-JEE-docx'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.scribd.com/document/405562645/30-Important-Name-Reactions-Organic-Chemistry-for-IIT-JEE-docx'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Arihant Physics 43 Years IIT JEE Solved Papers",
       "Author": "alpha.gwd12",
-      "Download": "<a href='https:\/\/www.scribd.com\/document\/693793558\/Arihant-Physics-43-Years-IIT-JEE-Solved-Papers-WWW-examSAKHA-in'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.scribd.com/document/693793558/Arihant-Physics-43-Years-IIT-JEE-Solved-Papers-WWW-examSAKHA-in'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "P Block Elements Notes For JEE Mains",
       "Author": "Shaswat Naman",
-      "Download": "<a href='https:\/\/www.scribd.com\/document\/693812734\/P-Block-Elements-Notes-for-JEE-Mains'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.scribd.com/document/693812734/P-Block-Elements-Notes-for-JEE-Mains'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "JEE Math Explorer",
       "Author": "Chilaka Deekshitha",
-      "Download": "<a href='https:\/\/www.scribd.com\/document\/698202372\/JEE-Math-Explorer'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     },
-     {
+      "Download": "<a href='https://www.scribd.com/document/698202372/JEE-Math-Explorer'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
       "name": "Most Asked Chapters in JEE Mains 2024",
       "Author": "Harshita Agarwal\n",
-      "Download": "<a href='https:\/\/www.scribd.com\/document\/720890204\/Most-Asked-Chapters-in-JEE-Mains-2024-January'><img  src='img\/download_new.jpg'class='hide-bg' \/><\/a>"
-     }
-    ]
-    }
+      "Download": "<a href='https://www.scribd.com/document/720890204/Most-Asked-Chapters-in-JEE-Mains-2024-January'><img  src='img/download_new.jpg'class='hide-bg' /></a>"
+    },
+    {
+    "name": "Cengage Mechanics 1",
+    "Author": "Cengage",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Cengage Mechanics 2",
+    "Author": "Cengage",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Cengage Electrostatics",
+    "Author": "Cengage",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Cengage Magnetism",
+    "Author": "Cengage",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Cengage Waves & Thermodynamics",
+    "Author": "Cengage",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "DC Pandey Mechanics 1",
+    "Author": "D.C. Pandey",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "DC Pandey Mechanics 2",
+    "Author": "D.C. Pandey",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "DC Pandey Waves",
+    "Author": "D.C. Pandey",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "DC Pandey Electricity",
+    "Author": "D.C. Pandey",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "DC Pandey Optics & Modern Physics",
+    "Author": "D.C. Pandey",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Concepts of Physics Vol 1",
+    "Author": "H.C. Verma",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Concepts of Physics Vol 2",
+    "Author": "H.C. Verma",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Problems in General Physics",
+    "Author": "I.E. Irodov",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Irodov Solutions Part 1",
+    "Author": "I.E. Irodov",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  },
+  {
+    "name": "Irodov Solutions Part 2",
+    "Author": "I.E. Irodov",
+    "Download": "<a href='https://practiso.me/'><img src='img/download_new.jpg' class='hide-bg' /></a>"
+  }
+  ]
+}
