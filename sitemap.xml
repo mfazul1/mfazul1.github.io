@@ -9,16 +9,37 @@
 
 <url>
   <loc>https://jeeiitianbooks.in/</loc>
-  <lastmod>2024-09-25T14:09:12+00:00</lastmod>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://jeeiitianbooks.in/index.html</loc>
-  <lastmod>2024-09-25T14:09:12+00:00</lastmod>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-	<loc>https://i.ibb.co/XytZbgd/Fav-logo.png</loc>
-	<lastmod>2024-09-30T22:44:52+02:00</lastmod>
- </url>
+  <loc>https://jeeiitianbooks.in/About.html</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/Wyg.html</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/readfiles.html</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/Faqs.html</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/Connect.html</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 </urlset>
