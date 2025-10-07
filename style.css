@@ -343,6 +343,123 @@ h1 {
 .author-label img{width:100%;height:100px;border-radius:50%}.blog-author .social a{color:#777;display:inline-block;margin-right:15px;font-size:16px}
 
 
+/* ----- Fix image alignment & overflow in showcase section ----- */
+.swiper-container {
+  width: 100% !important;
+  height: auto !important;
+  overflow: hidden;
+  border-radius: 8px;
+}
 
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
 
+.showcase-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* ensure equal height columns stack properly */
+@media (min-width: 768px) {
+  .showcase-card, .swiper-container {
+    min-height: 100%;
+  }
+}
+
+/* ----- Navbar text color fix ----- */
+.navbar-light .navbar-nav .nav-link {
+  color: #000 !important;
+  font-weight: 600;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #333 !important;
+  text-decoration: underline;
+}
+
+.navbar-light .navbar-toggler-icon {
+  filter: invert(100%);
+}
+
+/* Fix swiper width & prevent overlap */
+.image-slider-1 {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-slider-1 .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Keep equal spacing on all devices */
+@media (min-width: 768px) {
+  .image-slider-1 {
+    min-height: 250px;
+  }
+}
+
+/* Tweak swiper navigation visibility */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+    /* Fix for Swiper container height collapse in the showcase section */
+    .showcase-slider-wrap {
+      /* Apply aspect ratio padding for responsiveness */
+      padding-bottom: 66.66%; 
+      height: 0; 
+      position: relative; 
+    }
+    .showcase-slider-wrap .swiper-container {
+      position: absolute; 
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* NEW: Define a fixed height for larger screens to ensure initialization */
+    @media (min-width: 768px) {
+        .showcase-slider-wrap {
+            height: 250px; /* Adjust this value (e.g., 250px) to the desired height on desktop */
+            padding-bottom: 0; /* Remove padding hack when fixed height is used */
+        }
+        .showcase-slider-wrap .swiper-container {
+            position: relative; /* Change back for better flow */
+        }
+        .showcase-slider-wrap img {
+            height: 100%;
+            object-fit: cover; /* Ensures images fill the fixed height without distortion */
+        }
+    }
+    
 
