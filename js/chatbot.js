@@ -77,11 +77,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // If the score is high enough, return the local answer
-        if (highestScore > 1) { // Require more than one keyword for a confident local match
+        if (highestScore > 0) { // Respond if at least one keyword matches
             return knowledgeBase[bestMatch];
         }
 
-     
+        // If no confident match is found, return the default response.
+        // This prevents 'undefined' from being returned.
+        return knowledgeBase.default;
+
     }
 
     async function handleUserInput() {
