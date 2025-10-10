@@ -481,48 +481,5 @@ Our platform offers a comprehensive range of FREE best JEE and IIT PDF BOOKS tha
     }
   </script>
 
-  <!-- Swiper init (keeps existing configurations but responsive) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // image slider
-      if (typeof Swiper !== 'undefined') {
-        new Swiper('.image-slider-1', {
-          loop: true,
-          slidesPerView: 1,
-          spaceBetween: 12,
-          navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-          pagination: { el: '.swiper-pagination', clickable: true },
-          breakpoints: {
-            576: { slidesPerView: 1 },
-            768: { slidesPerView: 1 },
-            992: { slidesPerView: 1 }
-          }
-        });
-
-        // image slider
-        const imageSlider = new Swiper('.image-slider-1', {
-          loop: true,
-          slidesPerView: 1,
-          spaceBetween: 12,
-          navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-          pagination: { el: '.swiper-pagination', clickable: true },
-          breakpoints: {
-            576: { slidesPerView: 1 },
-            768: { slidesPerView: 1 },
-            992: { slidesPerView: 1 }
-          },
-          // NEW: Wait for images to load, then update
-          on: {
-            imagesReady: function () {
-              imageSlider.update();
-            },
-          }
-        });
-      } // Missing closing brace for 'if'
-    }); // Missing closing brace and parenthesis for 'DOMContentLoaded'
-  </script>
-
-
-
 </body>
 </html>
