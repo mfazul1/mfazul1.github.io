@@ -30,6 +30,7 @@
   <link href="css/magnific-popup.css" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
+  <link href="css/chatbot.css" rel="stylesheet" />
 
   <!-- Font Awesome (JS) -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -354,6 +355,28 @@ Our platform offers a comprehensive range of FREE best JEE and IIT PDF BOOKS tha
     </div>
   </footer>
 
+  <!-- CHATBOT -->
+  <div class="chat-widget">
+    <button id="chat-button" class="chat-button">
+      <i class="fas fa-comment-dots"></i>
+    </button>
+    <div id="chat-popup" class="chat-popup">
+      <div class="chat-header">
+        <span>JEEIITIANBOOKS Buddy</span>
+        <span id="close-chat" class="close-btn">&times;</span>
+      </div>
+      <div id="chat-body" class="chat-body">
+        <!-- Messages will be appended here -->
+      </div>
+      <div class="chat-footer">
+        <input type="text" id="chat-input" placeholder="Ask a question...">
+        <button id="send-btn">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Structured data (kept) -->
   <script type="application/ld+json">{
     "@context": "http://schema.org",
@@ -382,6 +405,7 @@ Our platform offers a comprehensive range of FREE best JEE and IIT PDF BOOKS tha
   <script src="js/jquery.magnific-popup.js"></script>
   <script src="js/validator.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="js/chatbot.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -496,7 +520,6 @@ Our platform offers a comprehensive range of FREE best JEE and IIT PDF BOOKS tha
         });
   </script>
 
-<script src='https://www.noupe.com/embed/01997cacaf887d2f86e3af3db7f7871a9f5c.js'></script>
 
 
 </body>
