@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "about": "JEE IITian BOOKS is a free platform dedicated to providing a vast collection of PDF books and study materials to help students prepare for JEE and IIT exams.",
         "what you get": "You get essential books, downloadable PDFs, and subject-specific e-books for Physics, Chemistry, and Mathematics. All for free and without registration.",
         "author": "This website was created by Mohammed Fazuluddin, an IT professional dedicated to helping JEE and IIT aspirants with innovative study tools.",
-        "greeting": "Hello! I am your JEEIITIAN Buddy. How can I help you with your JEE/IIT preparation today? You can ask me about the best books, how to download, or about the author.",
+        "greeting": "Hello! I am your AI JEEIITIAN Buddy. How can I help you with your JEE/IIT preparation today? You can ask me about the best books, how to download, or about the author.",
         "default": "I'm sorry, I'm not sure how to answer that. I can help with questions about the best books for JEE/IIT, how to download them, or information about this website. For more complex queries, you may need to consult a human expert."
     };
 
