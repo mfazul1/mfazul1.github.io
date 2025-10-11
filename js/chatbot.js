@@ -6,7 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const chatInput = document.getElementById('chat-input');
     const sendBtn = document.getElementById('send-btn');
 
-       // --- Knowledge Base ---
+    // --- Groq API Configuration ---
+    // 
+    // const GROQAPIKEY = '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';
+
+    // --- Knowledge Base ---
     // This is a simple AI based on keyword matching. 
     // For a true AI, you would integrate with a service like Google's Gemini or Dialogflow.
     const knowledgeBase = {
@@ -77,14 +81,60 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // If the score is high enough, return the local answer
-        if (highestScore > 0) { // Respond if at least one keyword matches
+        if (highestScore > 1) { // Require more than one keyword for a confident local match
             return knowledgeBase[bestMatch];
         }
 
-        // If no confident match is found, return the default response.
-        // This prevents 'undefined' from being returned.
-        return knowledgeBase.default;
+        // Otherwise, fall back to the Groq API
+        return await getGroqResponse(userInput);
+    }
 
+    // New function to call Groq API
+    async function getGroqResponse(userInput) {
+        // if (GROQ_API_KEY === 'YOUR_GROQ_API_KEY_HERE') {
+        //     return "Groq API key is not configured. I can only answer questions from my local knowledge base. Please ask the site administrator to configure it.";
+        // }
+
+        // Add a "typing" indicator and get a reference to it
+        const typingMessage = addMessage('bot', '...');
+        let botResponse = knowledgeBase.default; // Default response
+        try {
+            // IMPORTANT: Your API key is exposed here. This is a security risk.
+            const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer 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`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    messages: [
+                        {
+                            role: "system",
+                            content: "You are a helpful AI assistant for a website called 'JEE IITian BOOKS'. This site provides free PDF books and study materials for students preparing for the JEE and IIT exams in India. The author of the site is Mohammed Fazuluddin. Be concise, friendly, and helpful in your responses."
+                        },
+                        {
+                            role: "user",
+                            content: userInput
+                        }
+                    ],
+                    model: "llama-3.3-70b-versatile" // Or use "mixtral-8x7b-32768"
+                })
+            });
+
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.error?.message || 'API request failed');
+            }
+            botResponse = data.choices[0]?.message?.content.trim() || knowledgeBase.default;
+            typingMessage.innerHTML = botResponse; // Update the "typing" message with the actual response
+            typingMessage.classList.remove('typing');
+
+        } catch (error) {
+            console.error("Error calling Groq API:", error);
+            botResponse = "Sorry, I'm having trouble connecting to my brain right now. Please try again in a moment.";
+            typingMessage.innerHTML = botResponse;
+        }
+        return botResponse; // Always return the response string
     }
 
     async function handleUserInput() {
