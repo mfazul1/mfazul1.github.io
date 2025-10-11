@@ -25,9 +25,11 @@ document.addEventListener('DOMContentLoaded', function () {
         "about": "JEE IITian BOOKS is a free platform dedicated to providing a vast collection of PDF books and study materials to help students prepare for JEE and IIT exams.",
         "what you get": "You get essential books, downloadable PDFs, and subject-specific e-books for Physics, Chemistry, and Mathematics. All for free and without registration.",
         "author": "This website was created by Mohammed Fazuluddin, an IT professional dedicated to helping JEE and IIT aspirants with innovative study tools.",
-        "greeting": "Hello! I am your AI assistant. How can I help you with your JEE/IIT preparation today? You can ask me about the best books, how to download, or about the author.",
+        "greeting": "Hello! I am your JEEIITIAN Buddy. How can I help you with your JEE/IIT preparation today? You can ask me about the best books, how to download, or about the author.",
         "default": "I'm sorry, I'm not sure how to answer that. I can help with questions about the best books for JEE/IIT, how to download them, or information about this website. For more complex queries, you may need to consult a human expert."
     };
+
+    const DefaultBooksLink ="You can find all the essential books for JEE/IIT preparation on our <b><a href='readfiles.html' target='_blank'>BOOKS</a></b> page. Happy studying!";
 
     // --- Chatbot Functions ---
 
@@ -95,8 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //     return "Groq API key is not configured. I can only answer questions from my local knowledge base. Please ask the site administrator to configure it.";
         // }
 
-        // Add a "typing" indicator and get a reference to it
-        const typingMessage = addMessage('bot', '...');
+        
         let botResponse = knowledgeBase.default; // Default response
         try {
             // IMPORTANT: Your API key is exposed here. This is a security risk.
@@ -126,15 +127,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 throw new Error(data.error?.message || 'API request failed');
             }
             botResponse = data.choices[0]?.message?.content.trim() || knowledgeBase.default;
-            typingMessage.innerHTML = botResponse; // Update the "typing" message with the actual response
-            typingMessage.classList.remove('typing');
 
         } catch (error) {
             console.error("Error calling Groq API:", error);
             botResponse = "Sorry, I'm having trouble connecting to my brain right now. Please try again in a moment.";
-            typingMessage.innerHTML = botResponse;
         }
-        return botResponse; // Always return the response string
+        return botResponse;
     }
 
     async function handleUserInput() {
@@ -145,11 +143,12 @@ document.addEventListener('DOMContentLoaded', function () {
         chatInput.value = '';
 
         // Get response (which might be async)
-        addMessage('bot', '...'); // Show typing indicator immediately
+        const typingMessage = addMessage('bot', '...'); // Show typing indicator immediately
         const botResponse = await getBotResponse(userInput);
-        const typingMessage = document.querySelector('.chat-message.bot.typing');
-        if (typingMessage) typingMessage.remove(); // Remove typing indicator
-        addMessage('bot', botResponse); // Add the final response
+        
+        // Update the typing message with the final response and the link
+        typingMessage.innerHTML = botResponse + DefaultBooksLink;
+        typingMessage.classList.remove('typing');
     }
 
     // --- Event Listeners ---
