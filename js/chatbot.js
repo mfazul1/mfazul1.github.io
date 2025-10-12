@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // --- Groq API Configuration ---
     // 
-    // const GROQAPIKEY = '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';
+    let GROQ_API_KEY = ''; // Will be fetched
+    getSecret().then(key => {
+        GROQ_API_KEY = key; // Assign the fetched key
+        console.log("GROQ API Key loaded successfully."+GROQ_API_KEY);
+    });
 
     // --- Knowledge Base ---
     // This is a simple AI based on keyword matching. 
@@ -46,13 +50,26 @@ document.addEventListener('DOMContentLoaded', function () {
         messageElement.classList.add('chat-message', sender);
         if (isTypingMessage) {
             messageElement.classList.add('typing');
-        }
+        }   
         messageElement.innerHTML = message; // Use innerHTML to render links
         chatBody.appendChild(messageElement);
         chatBody.scrollTop = chatBody.scrollHeight;
         return messageElement; // Return the element to allow updating it
     }
 
+    async function getSecret() {
+        try {
+            const response = await fetch('https://api.npoint.io/43fbddac3ecb01879fa9', {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' }
+            });
+            const data = await response.json();
+            return data.groq_api_key; // Assuming the key is stored with this name
+        } catch (error) {
+            console.error('Failed to fetch API key:', error);
+            return null;
+        }
+    }
     async function getBotResponse(userInput) {
         const lowerInput = userInput.toLowerCase();
         
@@ -93,9 +110,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // New function to call Groq API
     async function getGroqResponse(userInput) {
-        // if (GROQ_API_KEY === 'YOUR_GROQ_API_KEY_HERE') {
-        //     return "Groq API key is not configured. I can only answer questions from my local knowledge base. Please ask the site administrator to configure it.";
-        // }
+        if (!GROQ_API_KEY) {
+            return "Sorry, my connection to the AI service is not configured correctly. Please ask the site administrator to check the API key.";
+        }
 
         
         let botResponse = knowledgeBase.default; // Default response
@@ -104,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
                 method: 'POST',
                 headers: {
-                    'Authorization': `Bearer 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`,
+                    'Authorization': `Bearer ${GROQ_API_KEY}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
@@ -118,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             content: userInput
                         }
                     ],
-                    model: "llama-3.3-70b-versatile" // Or use "mixtral-8x7b-32768"
+                    model: "llama-3.3-70b-versatile" // A good general-purpose model
                 })
             });
 
