@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let GROQ_API_KEY = ''; // Will be fetched
     getSecret().then(key => {
         GROQ_API_KEY = key; // Assign the fetched key
-        console.log("GROQ API Key loaded successfully."+GROQ_API_KEY);
+        // console.log("GROQ API Key loaded successfully."+GROQ_API_KEY);
     });
 
     // --- Knowledge Base ---
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function getSecret() {
         try {
-            const response = await fetch('https://api.npoint.io/43fbddac3ecb01879fa9', {
+            const response = await fetch('https://api.npoint.io/e7926abb4dad1dfcc984', {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
             });
