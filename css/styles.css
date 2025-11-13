@@ -1568,13 +1568,13 @@ input[type='checkbox'] {
 a.back-to-top {
 	position: fixed;
 	z-index: 999;
-	right: 0.75rem;
+	left: 0.75rem;   /* changed from right to left */
 	bottom: 0.75rem;
 	display: none;
 	width: 2.625rem;
 	height: 2.625rem;
 	border-radius: 1.875rem;
-	background: #ffbd50 url("../img/up-arrow.png") no-repeat center 47%;
+	background: #1000f3 url("../img/up-arrow.png") no-repeat center 47%;
 	background-size: 1.125rem 1.125rem;
 	text-indent: -9999px;
 }
