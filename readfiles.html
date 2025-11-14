@@ -135,9 +135,9 @@ tr:hover {background-color: #d8d6ee;}
 .hide-bg{
 mix-blend-mode: multiply;
 filter: contrast(2);/*edit to 2 to see effect*/
-width: 80px;
+width: 150px;
 align:left;
-height:20px;
+height:50px;
 }
 </style> 
 </head>
@@ -214,93 +214,84 @@ data-aos-duration="1000">
 <!-- <h3 class="display-9 align-text-center">Books </h3> -->
 <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> -->
 
-<table id="myTable"> 
-	<tr> 
-		<th>Name</th> 
-		<th>Author</th> 
-		<th>Download</th> 
-	</tr> 
-	<!-- Table rows will be added dynamically -->
-</table> 
+<div style="background-color: #f1faff;">
+<!-- BOOKS dynamic table -->
+    <section id="BOOKS" class="books-table-wrap" data-aos="fade-up">
+      <!-- <h3 class="h4 text-center">BOOKS</h3>
+      <hr> -->
+      <div class="mb-3 text-center">
+        <!-- optional search input (keep commented or uncomment if desired)
+        <input type="text" id="myInput" class="form-control" placeholder="Search for names.." onkeyup="myFunction()"> -->
+      </div>
+
+      <div class="table-responsive">
+        <table id="myTable" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Author</th>
+              <th>Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- rows populated by the existing JSON script -->
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center" id="pagination" style="margin-top:1rem;"></div>
+    </section>
+
+  </div> <!-- /.container -->
 <div class="align-text-center" id="pagination"></div> 
 <!-- <p class="align-text-right"><a href="index.html">HOME</a>
 </p> -->
 
 
-<script type="module" crossorigin="anonymous|use-credentials"> 
+<!-- JSON-based table population (kept, adapted to fill tbody) -->
+  <script type="module">
+    import jsonData from 'https://api.npoint.io/cd68855e120deda6905a' with { type: 'json' };
+    const obj = JSON.parse(JSON.stringify(jsonData));
+    const data = obj['Sheet1'] || [];
+    const rowsPerPage = 10;
+    let currentPage = 1;
 
-import jsonData from 'https://api.npoint.io/cd68855e120deda6905a' with  { type: 'json' };
+    function renderTable(page = 1) {
+      const tableBody = document.querySelector("#myTable tbody");
+      tableBody.innerHTML = "";
+      const startIndex = (page - 1) * rowsPerPage;
+      const sliced = data.slice(startIndex, startIndex + rowsPerPage);
+      sliced.forEach(item => {
+        const tr = document.createElement("tr");
+        const nameTd = document.createElement("td"); nameTd.innerHTML = item.name || "";
+        const authorTd = document.createElement("td"); authorTd.innerHTML = item.Author || "";
+        const downloadTd = document.createElement("td"); downloadTd.innerHTML = item.Download || "";
+        tr.appendChild(nameTd); tr.appendChild(authorTd); tr.appendChild(downloadTd);
+        tableBody.appendChild(tr);
+      });
+      renderPagination(page);
+    }
 
-// console.log(jsonData.repsonse);
+    function renderPagination(page = 1) {
+      const pagination = document.getElementById("pagination");
+      pagination.innerHTML = "";
+      const pageCount = Math.ceil(data.length / rowsPerPage) || 1;
+      for (let i = 1; i <= pageCount; i++) {
+        const a = document.createElement("a");
+        a.href = "#BOOKS";
+        a.innerText = i;
+        a.className = "mx-1";
+        a.onclick = (e) => { e.preventDefault(); renderTable(i); };
+        if (i === page) {
+          a.style.padding = "6px 10px"; a.style.backgroundColor = "#3498db"; a.style.color = "#fff"; a.style.borderRadius = "6px"; a.style.fontWeight = "700";
+        }
+        pagination.appendChild(a);
+      }
+    }
 
-	//const jsonData = await fetchJSONData().json();
-	const obj = JSON.parse(JSON.stringify(jsonData));
-	let data=obj['Sheet1'];
-	// console.log(data);
-	
+    // initial render (when module executed)
+    renderTable(currentPage);
+  </script>
 
-	const rowsPerPage = 10; 
-	let currentPage = 1; 
-
-	function displayTable(page) { 
-		const table = document.getElementById("myTable"); 
-		const startIndex = (page - 1) * rowsPerPage; 
-		const endIndex = startIndex + rowsPerPage; 
-		const slicedData = data.slice(startIndex, endIndex); 
-
-		// Clear existing table rows 
-		table.innerHTML = ` 
-	<tr> 
-		<th>Name</th> 
-		<th>Author</th> 
-		<th>Download</th> 
-	</tr> 
-`; 
-
-		// Add new rows to the table 
-		slicedData.forEach(item => { 
-			const row = table.insertRow(); 
-			const nameCell = row.insertCell(0); 
-			const AuthorCell = row.insertCell(1); 
-			const DownloadCell = row.insertCell(2); 
-			nameCell.innerHTML = item.name; 
-			AuthorCell.innerHTML = item.Author; 
-			DownloadCell.innerHTML = item.Download; 
-		}); 
-
-		// Update pagination 
-		updatePagination(page); 
-	} 
-
-	function updatePagination(currentPage) { 
-		const pageCount = Math.ceil(data.length / rowsPerPage); 
-		const paginationContainer = document.getElementById("pagination"); 
-		paginationContainer.innerHTML = ""; 
-
-		for (let i = 1; i <= pageCount; i++) { 
-			const pageLink = document.createElement("a"); 
-			pageLink.href = "readfiles.html#Team"; 
-			pageLink.innerText = i; 
-			pageLink.onclick = function () { 
-				displayTable(i); 
-			}; 
-			if (i === currentPage) { 
-				pageLink.style.padding = "5px 10px"; 
-				pageLink.style.border = "1px solid #ddd;"; 
-				pageLink.style.display = "inline-block"; 
-				pageLink.style.fontWeight = "bold"; 
-				pageLink.style.backgroundColor = "powderblue";
-				pageLink.style.borderRadius = "5px"; 
-			} 
-			paginationContainer.appendChild(pageLink); 
-			paginationContainer.appendChild(document.createTextNode(" ")); 
-		} 
-	} 
-
-	// Initial display 
-	displayTable(currentPage); 
-   
-</script> 
 <script>
  function myFunction() {
 		var input, filter, table, tr, td, i, txtValue;
