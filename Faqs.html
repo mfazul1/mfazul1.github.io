@@ -178,9 +178,19 @@ height:20px;
             padding: 20px;
             background-color: #fdfdfd;
         }
+        
     </style>
 </head>
-<body>
+<body data-spy="scroll" data-target=".fixed-top" oncontextmenu="return false">
+    <!-- Preloader -->
+	 <div class="spinner-wrapper">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
+	
 
     <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #2c3e50;">
@@ -204,7 +214,7 @@ height:20px;
       </div>
     </div>
   </nav>
-<br><br><br>
+<br>
     <!-- Header -->
     <header id="header" class="ex-header">
         <div class="container">
@@ -323,82 +333,6 @@ height:20px;
             });
         });
 
-        //Get the button
-        var mybutton = document.getElementById("scrollTopBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-          } else {
-            mybutton.style.display = "none";
-          }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-
-        // Share
-        function sharePage() {
-          if (navigator.share) {
-            navigator.share({
-              title: 'JEE IITian BOOKS - FAQ',
-              text: 'Check out the FAQ page on JEE IITian BOOKS!',
-              url: window.location.href
-            }).then(() => {
-              console.log('Thanks for sharing!');
-            })
-            .catch(console.error);
-          } else {
-            // fallback
-            alert("Sharing is not supported by your browser.");
-          }
-        }
-
-        // Cookie Consent
-        function acceptCookieConsent(){
-            document.getElementById("cookieConsent").style.display = "none";
-            setCookie("cookieConsent", "true", 365);
-        }
-
-        function checkCookieConsent(){
-            var cookie = getCookie("cookieConsent");
-            if (cookie != "true") {
-                document.getElementById("cookieConsent").style.display = "block";
-            }
-        }
-
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays*24*60*60*1000));
-            var expires = "expires="+ d.toUTCString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-        }
-
-        function getCookie(cname) {
-            var name = cname + "=";
-            var decodedCookie = decodeURIComponent(document.cookie);
-            var ca = decodedCookie.split(';');
-            for(var i = 0; i <ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-
-        window.onload = function() {
-            checkCookieConsent();
-        };
     </script>
 
  <!-- Footer -->
@@ -449,5 +383,7 @@ height:20px;
         document.getElementById("lastUpdated").innerHTML = "Last updated on " + document.lastModified;
     </script>
 
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/scripts.js"></script>
 </body>
 </html>
