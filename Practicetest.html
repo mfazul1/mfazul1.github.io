@@ -192,6 +192,15 @@ height:20px;
         color: #c62828;
         margin-top: 20px;
     }
+    .options label.correct {
+        background-color: #d4edda; /* light green */
+        border-color: #c3e6cb;
+    }
+
+    .options label.incorrect {
+        background-color: #f8d7da; /* light red */
+        border-color: #f5c6cb;
+    }
 </style>
 </head>
 <body data-spy="scroll" data-target=".fixed-top" oncontextmenu="return false">
@@ -359,7 +368,22 @@ function submitQuiz() {
 
     selectedQuestions.forEach((q, i) => {
         const userAns = selectedAnswers[`q${i}`];
-        if (userAns === q.answer) score++;
+        const correctAns = q.answer;
+        const options = document.querySelectorAll(`input[name="q${i}"]`);
+
+        options.forEach(option => {
+            const label = option.parentElement;
+            option.disabled = true; // disable all options for this question
+            if (option.value === correctAns) {
+                label.classList.add('correct');
+            } else if (option.checked) {
+                label.classList.add('incorrect');
+            }
+        });
+
+        if (userAns === correctAns) {
+            score++;
+        }
     });
 
     document.getElementById("score").innerHTML =
