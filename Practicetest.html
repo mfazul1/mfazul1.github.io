@@ -278,6 +278,7 @@ let allQuestions = [];
 let selectedQuestions = [];
 let selectedAnswers = {};
 const TOTAL_QUESTIONS = 10;
+let lastQuestionIndex = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
     loadQuestions();
@@ -295,7 +296,8 @@ async function loadQuestions() {
 
         if (!Array.isArray(allQuestions))
             throw new Error("Invalid JSON format — expected an array");
-
+        
+        allQuestions.sort(() => 0.5 - Math.random());
         pickRandomQuestions();
         renderQuiz();
 
@@ -307,8 +309,12 @@ async function loadQuestions() {
 }
 
 function pickRandomQuestions() {
-    let shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
-    selectedQuestions = shuffled.slice(0, TOTAL_QUESTIONS);
+    if (lastQuestionIndex + TOTAL_QUESTIONS > allQuestions.length) {
+        lastQuestionIndex = 0;
+        allQuestions.sort(() => 0.5 - Math.random());
+    }
+    selectedQuestions = allQuestions.slice(lastQuestionIndex, lastQuestionIndex + TOTAL_QUESTIONS);
+    lastQuestionIndex += TOTAL_QUESTIONS;
 }
 
 function renderQuiz() {
