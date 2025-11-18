@@ -144,36 +144,55 @@ width: 80px;
 align:left;
 height:20px;
 }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: #fff;
-            padding: 16px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .name {
-            font-weight: bold;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .tip {
-            margin-top: 8px;
-            font-size: 14px;
-            color: #333;
-        }
-    </style>
+    .question {
+        margin: 20px 0;
+        padding: 15px;
+        border-radius: 8px;
+        background: #fafafa;
+        border-left: 4px solid #4a90e2;
+    }
+    .options label {
+        display: block;
+        padding: 8px;
+        margin: 4px 0;
+        background: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid #ddd;
+    }
+    .options input {
+        margin-right: 10px;
+    }
+    .btn {
+        padding: 10px 20px;
+        margin-top: 20px;
+        background: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .btn:disabled {
+        background: #888;
+        cursor: not-allowed;
+    }
+    .score-box {
+        margin-top: 20px;
+        padding: 15px;
+        background: #e8f5e9;
+        border-left: 4px solid #2e7d32;
+        border-radius: 6px;
+    }
+    .error {
+        padding: 15px;
+        background: #ffebee;
+        border-left: 4px solid #c62828;
+        border-radius: 6px;
+        color: #c62828;
+        margin-top: 20px;
+    }
+</style>
 </head>
 <body data-spy="scroll" data-target=".fixed-top" oncontextmenu="return false">
 	
@@ -216,8 +235,8 @@ height:20px;
       </div>
     </div>
   </nav>
-
-  <!-- AtoZSEOTools Counter Code START -->
+	
+<!-- AtoZSEOTools Counter Code START -->
 <script>
 //var Count = GetURLParameter('count');
 const params = new URLSearchParams(document.location.search);
@@ -236,144 +255,126 @@ document.write('<img src="https://www.coolseotools.com/website-visitor-counter/c
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12"><br>
-				<h1 class="white">Tips From Toppers</h1>
+				<h1 class="white">JEE IIT Practice Test</h1>
 			</div> <!-- end of col -->
 		</div> <!-- end of row -->
 	</div> <!-- end of container -->
 </header> <!-- end of ex-header -->
 <!-- end of header -->
 
-    <div class="grid">
-        <!-- 20 Real Topper Cards (JEE Advanced AIR as reported in 2024 result sources) -->
+    <div id="error"></div>
+    <div id="quiz"></div>
 
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Ved Lahoti</div>
-            <div class="tip">JEE Advanced (AIR): 1<br>Tip: Create a disciplined study schedule and revise core concepts multiple times.</div>
-        </div>
+    <button id="submitBtn" class="btn" disabled>Submit & Reveal Score</button>
+    <button id="retakeBtn" class="btn" style="background:#555;">Retake Test</button>
 
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Aditya</div>
-            <div class="tip">JEE Advanced (AIR): 2<br>Tip: Prioritise understanding over rote learning; practice concept application.</div>
-        </div>
+    <p id="answeredCount">Answered: 0/10</p>
 
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Bhogalapalli Sandesh</div>
-            <div class="tip">JEE Advanced (AIR): 3<br>Tip: Solve previous years’ papers to recognise patterns and question styles.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Rhythm Kedia</div>
-            <div class="tip">JEE Advanced (AIR): 4<br>Tip: Take timed mock tests to improve speed and accuracy under pressure.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Putti Kushal Kumar</div>
-            <div class="tip">JEE Advanced (AIR): 5<br>Tip: Maintain short notes for last-minute revisions and quick recall.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Rajdeep Mishra</div>
-            <div class="tip">JEE Advanced (AIR): 6<br>Tip: Analyse every mock test error and correct the underlying conceptual gap.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Dwija Dharmeshkumar Patel</div>
-            <div class="tip">JEE Advanced (AIR): 7<br>Tip: Balance all subjects; give weak areas targeted daily practice.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Koduru Tejeswar</div>
-            <div class="tip">JEE Advanced (AIR): 8<br>Tip: Keep your study space tidy and distraction-free for focused sessions.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Dhruvin Hemant Doshi</div>
-            <div class="tip">JEE Advanced (AIR): 9<br>Tip: Simulate exam conditions for practice tests to build stamina and focus.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Alladaboina S S D B Sidhvik Suhas</div>
-            <div class="tip">JEE Advanced (AIR): 10<br>Tip: Revise formulas and key derivations daily for quick recall during exams.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Parth Bawankule</div>
-            <div class="tip">JEE Advanced (AIR): 11<br>Tip: Mark difficult problems and revisit them regularly to reduce fear of tough questions.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Raghav Sharma</div>
-            <div class="tip">JEE Advanced (AIR): 12<br>Tip: Break large topics into smaller tasks; small wins keep motivation high.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Matcha Balaaditya</div>
-            <div class="tip">JEE Advanced (AIR): 13<br>Tip: Use error logs to track recurring mistakes and focus revisions there.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Bibaswan Biswas</div>
-            <div class="tip">JEE Advanced (AIR): 14<br>Tip: Teach tough concepts to a peer or to yourself — teaching reveals gaps fast.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Sumukh M G</div>
-            <div class="tip">JEE Advanced (AIR): 15<br>Tip: Keep mock-test review sessions longer than the test itself to deeply analyse performance.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Chunchikala Sreecharan</div>
-            <div class="tip">JEE Advanced (AIR): 16<br>Tip: Trust a small set of good-quality books instead of flipping many resources.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Gunda Joshmitha</div>
-            <div class="tip">JEE Advanced (AIR): 17<br>Tip: Maintain consistent sleep and short exercise breaks to keep the mind fresh.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Hemant Godve</div>
-            <div class="tip">JEE Advanced (AIR): 18<br>Tip: Practice mixed-topic question sets to learn switching between concepts fast.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Sangye Norphel Sherpa</div>
-            <div class="tip">JEE Advanced (AIR): 19<br>Tip: Avoid last-minute new topics; focus on consolidation and accuracy instead.</div>
-        </div>
-
-        <div class="card">
-            <img src="img/topper.png" />
-            <div class="name">Rajdeep Mishra</div>
-            <div class="tip">JEE Advanced (AIR): 20<br>Tip: Keep a calm exam-day routine — small rituals (breakfast, setup) reduce anxiety.</div>
-        </div>
-
-    </div>
-
-</div>
-<div style="background-color: #ffffff;">
-<p> &nbsp; </p>
+    <div id="score"></div>
 </div>
 
- <!-- Footer -->
+<script>
+let allQuestions = [];
+let selectedQuestions = [];
+let selectedAnswers = {};
+const TOTAL_QUESTIONS = 10;
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadQuestions();
+    document.getElementById("submitBtn").addEventListener("click", submitQuiz);
+    document.getElementById("retakeBtn").addEventListener("click", retakeQuiz);
+});
+
+async function loadQuestions() {
+    try {
+        const res = await fetch("https://api.npoint.io/6dada16824b2db8e7a55");
+
+        if (!res.ok) throw new Error("Unable to load questions.json");
+
+        allQuestions = await res.json();
+
+        if (!Array.isArray(allQuestions))
+            throw new Error("Invalid JSON format — expected an array");
+
+        pickRandomQuestions();
+        renderQuiz();
+
+    } catch (err) {
+        document.getElementById("error").innerHTML =
+            `<div class="error"><b>Error:</b> ${err.message}<br>
+             Make sure <b>questions.json</b> is in the same folder and running through a local server.</div>`;
+    }
+}
+
+function pickRandomQuestions() {
+    let shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
+    selectedQuestions = shuffled.slice(0, TOTAL_QUESTIONS);
+}
+
+function renderQuiz() {
+    const quizDiv = document.getElementById("quiz");
+    quizDiv.innerHTML = "";
+
+    selectedQuestions.forEach((q, i) => {
+        let html = `
+        <div class="question">
+            <p><b>Q${i+1}.</b> ${q.question}</p>
+            <div class="options">`;
+
+        q.options.forEach(opt => {
+            html += `
+                <label>
+                    <input type="radio" name="q${i}" value="${opt}">
+                    ${opt}
+                </label>`;
+        });
+
+        html += `</div></div>`;
+        quizDiv.innerHTML += html;
+    });
+
+    document.querySelectorAll("input[type=radio]").forEach(input => {
+        input.addEventListener("change", updateAnswers);
+    });
+}
+
+function updateAnswers(e) {
+    const name = e.target.name;
+    selectedAnswers[name] = e.target.value;
+
+    const answered = Object.keys(selectedAnswers).length;
+    document.getElementById("answeredCount").innerText = `Answered: ${answered}/10`;
+
+    document.getElementById("submitBtn").disabled = answered < TOTAL_QUESTIONS;
+}
+
+function submitQuiz() {
+    let score = 0;
+
+    selectedQuestions.forEach((q, i) => {
+        const userAns = selectedAnswers[`q${i}`];
+        if (userAns === q.answer) score++;
+    });
+
+    document.getElementById("score").innerHTML =
+        `<div class="score-box"><b>Your Score:</b> ${score} / ${TOTAL_QUESTIONS}</div>`;
+
+    document.getElementById("submitBtn").disabled = true;
+}
+
+function retakeQuiz() {
+    selectedAnswers = {};
+    document.getElementById("score").innerHTML = "";
+    document.getElementById("answeredCount").innerText = "Answered: 0/10";
+    document.getElementById("submitBtn").disabled = true;
+
+    pickRandomQuestions();
+    renderQuiz();
+}
+</script>
+
+
+<!-- Footer -->
   <footer class="footer-section bg-dark text-white pt-5 pb-3 mt-4">
     <div class="container">
       <div class="row text-center text-md-left">
