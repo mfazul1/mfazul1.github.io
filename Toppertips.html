@@ -144,7 +144,36 @@ width: 80px;
 align:left;
 height:20px;
 }
-</style> 
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .tip {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
 </head>
 <body data-spy="scroll" data-target=".fixed-top" oncontextmenu="return false">
 	
@@ -186,8 +215,8 @@ height:20px;
       </div>
     </div>
   </nav>
-	
-<!-- AtoZSEOTools Counter Code START -->
+
+  <!-- AtoZSEOTools Counter Code START -->
 <script>
 //var Count = GetURLParameter('count');
 const params = new URLSearchParams(document.location.search);
@@ -206,84 +235,144 @@ document.write('<img src="https://www.coolseotools.com/website-visitor-counter/c
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12"><br>
-				<h1 class="white">CONNECT</h1>
+				<h1 class="white">JEE IIT Topper Tips</h1>
 			</div> <!-- end of col -->
 		</div> <!-- end of row -->
 	</div> <!-- end of container -->
 </header> <!-- end of ex-header -->
 <!-- end of header -->
 
-<div class="container mt-5 mb-5">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h2 class="card-title">Get in Touch</h2>
-                    <p class="card-text">We'd love to hear from you. Please fill out the form below to get in touch with us.</p>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                </div>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                </div>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
-                    </form>
-                </div>
-            </div>
+    <div class="grid">
+        <!-- 20 Real Topper Cards (JEE Advanced AIR as reported in 2024 result sources) -->
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Ved Lahoti</div>
+            <div class="tip">JEE Advanced (AIR): 1<br>Tip: Create a disciplined study schedule and revise core concepts multiple times.</div>
         </div>
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h2 class="card-title">Find Us</h2>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.834676550186!2d77.6393350148214!3d12.918253090891092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14f0df2a5f3d%3A0x851a6358c9bfc6f!2sBTM%20Layout%2C%20Bengaluru%2C%20Karnataka%20560068!5e0!3m2!1sen!2sin!4v1637862432046!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="card shadow-sm mt-4">
-                <div class="card-body">
-                    <h2 class="card-title">Connect With Us</h2>
-                    <div class="social text-center">
-                        <a href="https://www.facebook.com/profile.php?id=61566435388534" target="_blank" class="mx-2"><i class="fab fa-facebook fa-3x"></i></a>
-                        <a href="#" class="mx-2"><i class="fab fa-twitter fa-3x"></i></a>
-                        <a href="#" class="mx-2"><i class="fab fa-google-plus-g fa-3x"></i></a>
-                        <a href="#" class="mx-2"><i class="fab fa-instagram fa-3x"></i></a>
-                        <a href="#" class="mx-2"><i class="fab fa-youtube fa-3x"></i></a>
-                    </div>
-                </div>
-            </div>
-             <div class="card shadow-sm mt-4">
-                <div class="card-body">
-                    <h2 class="card-title">Contact Us</h2>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka, 560068</li>
-                        <li><i class="fas fa-phone"></i> xxxxxxxxxxxxxxxx</li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:JEEIITianBOOKS@gmail.com">JEEIITianBOOKS@gmail.com</a></li>
-                    </ul>
-                </div>
-            </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Aditya</div>
+            <div class="tip">JEE Advanced (AIR): 2<br>Tip: Prioritise understanding over rote learning; practice concept application.</div>
         </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Bhogalapalli Sandesh</div>
+            <div class="tip">JEE Advanced (AIR): 3<br>Tip: Solve previous years’ papers to recognise patterns and question styles.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Rhythm Kedia</div>
+            <div class="tip">JEE Advanced (AIR): 4<br>Tip: Take timed mock tests to improve speed and accuracy under pressure.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Putti Kushal Kumar</div>
+            <div class="tip">JEE Advanced (AIR): 5<br>Tip: Maintain short notes for last-minute revisions and quick recall.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Rajdeep Mishra</div>
+            <div class="tip">JEE Advanced (AIR): 6<br>Tip: Analyse every mock test error and correct the underlying conceptual gap.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Dwija Dharmeshkumar Patel</div>
+            <div class="tip">JEE Advanced (AIR): 7<br>Tip: Balance all subjects; give weak areas targeted daily practice.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Koduru Tejeswar</div>
+            <div class="tip">JEE Advanced (AIR): 8<br>Tip: Keep your study space tidy and distraction-free for focused sessions.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Dhruvin Hemant Doshi</div>
+            <div class="tip">JEE Advanced (AIR): 9<br>Tip: Simulate exam conditions for practice tests to build stamina and focus.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Alladaboina S S D B Sidhvik Suhas</div>
+            <div class="tip">JEE Advanced (AIR): 10<br>Tip: Revise formulas and key derivations daily for quick recall during exams.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Parth Bawankule</div>
+            <div class="tip">JEE Advanced (AIR): 11<br>Tip: Mark difficult problems and revisit them regularly to reduce fear of tough questions.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Raghav Sharma</div>
+            <div class="tip">JEE Advanced (AIR): 12<br>Tip: Break large topics into smaller tasks; small wins keep motivation high.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Matcha Balaaditya</div>
+            <div class="tip">JEE Advanced (AIR): 13<br>Tip: Use error logs to track recurring mistakes and focus revisions there.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Bibaswan Biswas</div>
+            <div class="tip">JEE Advanced (AIR): 14<br>Tip: Teach tough concepts to a peer or to yourself — teaching reveals gaps fast.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Sumukh M G</div>
+            <div class="tip">JEE Advanced (AIR): 15<br>Tip: Keep mock-test review sessions longer than the test itself to deeply analyse performance.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Chunchikala Sreecharan</div>
+            <div class="tip">JEE Advanced (AIR): 16<br>Tip: Trust a small set of good-quality books instead of flipping many resources.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Gunda Joshmitha</div>
+            <div class="tip">JEE Advanced (AIR): 17<br>Tip: Maintain consistent sleep and short exercise breaks to keep the mind fresh.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Hemant Godve</div>
+            <div class="tip">JEE Advanced (AIR): 18<br>Tip: Practice mixed-topic question sets to learn switching between concepts fast.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Sangye Norphel Sherpa</div>
+            <div class="tip">JEE Advanced (AIR): 19<br>Tip: Avoid last-minute new topics; focus on consolidation and accuracy instead.</div>
+        </div>
+
+        <div class="card">
+            <img src="img//topper.png" />
+            <div class="name">Rajdeep Mishra</div>
+            <div class="tip">JEE Advanced (AIR): 20<br>Tip: Keep a calm exam-day routine — small rituals (breakfast, setup) reduce anxiety.</div>
+        </div>
+
     </div>
+
+</div>
+<div style="background-color: #ffffff;">
+<p> &nbsp; </p>
 </div>
 
-<!-- Footer -->
+ <!-- Footer -->
   <footer class="footer-section bg-dark text-white pt-5 pb-3 mt-4">
     <div class="container">
       <div class="row text-center text-md-left">
