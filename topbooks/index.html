@@ -101,9 +101,7 @@
 <style> 
      .books-grid {
        display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 20px;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 25px;
        padding: 20px;
      }
@@ -112,13 +110,9 @@
      .book-item img {
        width: 100%;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      height: 250px;
       border-radius: 12px;
       box-shadow: 10px 4px 8px rgba(0,0,0,0.1);
        transition: transform 0.2s;
-      object-fit: cover;
      }
      .book-item img:hover {
        transform: scale(1.05);
