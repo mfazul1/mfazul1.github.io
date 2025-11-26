@@ -668,9 +668,8 @@ input[type='checkbox'] {
 	transition: all 0.2s ease;
 }
 
-.navbar-custom .nav-item .nav-link:hover,
-.navbar-custom .nav-item .nav-link.active {
-	color: #ffbd50;
+.navbar-custom .nav-item .nav-link:hover {
+    color: yellow !important;
 }
 
 /* Dropdown Menu */
@@ -715,7 +714,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item:hover .item-text {
-	color: #ffbd50;
+	color: yellow;
 }
 
 .navbar-custom .dropdown-divider {
@@ -1826,7 +1825,7 @@ a:hover.back-to-top {
 
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
 	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-		color: #ffbd50;
+		color: yellow;
 	}
 
 	.navbar-custom .dropdown-menu {
