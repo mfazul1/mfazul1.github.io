@@ -1,0 +1,71 @@
+// including variables and mixins
+@import "theme/variables";
+@import "theme/mixins";
+@import "theme/flexbox";
+@import "theme/reset";
+
+// Custom Scss
+@import "theme/predefined";
+@import "theme/header";
+@import "theme/banner";
+@import "theme/home";
+@import "theme/blog";
+@import "theme/elements";
+@import "theme/footer";
+
+.what-you-get-section {
+    background-color: #e9ecef;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.author-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.author-img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 10px;
+    border-radius: 50%;
+    // object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid $primary-color;
+}
+.author-details h6 {
+    font-weight: 700;
+}
+.colorful-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.colorful-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.colorful-table th,
+.colorful-table td {
+    padding: 12px 15px;
+}
+
+.colorful-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.colorful-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}

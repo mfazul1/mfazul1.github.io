@@ -2217,4 +2217,213 @@ a:hover.back-to-top {
 	}
 	/* end of extra pages */
 }
+.swiper-container {
+  width: 100% !important;
+  height: auto !important;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fix for Swiper container height collapse in the showcase section */
+    .showcase-slider-wrap {
+      /* Apply aspect ratio padding for responsiveness */
+      padding-bottom: 66.66%; 
+      height: 0; 
+      position: relative; 
+    }
+    .showcase-slider-wrap .swiper-container {
+      position: absolute; 
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* NEW: Define a fixed height for larger screens to ensure initialization */
+    @media (min-width: 768px) {
+        .showcase-slider-wrap {
+            height: 250px; /* Adjust this value (e.g., 250px) to the desired height on desktop */
+            padding-bottom: 0; /* Remove padding hack when fixed height is used */
+        }
+        .showcase-slider-wrap .swiper-container {
+            position: relative; /* Change back for better flow */
+        }
+        .showcase-slider-wrap img {
+            height: 100%;
+            object-fit: cover; /* Ensures images fill the fixed height without distortion */
+        }
+    }
 /* end of min-width width 1200px */
+
+    .books-grid {
+       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+       padding: 20px;
+     }
+     .book-item {
+     }
+     .book-item img {
+       width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 10px 4px 8px rgba(0,0,0,0.1);
+       transition: transform 0.2s;
+     }
+     .book-item img:hover {
+       transform: scale(1.05);
+    }
+
+	.grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .tip {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+
+.faq-section {
+            padding: 60px 0;
+        }
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .faq-header h2 {
+            font-weight: 600;
+            color: #333;
+        }
+        .faq-search {
+            margin-bottom: 30px;
+        }
+        .card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            background-color: #fff;
+            border-bottom: none;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .card-header h5 {
+            margin: 0;
+            font-weight: 600;
+            color: #007bff;
+        }
+        .card-body {
+            padding: 20px;
+            background-color: #fdfdfd;
+        }
+        .card-body p {
+			margin: 0;
+			color: #555;
+			line-height: 1.6;
+		}
+
+.books-table-wrap {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.colorful-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: 'Roboto', sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.colorful-table thead tr {
+  background: -webkit-linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
+  background: linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.colorful-table th,
+.colorful-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.colorful-table tbody tr {
+  background-color: #f8f9fa;
+}
+
+.colorful-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.colorful-table tbody tr:hover {
+  background-color: #e9ecef;
+  color: #7c32ff;
+  font-weight: 500;
+}
+
+.books-table-wrap .form-control {
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    padding: 10px 20px;
+}
+
+.books-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 25px;
+padding: 20px;
+}
+.book-item {
+}
+.book-item img {
+width: 100%;
+height: auto;
+border-radius: 12px;
+box-shadow: 10px 4px 8px rgba(0,0,0,0.1);
+transition: transform 0.2s;
+}
+.book-item img:hover {
+transform: scale(1.05);
+}

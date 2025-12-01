@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "default": "I'm sorry, I'm not sure how to answer that. I can help with questions about the best books for JEE/IIT, how to download them, or information about this website. For more complex queries, you may need to consult a human expert."
     };
 
-    const DefaultBooksLink ="You can find all the essential books for JEE/IIT preparation on our <b><a href='readfiles.html' target='_blank'>BOOKS</a></b> page. Happy studying!";
+    const DefaultBooksLink ="You can find all the essential books for JEE/IIT preparation on our <b>Books</b> page. Happy studying!";
 
     // --- Chatbot Functions ---
 

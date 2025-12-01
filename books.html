@@ -1,0 +1,324 @@
+ <!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <!-- Author Meta -->
+  <meta name="author" content="colorlib" />
+  <!-- Meta Description -->
+  <meta name="description" content="" />
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="" />
+  <!-- meta character set -->
+  <meta charset="UTF-8" />
+  <!-- Site Title -->
+  <title>Jeeiitian Books</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700" rel="stylesheet" />
+  <!--
+      CSS
+      =============================================
+    -->
+  <link rel="stylesheet" href="css/linearicons.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/hexagons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    .colorful-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .colorful-table thead tr {
+      background-color: #009879;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    .colorful-table th,
+    .colorful-table td {
+      padding: 12px 15px;
+    }
+
+    .colorful-table tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ================ Start Header Area ================= -->
+  <header class="default-header">
+    <nav class="navbar navbar-expand-lg  navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt=""  style="width: 150px; height: 30px;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="lnr lnr-menu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+           <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="books.html">Free Books</a></li>
+            <li><a href="topbooks.html">Top Books</a></li>
+            <li><a href="toppertips.html">Topper Tips</a></li>     
+            <li><a href="faqs.html">Faqs</a></li>   
+            <li><a href="contacts.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- ================ End Header Area ================= -->
+
+    <!-- ================ start banner Area ================= -->
+    <section class="banner-area">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-12 banner-right">
+                    <h1 class="text-white">
+                        Free Books
+                    </h1>
+                    <p class="mx-auto text-white  mt-20 mb-40">
+                        Find a wide range of free books to aid your learning and preparation.
+                    </p>
+                    <div class="link-nav">
+                        <span class="box">
+                            <a href="index.html">Home </a>
+                            <i class="lnr lnr-arrow-right"></i>
+                            <a href="books.html">Books </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End banner Area ================= -->
+
+    <!--================ Start Course Details Area =================-->
+    <section class="course-details-area section-gap">
+       <div id="books" class="container-fluid" data-aos="fade-down"
+data-aos-offset="200"
+data-aos-delay="50"
+data-aos-duration="1000">
+	
+<!-- <h3 class="display-9 align-text-center">Books </h3> -->
+<!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."> -->
+
+<div style="background-color: #f1faff;">
+<!-- BOOKS dynamic table -->
+    <section id="BOOKS" class="books-table-wrap" data-aos="fade-up">
+      <div class="mb-3 text-center">
+        <input type="text" id="myInput" class="form-control" placeholder="Search for book names..." onkeyup="myFunction()">
+      </div>
+
+      <div class="table-responsive">
+        <table id="myTable" class="table colorful-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Author</th>
+              <th>Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- rows populated by the existing JSON script -->
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center" id="pagination" style="margin-top:1rem;"></div>
+    </section>
+
+  </div> <!-- /.container -->
+<div class="align-text-center" id="pagination"></div> 
+<!-- <p class="align-text-right"><a href="index.html">HOME</a>
+</p> -->
+
+  </div>
+</div>
+    </section>
+    <!--================ End Course Details Area =================-->
+
+   <!-- ================ start footer Area ================= -->
+  <footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 single-footer-widget">
+        <br/><br/><br/><br/><br/>
+
+					<h4>About Us</h4>
+					<p>Jeeiitian Books is your one-stop destination for cracking the IIT JEE. We provide curated books, practice tests, and expert guidance to help you achieve your dream.</p>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+        <br/><br/><br/><br/><br/>
+
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="topbooks.html">Top Books</a></li>
+						<li><a href="books.html">Free Books</a></li>
+						<li><a href="practicetest.html">Practice Tests</a></li>
+						<li><a href="toppertips.html">Topper Tips</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+        <br/><br/><br/><br/><br/>
+
+					<h4>Subjects</h4>
+					<ul>
+						<li><a href="#">Physics</a></li>
+						<li><a href="#">Chemistry</a></li>
+						<li><a href="#">Mathematics</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+                  <br/><br/><br/><br/><br/>
+
+					<h4>Resources</h4>
+					<ul>
+						<li><a href="faqs.html">FAQs</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="contacts.html">Contact Us</a></li>
+					</ul>
+				</div>
+
+			<div class="footer-bottom row align-items-center">
+				<p class="footer-text m-0 col-lg-8 col-md-12">
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="https://colorlib.com" target="_blank">Mohammed Fazuluddin</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				<div class="col-lg-4 col-md-12 footer-social">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a> 
+				</div>
+			</div>
+		</div>
+	</footer>
+  <!-- ================ End footer Area ================= -->
+
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/hexagons.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/main.js"></script>
+
+    
+<!-- JSON-based table population (kept, adapted to fill tbody) -->
+  <script type="module">
+    import jsonData from 'https://api.npoint.io/cd68855e120deda6905a' with { type: 'json' };
+    const obj = JSON.parse(JSON.stringify(jsonData));
+    const data = obj['Sheet1'] || [];
+    const rowsPerPage = 10;
+    let currentPage = 1;
+
+    function renderTable(page = 1) {
+      const tableBody = document.querySelector("#myTable tbody");
+      tableBody.innerHTML = "";
+      const startIndex = (page - 1) * rowsPerPage;
+      const sliced = data.slice(startIndex, startIndex + rowsPerPage);
+      sliced.forEach(item => {
+        const tr = document.createElement("tr");
+        const nameTd = document.createElement("td"); nameTd.innerHTML = item.name || "";
+        const authorTd = document.createElement("td"); authorTd.innerHTML = item.Author || "";
+        const downloadTd = document.createElement("td"); downloadTd.innerHTML = item.Download || "";
+        tr.appendChild(nameTd); tr.appendChild(authorTd); tr.appendChild(downloadTd);
+        tableBody.appendChild(tr);
+      });
+      renderPagination(page);
+    }
+
+    function renderPagination(page = 1) {
+      const pagination = document.getElementById("pagination");
+      pagination.innerHTML = "";
+      const pageCount = Math.ceil(data.length / rowsPerPage) || 1;
+      for (let i = 1; i <= pageCount; i++) {
+        const a = document.createElement("a");
+        a.href = "#BOOKS";
+        a.innerText = i;
+        a.className = "mx-1";
+        a.onclick = (e) => { e.preventDefault(); renderTable(i); };
+        if (i === page) {
+          a.style.padding = "6px 10px"; a.style.backgroundColor = "#3498db"; a.style.color = "#fff"; a.style.borderRadius = "6px"; a.style.fontWeight = "700";
+        }
+        pagination.appendChild(a);
+      }
+    }
+
+    // initial render (when module executed)
+    renderTable(currentPage);
+  </script>
+
+<script>
+ function myFunction() {
+		var input, filter, table, tr, td, i, txtValue;
+		input = document.getElementById("myInput");
+		filter = input.value.toUpperCase();
+		table = document.getElementById("myTable");
+		tr = table.getElementsByTagName("tr");
+		for (i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[0];
+			if (td) {
+			txtValue = td.textContent || td.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";
+			} else {
+				tr[i].style.display = "none";
+			}
+			}       
+		}
+		}
+</script>
+</div>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+<script type='application/ld+json'>{
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name" : "JEEIITIANBOOKS.IN",
+        "url" : "https://www.jeeiitianbooks.in/"
+        }</script>
+
+<!-- Scripts -->
+<script src="../js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+<script src="../js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+<script src="../js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+<script src="../js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+<script src="../js/jquery.countdown.min.js"></script> <!-- The Final Countdown plugin for jQuery -->
+<script src="../js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+<script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+<script src="../js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+<script src="../js/scripts.js"></script> <!-- Custom scripts -->
+
+
+</body>
+
+</html>
