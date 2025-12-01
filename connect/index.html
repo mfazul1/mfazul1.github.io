@@ -379,8 +379,21 @@ height:20px;
 				title: 'Hyderabad'
 			});
 		}
-	</script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA&callback=initMap">
+
+		// Fetch the Google API key and load the Google Maps script
+		fetch('https://api.npoint.io/fee3f4ff83fee2343312/google_api_key')
+			.then(response => response.json())
+			.then(data => {
+				const apiKey = data.google_api_key;
+				if (apiKey) {
+					const script = document.createElement('script');
+					script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+					script.async = true;
+					script.defer = true;
+					document.body.appendChild(script);
+				}
+			})
+			.catch(error => console.error('Error fetching Google API key:', error));
 	</script>
 	
 </body>
