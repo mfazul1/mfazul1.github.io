@@ -25,7 +25,6 @@ Table Of Contents:
 16. Contact
 17. Footer
 18. Copyright
-19. Back To Top Button
 20. Extra Pages
 21. Media Queries
 ******************************************/
@@ -1560,27 +1559,6 @@ input[type='checkbox'] {
 	color: #999;
 }
 
-
-/**********************************/
-/*     19. Back To Top Button     */
-/**********************************/
-a.back-to-top {
-	position: fixed;
-	z-index: 999;
-	left: 0.75rem;   /* changed from right to left */
-	bottom: 0.75rem;
-	display: none;
-	width: 2.625rem;
-	height: 2.625rem;
-	border-radius: 1.875rem;
-	background: #1000f3 url("../img/up-arrow.png") no-repeat center 47%;
-	background-size: 1.125rem 1.125rem;
-	text-indent: -9999px;
-}
-
-a:hover.back-to-top {
-	background-color: #1000f3; 
-}
 
 
 /***************************/
