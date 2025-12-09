@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const showBtn = document.getElementById('show-btn');
     const submitBtn = document.getElementById('submit-btn');
     const subjectSelect = document.getElementById('subject-select');
+    const classSelect = document.getElementById('class-select');
+    const chapterSelect = document.getElementById('chapter-select');
     const difficultySelect = document.getElementById('difficulty-select');
     const numQuestionsSelect = document.getElementById('num-questions-select');
     const scoreDisplay = document.getElementById('score-display');
@@ -12,11 +14,17 @@ document.addEventListener('DOMContentLoaded', function () {
     let GROQ_API_KEY = '';
     let questionsData = [];
     let userAnswers = {};
+    let chapterData = {};
 
     getSecret().then(key => {
         GROQ_API_KEY = key;
         // console.log("GROQ API Key loaded successfully."); // For debugging
     });
+
+    fetch('https://api.npoint.io/aa477d0ba2e0d392f45f')
+        .then(response => response.json())
+        .then(data => chapterData = data)
+        .catch(error => console.error('Error fetching chapter data:', error));
 
     async function getSecret() {
         try {
@@ -32,6 +40,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showBtn.addEventListener('click', fetchQuestions);
     submitBtn.addEventListener('click', handleSubmit);
+
+$(classSelect).niceSelect();
+$(subjectSelect).niceSelect();
+$(chapterSelect).niceSelect();
+
+// Listen for real change events
+$(classSelect).on('change', updateChapterSelect);
+$(subjectSelect).on('change', updateChapterSelect);
+
     // Event listener for the "OK" button in the modal to clear the score display
     $('#scoreModal').on('hidden.bs.modal', function () {
         scoreDisplay.innerHTML = ''; // Clear the inline score display
@@ -39,12 +56,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     async function fetchQuestions() {
-        const subject = subjectSelect.value;
+        let subject = subjectSelect.value;
+        const selectedClass = classSelect.value;
+        const chapter = chapterSelect.value;
         const difficulty = difficultySelect.value;
         const numQuestions = numQuestionsSelect.value;
 
-        if (subject === 'Not selected' || difficulty === 'Not selected' || numQuestions === 'Not selected') {
-            alert('Please select a subject, difficulty level, and number of questions.');
+
+        if (selectedClass === 'Not selected' || subject === 'Not selected' || chapter === 'Not selected' || difficulty === 'Not selected' || numQuestions === 'Not selected') {
+            alert('Please select all fields before proceeding.');
             return;
         }
 
@@ -58,7 +78,10 @@ document.addEventListener('DOMContentLoaded', function () {
         scoreDisplay.innerHTML = '';
         userAnswers = {};
 
-        const prompt = `Generate ${numQuestions} multiple-choice questions on the subject of ${subject} with ${difficulty} difficulty for the JEE exam. Return the response as a valid JSON array where each object has 'question' (string), 'options' (an array of 4 strings), and 'answer' (the correct option string).`;
+        // Correct "Maths" to "Mathematics" for API consistency
+        const apiSubject = (subject === 'Maths') ? 'Mathematics' : subject;
+
+        const prompt = `Generate ${numQuestions} multiple-choice questions for ${selectedClass.replace('_', ' ')} on the chapter '${chapter}' from the subject ${apiSubject} for the JEE exam with ${difficulty} difficulty. Return the response as a valid JSON array where each object has 'question' (string), 'options' (an array of 4 strings), and 'answer' (the correct option string).`;
 
         try {
             const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -99,6 +122,30 @@ document.addEventListener('DOMContentLoaded', function () {
         } catch (error) {
             console.error("Error calling Groq API:", error);
             questionBox.innerHTML = "Sorry, I couldn't fetch the questions. Please try again. If the problem persists, the API might be down.";
+        }
+    }
+
+    function updateChapterSelect() {
+        console.log('Updating chapter select options...');
+        const selectedClass = classSelect.value;
+        let selectedSubject = subjectSelect.value;
+
+        chapterSelect.innerHTML = '<option>Not selected</option>';
+        chapterSelect.disabled = true;
+
+        // Handle the "Maths" vs "Mathematics" discrepancy
+        const dataSubject = (selectedSubject === 'Maths') ? 'Mathematics' : selectedSubject;
+
+        if (selectedClass !== 'Not selected' && selectedSubject !== 'Not selected' && chapterData[selectedClass] && chapterData[selectedClass][dataSubject]) {
+            const chapters = chapterData[selectedClass][dataSubject];
+            chapters.forEach(chapter => {
+                const option = document.createElement('option');
+                option.value = chapter;
+                option.textContent = chapter;
+                chapterSelect.appendChild(option);
+            });
+            chapterSelect.disabled = false;
+            $(chapterSelect).niceSelect('update'); // Refresh the nice-select dropdown
         }
     }
 
