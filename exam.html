@@ -4,7 +4,7 @@
   <!-- Mobile Specific Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Favicon -->
-  <link rel="shortcut icon" href="../img/favicon.png" />
+  <link rel="shortcut icon" href="img/favicon.png" />
   <!-- Author Meta -->
   <meta name="author" content="colorlib" />
   <!-- Meta Description -->
@@ -21,16 +21,16 @@
       CSS
       =============================================
     -->
-  <link rel="stylesheet" href="../css/linearicons.css" />
-  <link rel="stylesheet" href="../css/font-awesome.min.css" />
-  <link rel="stylesheet" href="../css/bootstrap.css" />
-  <link rel="stylesheet" href="../css/magnific-popup.css" />
-  <link rel="stylesheet" href="../css/owl.carousel.css" />
-  <link rel="stylesheet" href="../css/nice-select.css">
-  <link rel="stylesheet" href="../css/hexagons.min.css" />
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" /> -->
-    <link rel="stylesheet" href="../css/exam.css" />
-  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="css/linearicons.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/hexagons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+  <link rel="stylesheet" href="css/main.css" />
+      <link rel="stylesheet" href="css/exam.css" />
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
@@ -47,16 +47,16 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li><a href="../">Home</a></li>
-              <li><a href="../about/">About</a></li>
-              <li><a href="../books/">Free Books</a></li>
-              <li><a href="../topbooks/">Top Books</a></li>
-              <li><a href="../toppertips/">Topper Tips</a></li> 
-              <li class="active"><a href="./">Practice Test</a></li>     
-              <li><a href="../faqs/">Faqs</a></li>   
-              <li><a href="../connect/">Connect</a></li>
-            </ul>
+          <ul class="navbar-nav">
+              <li><a href="../">Home</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../books/">Free Books</a></li>
+            <li><a href="../topbooks/">Top Books</a></li>
+            <li><a href="../toppertips/">Topper Tips</a></li> 
+			      <li><a href="./">Practice Test</a></li>     
+            <li><a href="../faqs/">Faqs</a></li>   
+            <li><a href="../connect/">Connect</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -112,59 +112,17 @@
             </div>
 
             <div>
-                <label>Number of Questions</label><br>
-                <select id="num-questions-select">
-                    <option selected>Not selected</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-            </div>
-
-            <div>
                 <button id="show-btn">Show</button>
             </div>
         </div>
 
         <div class="question-box" id="question-box">
-            Your Questions...
+            Questions
         </div>
 
-        <div class="submit-container">
-            <button class="submit-btn" id="submit-btn" disabled>Submit</button>
-            <span id="score-display"></span>
-        </div>
-
-        <!-- Score Modal -->
-        <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="scoreModalLabel">Test Results</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <h3 id="final-score-text"></h3>
-                        <p class="modal-message">Great job! Review your answers to learn more.</p>
-                    </div>
-                    <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-primary" id="score-modal-ok-btn" data-dismiss="modal">OK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <button class="submit-btn" id="submit-btn" disabled>Submit</button>
 
     </div> <!-- End of exam-container -->
-
     
       <!-- ================ start footer Area ================= -->
   <footer class="footer-area section-gap">
@@ -223,21 +181,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </footer>
 <!-- ================ End footer Area ================= -->
 
-<script src="../js/vendor/jquery-2.2.4.min.js"></script>
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
 	 crossorigin="anonymous"></script>
-	<script src="../js/vendor/bootstrap.min.js"></script>
-	<script src="../js/jquery.ajaxchimp.min.js"></script>
-	<script src="../js/jquery.magnific-popup.min.js"></script>
-	<script src="../js/parallax.min.js"></script>
-	<script src="../js/owl.carousel.min.js"></script>
-	<script src="../js/jquery.sticky.js"></script>
-	<script src="../js/hexagons.min.js"></script>
-	<script src="../js/jquery.counterup.min.js"></script>
-	<script src="../js/waypoints.min.js"></script>
-	<script src="../js/jquery.nice-select.min.js"></script>
-	<script src="../js/main.js"></script>
-    <script src="../js/exam.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/hexagons.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/main.js"></script>
+    <script src="js/exam.js"></script>
 </body>
 </html>
-<!DOCTYPE html>
