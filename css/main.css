@@ -1253,7 +1253,8 @@ th {
 
 .testi-slider .testi-item img {
   width: auto; }
-
+.testi-item img.quote {
+    max-width: 40px; }
 .testi-item {
   margin-bottom: 50px; }
   .testi-item h4 {
