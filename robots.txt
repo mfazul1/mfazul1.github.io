@@ -1,1 +1,9 @@
-sitemap:https://jeeiitianbooks.in/sitemap.xml
+User-agent: *
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Disallow: /index_old.html
+
+Sitemap: https://jeeiitianbooks.in/sitemap.xml
