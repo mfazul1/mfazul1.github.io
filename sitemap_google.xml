@@ -9,12 +9,42 @@
 
 <url>
   <loc>https://jeeiitianbooks.in/</loc>
-  <lastmod>2024-09-25T14:09:12+00:00</lastmod>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://jeeiitianbooks.in/index.html</loc>
-  <lastmod>2024-09-25T14:09:12+00:00</lastmod>
+  <loc>https://jeeiitianbooks.in/About</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/books</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/topbooks</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/Toppertips</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/Practicetest</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/faqs</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/connect</loc>
+  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 </urlset>
