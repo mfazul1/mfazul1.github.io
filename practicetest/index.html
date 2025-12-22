@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <!-- Mobile Specific Meta -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Favicon -->
   <!-- <link rel="shortcut icon" href="../img/favicon.png" /> -->
   <!-- Author Meta -->
@@ -34,6 +34,24 @@
     <link rel="stylesheet" href="../css/exam.css" />
   <link rel="stylesheet" href="../css/main.css" />
     <link href="../css/chatbot.css" rel="stylesheet" />
+
+  <style>
+    @media (max-width: 991px) {
+      .top-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .top-controls > div {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .top-controls select, .top-controls .nice-select, .top-controls button {
+        width: 100% !important;
+        float: none;
+      }
+    }
+  </style>
 
 </head>
 
@@ -274,4 +292,3 @@
     <script src="../js/chatbot.js"></script>
 </body>
 </html>
-<!DOCTYPE html>
