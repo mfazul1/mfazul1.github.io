@@ -142,6 +142,26 @@
     color: #7c32ff;
 }
 
+/* Star Rating */
+.star-rating {
+    display: flex;
+    font-size: 2em; /* Increase overall size of stars */
+    color: #ccc; /* Default color for unrated stars */
+    cursor: pointer;
+}
+
+.star-rating .star {
+    padding: 0 5px; /* Spacing between stars */
+    transition: color 0.2s ease-in-out;
+}
+
+.star-rating .star i {
+    pointer-events: none; /* Allows click to pass through to the span */
+}
+
+.star-rating .star.rated {
+    color: #ffc107; /* Gold color for rated stars */
+}
 @media (max-width: 768px) {
     .top-controls {
         flex-direction: column;
