@@ -7,14 +7,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const difficultySelect = document.getElementById('difficulty-select');
     const numQuestionsSelect = document.getElementById('num-questions-select');
     const scoreDisplay = document.getElementById('score-display');
-    const scoreModal = document.getElementById('scoreModal');
     const finalScoreText = document.getElementById('final-score-text');
     const questionBox = document.getElementById('question-box');
+
+    // Feedback modal elements
+    const feedbackModal = document.getElementById('feedbackModal');
+    const starRatingContainer = document.getElementById('star-rating');
+    const feedbackTextarea = document.getElementById('feedbackText');
+    const submitFeedbackBtn = document.getElementById('submitFeedbackBtn');
+    let stars = []; // Declare stars here, populate on modal show
+
+    const FEEDBACK_SESSION_KEY = 'feedbackRequestedThisSession';
+
+    // Function to show a custom alert modal
+    function showAlert(title, message) {
+        $('#generalAlertModalLabel').text(title);
+        $('#generalAlertModalBody').html(message);
+        $('#generalAlertModal').modal('show');
+    }
 
     let GROQ_API_KEY = '';
     let questionsData = [];
     let userAnswers = {};
     let chapterData = {};
+    let selectedRating = 0; // To store the user's selected rating
 
     getSecret().then(key => {
         GROQ_API_KEY = key;
@@ -49,11 +65,132 @@ $(chapterSelect).niceSelect();
 $(classSelect).on('change', updateChapterSelect);
 $(subjectSelect).on('change', updateChapterSelect);
 
-    // Event listener for the "OK" button in the modal to clear the score display
+    // Event listener for the "OK" button in the score modal to clear the score display and then show feedback modal
     $('#scoreModal').on('hidden.bs.modal', function () {
         scoreDisplay.innerHTML = ''; // Clear the inline score display
         finalScoreText.innerHTML = ''; // Clear the modal score
+        // Check if feedback has already been requested/shown in this session
+        if (feedbackModal && !sessionStorage.getItem(FEEDBACK_SESSION_KEY)) {
+            $('#feedbackModal').modal('show');
+            sessionStorage.setItem(FEEDBACK_SESSION_KEY, 'true'); // Set flag after showing
+        }
     });
+
+    // Event listener for when the feedback modal is shown
+    $('#feedbackModal').on('shown.bs.modal', function () {
+        // Re-initialize stars and event listeners when modal is shown
+        if (starRatingContainer) {
+            stars = starRatingContainer.querySelectorAll('.star');
+            stars.forEach(star => {
+                // Remove existing listeners to prevent duplicates
+                star.removeEventListener('mouseover', handleMouseOver);
+                star.removeEventListener('mouseout', handleMouseOut);
+                star.removeEventListener('click', handleClick);
+
+                // Add new listeners
+                star.addEventListener('mouseover', handleMouseOver);
+                star.addEventListener('mouseout', handleMouseOut);
+                star.addEventListener('click', handleClick);
+            });
+            // Reset rating and highlight when modal is opened
+            selectedRating = 0;
+            highlightStars(0);
+        }
+    });
+
+    // Event handlers for stars (defined outside to allow removeEventListener)
+    function handleMouseOver(event) {
+        highlightStars(event.target.dataset.value);
+    }
+
+    function handleMouseOut() {
+        highlightStars(selectedRating);
+    }
+
+    function handleClick(event) {
+        console.log('Star clicked:', event.target.dataset.value); // Added for debugging
+        setRating(event.target.dataset.value);
+    }
+
+    function highlightStars(rating) {
+        if (!stars.length) return; // Ensure stars are available
+        stars.forEach(star => {
+            if (star.dataset.value <= rating) {
+                star.classList.add('rated');
+            } else {
+                star.classList.remove('rated');
+            }
+        });
+    }
+
+    function setRating(rating) {
+        selectedRating = parseInt(rating);
+        highlightStars(selectedRating);
+    }
+
+    // Feedback submission (only if submitFeedbackBtn exists)
+    if (submitFeedbackBtn) {
+        submitFeedbackBtn.addEventListener('click', function() {
+            const feedbackText = feedbackTextarea.value;
+            const rating = selectedRating;
+
+            if (rating === 0) {
+                showAlert('Feedback Required', 'Please provide a rating before submitting.');
+                return;
+            }
+
+            const now = new Date();
+            const sessionId = now.getTime(); // Simple unique ID
+            const date = now.toLocaleDateString('en-CA'); // YYYY-MM-DD
+            const time = now.toLocaleTimeString('en-CA', { hour12: false }); // HH:MM:SS
+            const website = "jeeiitianbooks.in";
+
+            // Placeholder AJAX call to a hypothetical Django backend endpoint
+            $.ajax({
+                url: 'https://archgpt.in/api/submit-feedback/', // Updated API URL
+
+                // url: 'http://127.0.0.1:8000/api/submit-feedback/', // Updated API URL
+
+                type: 'POST',
+                contentType: 'application/json', // Assuming Django expects JSON
+                dataType: 'json',
+                data: JSON.stringify({
+                    rating: rating,
+                    comments: feedbackText,
+                    sessionId: sessionId,
+                    date: date,
+                    time: time,
+                    website: website
+                }),
+                success: function(response) {
+                    if (response.success) {
+                        showAlert('Feedback Submitted', 'Thank you for your feedback! It has been submitted successfully.');
+                        sessionStorage.setItem(FEEDBACK_SESSION_KEY, 'true'); // Set flag on successful submission
+                    } else {
+                        // Display error message from the backend if available
+                        showAlert('Feedback Submission Failed', 'Failed to submit feedback: ' + (response.message || 'Unknown error.'));
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    let errorMessage = 'Error submitting feedback. Please try again later.';
+                    if (jqXHR.responseJSON && jqXHR.responseJSON.message) {
+                        errorMessage += ' Details: ' + jqXHR.responseJSON.message;
+                    } else {
+                        errorMessage += ' Details: ' + textStatus + ' - ' + errorThrown;
+                    }
+                    showAlert('Error', errorMessage);
+                    console.error('AJAX error:', textStatus, errorThrown, jqXHR);
+                },
+                complete: function() {
+                    $('#feedbackModal').modal('hide');
+                    feedbackTextarea.value = '';
+                    selectedRating = 0;
+                    highlightStars(0); // Reset stars
+                }
+            });
+        });
+    }
+
 
     async function fetchQuestions() {
         let subject = subjectSelect.value;
@@ -64,12 +201,12 @@ $(subjectSelect).on('change', updateChapterSelect);
 
 
         if (selectedClass === 'Not selected' || subject === 'Not selected' || chapter === 'Not selected' || difficulty === 'Not selected' || numQuestions === 'Not selected') {
-            alert('Please select all fields before proceeding.');
+            showAlert('Selection Required', 'Please select all fields before proceeding.');
             return;
         }
 
         if (!GROQ_API_KEY) {
-            alert("API Key not loaded yet. Please wait a moment and try again.");
+            showAlert('API Key Not Ready', 'API Key not loaded yet. Please wait a moment and try again.');
             return;
         }
 

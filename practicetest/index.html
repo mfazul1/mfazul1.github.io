@@ -178,32 +178,66 @@
         <div class="submit-container">
             <button class="submit-btn" id="submit-btn" disabled>Submit</button>
             <span id="score-display"></span>
-        </div>
-
-        <!-- Score Modal -->
-        <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="scoreModalLabel">Test Results</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <h3 id="final-score-text"></h3>
-                        <p class="modal-message">Great job! Review your answers to learn more.</p>
-                    </div>
-                    <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-primary" id="score-modal-ok-btn" data-dismiss="modal">OK</button>
+                </div>
+        
+                <!-- Score Modal -->
+                <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="scoreModalLabel">Test Results</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <h3 id="final-score-text"></h3>
+                                <p class="modal-message">Great job! Review your answers to learn more.</p>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-primary" id="score-modal-ok-btn" data-dismiss="modal">OK</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-    </div> <!-- End of exam-container -->
-
-    
+        
+                <!-- Feedback Modal -->
+                <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="feedbackModalLabel">Provide Feedback</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>We'd love to hear your thoughts on the practice test experience!</p>
+                                <div class="form-group">
+                                    <label for="rating">Rating:</label>
+                                    <div class="star-rating" id="star-rating">
+                                        <span class="star" data-value="1"><i class="far fa-star"></i></span>
+                                        <span class="star" data-value="2"><i class="far fa-star"></i></span>
+                                        <span class="star" data-value="3"><i class="far fa-star"></i></span>
+                                        <span class="star" data-value="4"><i class="far fa-star"></i></span>
+                                        <span class="star" data-value="5"><i class="far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="feedbackText">Feedback:</label>
+                                    <textarea class="form-control" id="feedbackText" rows="3" placeholder="Enter your feedback here..."></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" id="submitFeedbackBtn">Submit Feedback</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div> <!-- End of exam-container -->
+                
  <!-- ================ start footer Area ================= -->
   <footer class="footer-area section-gap">
     <div class="container">
@@ -252,6 +286,26 @@
   </footer>
   <!-- ================ End footer Area ================= -->
    
+        <!-- Generic Alert Modal -->
+        <div class="modal fade" id="generalAlertModal" tabindex="-1" role="dialog" aria-labelledby="generalAlertModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="generalAlertModalLabel">Alert</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="generalAlertModalBody">
+                        <!-- Alert message will be inserted here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
      <!-- CHATBOT -->
   <div class="chat-widget">
     <button id="chat-button" class="chat-button">
