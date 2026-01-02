@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const starRatingContainer = document.getElementById('star-rating');
     const feedbackTextarea = document.getElementById('feedbackText');
     const submitFeedbackBtn = document.getElementById('submitFeedbackBtn');
+    const feedbackFormBody = feedbackModal.querySelector('.modal-body p');
+    const feedbackFormGroups = feedbackModal.querySelectorAll('.form-group');
+    const feedbackModalFooter = feedbackModal.querySelector('.modal-footer');
+    const feedbackLoadingContainer = document.getElementById('feedbackLoadingContainer');
     let stars = []; // Declare stars here, populate on modal show
 
     const FEEDBACK_SESSION_KEY = 'feedbackRequestedThisSession';
@@ -146,6 +150,14 @@ $(subjectSelect).on('change', updateChapterSelect);
             const website = "jeeiitianbooks.in";
 
             // Placeholder AJAX call to a hypothetical Django backend endpoint
+            // Hide form elements and show loading GIF
+            feedbackFormBody.style.display = 'none';
+            feedbackFormGroups.forEach(group => group.style.display = 'none');
+            feedbackModalFooter.style.display = 'none';
+            if (feedbackLoadingContainer) {
+                feedbackLoadingContainer.style.display = 'block';
+            }
+
             $.ajax({
                 url: 'https://archgpt.in/api/submit-feedback/', // Updated API URL
 
@@ -182,6 +194,13 @@ $(subjectSelect).on('change', updateChapterSelect);
                     console.error('AJAX error:', textStatus, errorThrown, jqXHR);
                 },
                 complete: function() {
+                    // Hide loading GIF and show form elements
+                    if (feedbackLoadingContainer) {
+                        feedbackLoadingContainer.style.display = 'none';
+                    }
+                    feedbackFormBody.style.display = 'block';
+                    feedbackFormGroups.forEach(group => group.style.display = 'block');
+                    feedbackModalFooter.style.display = 'flex'; // Restore original display type
                     $('#feedbackModal').modal('hide');
                     feedbackTextarea.value = '';
                     selectedRating = 0;
