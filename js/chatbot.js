@@ -74,35 +74,35 @@ document.addEventListener('DOMContentLoaded', function () {
         const lowerInput = userInput.toLowerCase();
         
         // Prioritize greetings
-        if (lowerInput.includes('hello') || lowerInput.includes('hi') || lowerInput.includes('hey')) {
-            return knowledgeBase.greeting;
-        }
+        // if (lowerInput.includes('hello') || lowerInput.includes('hi') || lowerInput.includes('hey')) {
+        //     return knowledgeBase.greeting;
+        // }
 
-        // Find the best match from the knowledge base
-        let bestMatch = 'default';
-        let highestScore = 0; // Start score at 0 to find any match
+        // // Find the best match from the knowledge base
+        // let bestMatch = 'default';
+        // let highestScore = 0; // Start score at 0 to find any match
 
-        for (const key in knowledgeBase) {
-            if (key === 'greeting' || key === 'default') continue;
+        // for (const key in knowledgeBase) {
+        //     if (key === 'greeting' || key === 'default') continue;
 
-            const keywords = key.split(' ');
-            let score = 0;
-            keywords.forEach(keyword => {
-                if (lowerInput.includes(keyword)) {
-                    score++;
-                }
-            });
+        //     const keywords = key.split(' ');
+        //     let score = 0;
+        //     keywords.forEach(keyword => {
+        //         if (lowerInput.includes(keyword)) {
+        //             score++;
+        //         }
+        //     });
 
-            if (score > highestScore) {
-                highestScore = score;
-                bestMatch = key;
-            }
-        }
+        //     if (score > highestScore) {
+        //         highestScore = score;
+        //         bestMatch = key;
+        //     }
+        // }
 
-        // If the score is high enough, return the local answer
-        if (highestScore > 1) { // Require more than one keyword for a confident local match
-            return knowledgeBase[bestMatch];
-        }
+        // // If the score is high enough, return the local answer
+        // if (highestScore > 1) { // Require more than one keyword for a confident local match
+        //     return knowledgeBase[bestMatch];
+        // }
 
         // Otherwise, fall back to the Groq API
         return await getGroqResponse(userInput);
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Get response (which might be async)
         const typingMessage = addMessage('bot', '...'); // Show typing indicator immediately
         const botResponse = await getBotResponse(userInput);
-        
+        console.log("Bot response:", botResponse); // Debug log for the bot's response
         // Update the typing message with the final response and the link
         typingMessage.innerHTML = botResponse + DefaultBooksLink;
         typingMessage.classList.remove('typing');
