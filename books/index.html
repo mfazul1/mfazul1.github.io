@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="../css/main.css" />
-    <link href="../css/chatbot.css" rel="stylesheet" />
+    
 
 <body>
   <!-- ================ Start Header Area ================= -->
@@ -61,14 +61,14 @@
 
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
           <ul class="navbar-nav">
-              <li><a href="../">Home</a></li>
-            <li><a href="../about/">About</a></li>
-            <li><a href="./">Free Books</a></li>
-            <li><a href="../topbooks/">Top Books</a></li>
-            <li><a href="../toppertips/">Topper Tips</a></li>
-			      <li><a href="../practicetest/">Practice Test</a></li>
-            <li><a href="../faqs/">Faqs</a></li>   
-            <li><a href="../connect/">Connect</a></li>
+              <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../about/">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="./">Free Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="../topbooks/">Top Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="../toppertips/">Topper Tips</a></li>
+			      <li class="nav-item"><a class="nav-link" href="../practicetest/">Practice Test</a></li>
+            <li class="nav-item"><a class="nav-link" href="../faqs/">Faqs</a></li>   
+            <li class="nav-item"><a class="nav-link" href="../connect/">Connect</a></li>
           </ul>
         </div>
       </div>
@@ -288,21 +288,22 @@ AOS.init();
   </footer>
   <!-- ================ End footer Area ================= -->
 
-  <!-- CHATBOT -->
   <div class="chat-widget">
     <button id="chat-button" class="chat-button">
-      <i class="fas fa-comment-dots"></i>
+      <i class="fas fa-comments"></i>
     </button>
-    <div id="chat-popup" class="chat-popup">
-      <div class="chat-header">
-        <span>JEEIITIANBOOKS Buddy</span>
-        <span id="close-chat" class="close-btn">&times;</span>
-      </div>
-      <div id="chat-body" class="chat-body"></div>
-      <div class="chat-footer">
-        <input type="text" id="chat-input" placeholder="Ask a question...">
-        <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
-      </div>
+  </div>
+  <div class="chat-popup" id="chat-popup">
+    <div class="chat-header">
+      <span>JEEIITianBooks Chat</span>
+      <span id="close-chat" class="close-btn">&times;</span>
+    </div>
+    <div id="chat-body" class="chat-body"></div>
+    <div class="chat-footer">
+      <input type="text" id="chat-input" placeholder="Ask a question...">
+      <button id="send-btn">
+        <i class="fas fa-paper-plane"></i>
+      </button>
     </div>
   </div>
 
@@ -318,8 +319,9 @@ AOS.init();
   <script src="../js/jquery.counterup.min.js"></script>
   <script src="../js/waypoints.min.js"></script>
   <script src="../js/jquery.nice-select.min.js"></script>
-  <script src="../js/chatbot.js"></script>
+  
   <script src="../js/main.js"></script>
+  <script src="../js/chatbot.js"></script>
 </body>
 
 </html>

@@ -793,7 +793,10 @@ th {
   font-size: 12px;
   font-weight: 500;
   color: #fff;
-  padding: 20px; }
+  padding: 20px;
+  white-space: nowrap; }
+.bg-white .navbar-nav li a {
+  color: #000; }
 .navbar-nav .dropdown .dropdown-item {
   color: #222222;
   padding: 10px 20px;
@@ -3482,3 +3485,238 @@ h6 {
 
 /* Added from chatbot.css */
 .chat-widget{position:fixed;bottom:20px;right:20px;z-index:1000}.chat-button{background-color:#007bff;color:white;border:none;border-radius:50%;width:60px;height:60px;font-size:28px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);display:flex;justify-content:center;align-items:center;transition:transform 0.2s,background-color 0.2s}.chat-button:hover{background-color:#0056b3;transform:scale(1.1)}.chat-popup{display:none;position:fixed;bottom:90px;right:20px;width:350px;max-width:90vw;height:500px;max-height:70vh;background-color:white;border-radius:15px;box-shadow:0 5px 25px rgba(0,0,0,0.2);flex-direction:column;overflow:hidden;transform:scale(0.5);transform-origin:bottom right;transition:transform 0.3s ease-out}.chat-popup.show{display:flex;transform:scale(1)}.chat-header{background-color:#007bff;color:white;padding:15px;font-weight:bold;display:flex;justify-content:space-between;align-items:center}.chat-header .close-btn{cursor:pointer;font-size:24px;font-weight:normal}.chat-body{flex-grow:1;padding:15px;overflow-y:auto;background-color:#f4f7f9;display:flex;flex-direction:column}.chat-message{padding:10px 15px;border-radius:18px;margin-bottom:10px;max-width:80%;line-height:1.4}.chat-message.user{background-color:#007bff;color:white;align-self:flex-end;border-bottom-right-radius:4px}.chat-message.bot{background-color:#e9eaf0;color:#333;align-self:flex-start;border-bottom-left-radius:4px}.chat-message.bot.typing::after{content:'...';display:inline-block;vertical-align:bottom;animation:typing-dots 1.5s infinite;width:1.2em;text-align:left}@keyframes typing-dots{0%{content:'.'}33%{content:'..'}66%{content:'...'}100%{content:'.'}}.chat-message.bot.typing{font-style:italic}.chat-footer{display:flex;padding:10px;border-top:1px solid #ddd}.chat-footer input{flex-grow:1;border:1px solid #ccc;border-radius:20px;padding:10px 15px;margin-right:10px;outline:none}.chat-footer button{background-color:#007bff;color:white;border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:18px;display:flex;justify-content:center;align-items:center}.chat-footer button:hover{background-color:#0056b3}
+
+/* Professional overrides */
+body {
+  background-color: #f4f6f9;
+  color: #1f2937;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.default-header {
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  position: relative;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+.default-header .navbar-brand img {
+  max-height: 55px;
+  width: auto;
+}
+.default-header .navbar-nav .nav-link {
+  color: #334155;
+  font-weight: 600;
+  padding: 0.75rem 0.85rem;
+  letter-spacing: 0.02em;
+}
+.default-header .navbar-nav .nav-link:hover,
+.default-header .navbar-nav .nav-link:focus {
+  color: #0f172a;
+}
+.banner-area,
+.home-banner-area {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #f8fafc 100%);
+  color: #f8fafc;
+}
+.banner-area .text-white,
+.home-banner-area .text-white {
+  color: #f8fafc !important;
+}
+.banner-area .link-nav .box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+}
+.banner-area .link-nav a,
+.banner-area .link-nav .lnr {
+  color: #cbd5e1;
+}
+.banner-area .banner-right img,
+.home-banner-area .home-banner-right img {
+  max-width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.22);
+}
+.section-gap,
+.section-gap-bottom,
+.section-gap-top {
+  padding: 4.5rem 0;
+}
+.footer-area {
+  background: #0f172a !important;
+  padding: 4rem 0 !important;
+}
+.footer-area .single-footer-widget h4 {
+  color: #f8fafc;
+}
+.footer-area .single-footer-widget ul li a {
+  color: #94a3b8;
+}
+.footer-area .single-footer-widget ul li a:hover {
+  color: #ffffff;
+}
+.footer-area .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+}
+.btn,
+.genric-btn,
+button[type='submit'] {
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+.btn:hover,
+.genric-btn:hover,
+button[type='submit']:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.09);
+}
+.section-title h2,
+.home-banner-area h1,
+.banner-area h1 {
+  color: #0f172a;
+}
+.section-title p,
+.home-banner-area p,
+.banner-area p {
+  color: rgba(15, 23, 42, 0.78);
+}
+.course-details-area,
+.about-area,
+.contact-page-area,
+.feature-area,
+.other-feature-area,
+.testimonials-area,
+.professional-services {
+  background: #ffffff;
+}
+.feature-summary .card,
+.professional-services .bg-light {
+  border: none;
+}
+.feature-summary .card:hover {
+  transform: translateY(-8px);
+}
+.card {
+  border-radius: 1rem;
+}
+.footer-area a {
+  color: #94a3b8;
+}
+.footer-area a:hover {
+  color: #ffffff;
+}
+/* Responsive header/menu polish */
+.default-header {
+  position: relative !important;
+  background: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+.default-header .navbar {
+  padding: 0;
+}
+.default-header .navbar-toggler {
+  color: #334155;
+  border-color: rgba(15, 23, 42, 0.12);
+}
+.default-header .navbar-toggler span,
+.default-header .navbar-toggler .lnr-menu {
+  color: #334155;
+  font-size: 22px;
+}
+@media (max-width: 992px) {
+  .default-header .navbar-collapse {
+    background: #ffffff !important;
+    margin-top: 0;
+    padding: 0.75rem 1rem 1rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+  }
+  .default-header .navbar-nav {
+    max-height: none !important;
+    overflow: visible !important;
+    width: 100%;
+  }
+  .default-header .navbar-nav li {
+    width: 100%;
+    padding: 0.35rem 0;
+  }
+  .default-header .navbar-nav li a,
+  .default-header .navbar-nav .nav-link {
+    color: #0f172a;
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  }
+  .default-header .navbar-nav .nav-link:hover,
+  .default-header .navbar-nav .nav-link:focus {
+    color: #4f46e5;
+  }
+}
+
+/* Professional site-wide page polish */
+body {
+  background: #f5f7fb;
+  color: #1f2937;
+}
+.default-header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+.default-header .navbar-brand img,
+.navbar-brand img {
+  height: 30px !important;
+  width: auto !important;
+  max-height: none !important;
+}
+.default-header .navbar-nav li a {
+  color: #1f2937;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+}
+.default-header .navbar-nav li a:hover {
+  color: #4f46e5;
+}
+.banner-area,
+.home-banner-area {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(79, 70, 229, 0.85) 100%);
+  color: #ffffff;
+}
+.banner-area .banner-right h1,
+.home-banner-area h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: #ffffff;
+}
+.banner-area p,
+.home-banner-area p,
+.banner-area .link-nav span,
+.banner-area .banner-right .link-nav a {
+  color: rgba(255, 255, 255, 0.88);
+}
+.footer-area {
+  background: #111827;
+  color: #cbd5e1;
+}
+.footer-area .single-footer-widget h4 {
+  color: #ffffff;
+}
+.footer-area a {
+  color: #cbd5e1;
+}
+.footer-area a:hover {
+  color: #ffffff;
+}
+.section-gap {
+  padding: 5rem 0;
+}
+@media (max-width: 991px) {
+  .section-gap {
+    padding: 3rem 0;
+  }
+}

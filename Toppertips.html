@@ -15,7 +15,7 @@
   <!-- meta character set -->
   <meta charset="UTF-8" />
   <!-- Site Title -->
-  <title>Jeeiitian Books</title>
+  <title>JEE Topper Tips — JEEIITianBooks</title>
 
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700" rel="stylesheet" />
   <!--
@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="css/owl.carousel.css" />
   <link rel="stylesheet" href="css/nice-select.css">
   <link rel="stylesheet" href="css/hexagons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
   <link rel="stylesheet" href="css/main.css" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -49,13 +50,13 @@
 
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
           <ul class="navbar-nav">
-           <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="books.html">Free Books</a></li>
-            <li><a href="topbooks.html">Top Books</a></li>
-            <li><a href="toppertips.html">Topper Tips</a></li>     
-            <li><a href="faqs.html">Faqs</a></li>   
-            <li><a href="contacts.html">Contact</a></li>
+           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="books.html">Free Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="topbooks.html">Top Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="toppertips.html">Topper Tips</a></li>     
+            <li class="nav-item"><a class="nav-link" href="faqs.html">Faqs</a></li>   
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -271,6 +272,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
   <!-- ================ End footer Area ================= -->
 
+  <div class="chat-widget">
+    <button id="chat-button" class="chat-button">
+      <i class="fas fa-comments"></i>
+    </button>
+  </div>
+  <div class="chat-popup" id="chat-popup">
+    <div class="chat-header">
+      <span>JEEIITianBooks Chat</span>
+      <span id="close-chat" class="close-btn">&times;</span>
+    </div>
+    <div id="chat-body" class="chat-body"></div>
+    <div class="chat-footer">
+      <input type="text" id="chat-input" placeholder="Ask a question...">
+      <button id="send-btn">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
 	 crossorigin="anonymous"></script>
@@ -285,6 +305,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/waypoints.min.js"></script>
 	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/chatbot.js"></script>
 </body>
 
 </html>

@@ -43,7 +43,7 @@
 
     <link rel="stylesheet" href="../css/exam.css" />
   <link rel="stylesheet" href="../css/main.css" />
-    <link href="../css/chatbot.css" rel="stylesheet" />
+    
 
   <style>
     @media (max-width: 991px) {
@@ -80,14 +80,14 @@
 
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li><a href="../">Home</a></li>
-              <li><a href="../about/">About</a></li>
-              <li><a href="../books/">Free Books</a></li>
-              <li><a href="../topbooks/">Top Books</a></li>
-              <li><a href="../toppertips/">Topper Tips</a></li> 
-              <li class="active"><a href="./">Practice Test</a></li>     
-              <li><a href="../faqs/">Faqs</a></li>   
-              <li><a href="../connect/">Connect</a></li>
+                <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="../about/">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="../books/">Free Books</a></li>
+              <li class="nav-item"><a class="nav-link" href="../topbooks/">Top Books</a></li>
+              <li class="nav-item"><a class="nav-link" href="../toppertips/">Topper Tips</a></li> 
+              <li class="nav-item active"><a class="nav-link" href="./">Practice Test</a></li>     
+              <li class="nav-item"><a class="nav-link" href="../faqs/">Faqs</a></li>   
+              <li class="nav-item"><a class="nav-link" href="../connect/">Connect</a></li>
             </ul>
         </div>
       </div>
@@ -321,25 +321,22 @@
             </div>
         </div>
 
-     <!-- CHATBOT -->
   <div class="chat-widget">
     <button id="chat-button" class="chat-button">
-      <i class="fas fa-comment-dots"></i>
+      <i class="fas fa-comments"></i>
     </button>
-    <div id="chat-popup" class="chat-popup">
-      <div class="chat-header">
-        <span>JEEIITIANBOOKS Buddy</span>
-        <span id="close-chat" class="close-btn">&times;</span>
-      </div>
-      <div id="chat-body" class="chat-body">
-        <!-- Messages will be appended here -->
-      </div>
-      <div class="chat-footer">
-        <input type="text" id="chat-input" placeholder="Ask a question...">
-        <button id="send-btn">
-          <i class="fas fa-paper-plane"></i>
-        </button>
-      </div>
+  </div>
+  <div class="chat-popup" id="chat-popup">
+    <div class="chat-header">
+      <span>JEEIITianBooks Chat</span>
+      <span id="close-chat" class="close-btn">&times;</span>
+    </div>
+    <div id="chat-body" class="chat-body"></div>
+    <div class="chat-footer">
+      <input type="text" id="chat-input" placeholder="Ask a question...">
+      <button id="send-btn">
+        <i class="fas fa-paper-plane"></i>
+      </button>
     </div>
   </div>
 
@@ -357,7 +354,8 @@
 	<script src="../js/waypoints.min.js"></script>
 	<script src="../js/jquery.nice-select.min.js"></script>
 	<script src="../js/main.js"></script>
+	<script src="../js/chatbot.js"></script>
     <script src="../js/exam.js"></script>
-    <script src="../js/chatbot.js"></script>
+    
 </body>
 </html>
