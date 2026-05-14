@@ -90,16 +90,140 @@
       color: #0f172a !important;
     }
     .default-header {
-      background: #ffffff;
-      box-shadow: 0 10px 35px rgba(15,23,42,.08);
       position: relative;
-      z-index: 10;
+      z-index: 20;
+    }
+    .header-3d.default-header {
+      background: rgba(255, 255, 255, 0.78);
+      -webkit-backdrop-filter: blur(16px) saturate(1.25);
+      backdrop-filter: blur(16px) saturate(1.25);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.85) inset,
+        0 18px 48px rgba(15, 23, 42, 0.12);
+    }
+    body.theme-3d {
+      background:
+        radial-gradient(1000px 700px at 8% -5%, rgba(99, 102, 241, 0.14), transparent 55%),
+        radial-gradient(800px 560px at 92% 8%, rgba(56, 189, 248, 0.12), transparent 50%),
+        linear-gradient(180deg, #eef2f7 0%, #e2e8f0 100%);
     }
     .professional-overview {
-      background: linear-gradient(135deg,#0f172a 0%,#1e293b 62%,#e2e8f0 100%);
       color: #f8fafc;
       padding-top: 5rem;
       padding-bottom: 5rem;
+    }
+    .hero-3d-stage.professional-overview {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: linear-gradient(148deg, #070b14 0%, #0f172a 38%, #1e3a5f 72%, #334155 100%);
+    }
+    .hero-3d-stage::before {
+      content: "";
+      position: absolute;
+      inset: -25%;
+      background:
+        radial-gradient(circle at 22% 28%, rgba(56, 189, 248, 0.22), transparent 42%),
+        radial-gradient(circle at 78% 62%, rgba(129, 140, 248, 0.18), transparent 48%),
+        radial-gradient(circle at 50% 100%, rgba(15, 23, 42, 0.5), transparent 55%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-3d-stage::after {
+      content: "";
+      position: absolute;
+      left: -15%;
+      right: -15%;
+      bottom: -18%;
+      height: 52%;
+      opacity: 0.42;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        linear-gradient(to top, rgba(7, 11, 20, 0.55), transparent 70%),
+        repeating-linear-gradient(90deg, rgba(148, 163, 184, 0.09) 0 1px, transparent 1px 52px),
+        repeating-linear-gradient(0deg, rgba(148, 163, 184, 0.07) 0 1px, transparent 1px 52px);
+      transform: perspective(720px) rotateX(64deg);
+      transform-origin: center bottom;
+    }
+    .hero-3d-stage .container {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-copy-3d {
+      transform-style: preserve-3d;
+    }
+    .hero-copy-3d .eyebrow {
+      text-shadow: 0 2px 24px rgba(56, 189, 248, 0.35);
+    }
+    .hero-copy-3d h1 {
+      text-shadow: 0 4px 0 rgba(0, 0, 0, 0.2), 0 18px 48px rgba(0, 0, 0, 0.35);
+    }
+    .hero-float-3d {
+      perspective: 1400px;
+      perspective-origin: 50% 42%;
+      padding: 0.5rem;
+    }
+    .hero-3d-img {
+      border-radius: 1.25rem;
+      max-width: 100%;
+      height: auto;
+      transform-style: preserve-3d;
+      transform: perspective(1400px) rotateY(-9deg) rotateX(5deg) translateZ(0);
+      box-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.12) inset,
+        0 28px 56px rgba(0, 0, 0, 0.42),
+        0 0 0 1px rgba(255, 255, 255, 0.08);
+      animation: hero-3d-breathe 9s ease-in-out infinite;
+    }
+    @keyframes hero-3d-breathe {
+      0%, 100% {
+        transform: perspective(1400px) rotateY(-9deg) rotateX(5deg) translateZ(0);
+      }
+      50% {
+        transform: perspective(1400px) rotateY(-5deg) rotateX(3deg) translateZ(16px);
+      }
+    }
+    .hero-cta-3d .btn {
+      transform-style: preserve-3d;
+      transition: transform 0.35s cubic-bezier(0.2, 0.85, 0.3, 1), box-shadow 0.35s ease;
+    }
+    .btn-3d-primary {
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.12) inset,
+        0 10px 0 #020617,
+        0 18px 32px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .btn-3d-primary:hover {
+      transform: translateY(-3px) translateZ(6px);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.15) inset,
+        0 13px 0 #020617,
+        0 26px 40px rgba(0, 0, 0, 0.38);
+    }
+    .btn-3d-primary:active {
+      transform: translateY(2px) translateZ(0);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.08) inset,
+        0 5px 0 #020617,
+        0 10px 20px rgba(0, 0, 0, 0.28);
+    }
+    .btn-3d-outline {
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.2) inset,
+        0 8px 24px rgba(0, 0, 0, 0.2);
+      border-width: 2px;
+    }
+    .btn-3d-outline:hover {
+      transform: translateY(-3px) translateZ(6px);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.25) inset,
+        0 16px 36px rgba(0, 0, 0, 0.28);
+    }
+    .btn-3d-outline:active {
+      transform: translateY(1px);
     }
     .professional-overview .eyebrow {
       display: inline-block;
@@ -116,27 +240,60 @@
     .professional-overview p {
       color: rgba(248,250,252,.82);
     }
+    .hero-3d-stage p.lead,
+    .hero-3d-stage .lead.text-muted {
+      color: rgba(248, 250, 252, 0.9) !important;
+    }
     .feature-summary {
       background: #ffffff;
       padding-top: 4rem;
       padding-bottom: 4rem;
     }
-    .feature-summary .card {
-      border: none;
-      border-radius: 1rem;
-      background: #ffffff;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    .feature-3d-col {
+      perspective: 1200px;
     }
-    .feature-summary .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 25px 45px rgba(15,23,42,.08);
+    .feature-summary .feature-3d-card {
+      border: none;
+      border-radius: 1.15rem;
+      background: linear-gradient(168deg, rgba(255, 255, 255, 0.96) 0%, #ffffff 55%);
+      transform-style: preserve-3d;
+      transition: transform 0.5s cubic-bezier(0.2, 0.85, 0.25, 1), box-shadow 0.5s ease;
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 16px 36px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+    }
+    .feature-summary .feature-3d-card:hover {
+      transform: rotateX(5deg) rotateY(-4deg) translateY(-12px) translateZ(24px);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 1) inset,
+        0 28px 56px rgba(15, 23, 42, 0.12);
+    }
+    .glass-3d-panel {
+      position: relative;
+      transform-style: preserve-3d;
+      background: linear-gradient(155deg, rgba(248, 250, 252, 0.92) 0%, #f1f5f9 100%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 1.15rem !important;
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.9) inset,
+        0 20px 48px rgba(15, 23, 42, 0.1);
+      transition: transform 0.45s cubic-bezier(0.2, 0.85, 0.25, 1), box-shadow 0.45s ease;
+    }
+    .glass-3d-panel:hover {
+      transform: perspective(900px) rotateY(-3deg) rotateX(2deg) translateZ(8px);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 1) inset,
+        0 28px 60px rgba(15, 23, 42, 0.12);
     }
     .professional-services {
       background: #f8fafc;
     }
     .footer-area {
-      background: #0f172a;
+      background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
       color: #cbd5e1;
+      box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.25);
+      border-top: 1px solid rgba(148, 163, 184, 0.12);
     }
     .footer-area a {
       color: #cbd5e1;
@@ -163,28 +320,65 @@
     /* .chat-widget {
       display: none !important;
     } */
-    /* Top Institutes Section Styles */
     .top-institutes {
       background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+    /* Top Institutes — marquee shell (same pattern as Top Books strip) */
+    .marquee-bleed {
+      width: 100%;
+      overflow: hidden;
+      padding: 10px 0 28px;
+    }
+    .marquee-shell {
+      position: relative;
+      max-width: 100%;
+    }
+    .marquee-shell::before,
+    .marquee-shell::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 48px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .marquee-shell--slate::before {
+      background: linear-gradient(90deg, #f8fafc 0%, transparent 100%);
+    }
+    .marquee-shell--slate::after {
+      background: linear-gradient(270deg, #e2e8f0 0%, transparent 100%);
+    }
+    .marquee-shell--paper::before {
+      background: linear-gradient(90deg, #ffffff 0%, transparent 100%);
+    }
+    .marquee-shell--paper::after {
+      background: linear-gradient(270deg, #f8fafc 0%, transparent 100%);
+    }
+    .marquee-viewport {
+      overflow: hidden;
+      padding: 8px 0 12px;
+      perspective: 2000px;
+    }
+    .marquee-viewport:hover .institutes-scroll,
+    .marquee-viewport:hover .feedback-scroll {
+      animation-play-state: paused;
     }
     .top-institutes h2 {
       color: #0f172a;
     }
-    .institutes-scroll-wrapper {
-      width: 100%;
-      overflow: hidden;
-      padding: 20px 0;
-    }
     .institutes-scroll {
       display: flex;
-      gap: 30px;
-      padding: 10px 5px;
-      animation: scroll 30s linear infinite;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      width: max-content;
+      padding: 8px 12px 16px;
+      min-height: 1px;
+      will-change: transform;
+      animation: institutesMarquee 68s linear infinite;
     }
-    .institutes-scroll:hover {
-      animation-play-state: paused;
-    }
-    @keyframes scroll {
+    @keyframes institutesMarquee {
       0% {
         transform: translateX(0);
       }
@@ -194,20 +388,31 @@
     }
     .institute-card {
       flex: 0 0 auto;
-      width: 500px;
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 6px 20px rgba(15,23,42,0.12);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: min(92vw, 400px);
+      background: linear-gradient(168deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 18px;
+      padding: 22px;
+      transform-style: preserve-3d;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 10px 28px rgba(15, 23, 42, 0.1);
+      transition: transform 0.4s cubic-bezier(0.2, 0.85, 0.25, 1), box-shadow 0.4s ease;
+    }
+    @media (min-width: 992px) {
+      .institute-card {
+        width: 420px;
+      }
     }
     .institute-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 12px 35px rgba(15,23,42,0.18);
+      transform: translateY(-10px) rotateX(4deg) translateZ(12px);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 1) inset,
+        0 22px 48px rgba(15, 23, 42, 0.16);
     }
     .institute-card img {
       width: 100%;
-      height: 350px;
+      height: 280px;
       object-fit: cover;
       border-radius: 12px;
     }
@@ -217,28 +422,25 @@
       font-size: 18px;
       font-weight: 600;
     }
-    /* Students Feedback Section Styles */
+    /* Students Feedback — marquee shell */
     .students-feedback {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     }
     .students-feedback h2 {
       color: #0f172a;
     }
-    .feedback-scroll-wrapper {
-      width: 100%;
-      overflow: hidden;
-      padding: 20px 0;
-    }
     .feedback-scroll {
       display: flex;
-      gap: 30px;
-      padding: 10px 5px;
-      animation: feedbackScroll 35s linear infinite;
+      flex-direction: row;
+      align-items: stretch;
+      gap: 2rem;
+      width: max-content;
+      padding: 8px 12px 16px;
+      min-height: 1px;
+      will-change: transform;
+      animation: feedbackMarquee 52s linear infinite;
     }
-    .feedback-scroll:hover {
-      animation-play-state: paused;
-    }
-    @keyframes feedbackScroll {
+    @keyframes feedbackMarquee {
       0% {
         transform: translateX(0);
       }
@@ -248,17 +450,28 @@
     }
     .feedback-card {
       flex: 0 0 auto;
-      width: 400px;
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 6px 20px rgba(15,23,42,0.12);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: min(88vw, 340px);
+      background: linear-gradient(168deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 18px;
+      padding: 26px;
+      transform-style: preserve-3d;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 10px 28px rgba(15, 23, 42, 0.1);
+      transition: transform 0.4s cubic-bezier(0.2, 0.85, 0.25, 1), box-shadow 0.4s ease;
       text-align: center;
     }
+    @media (min-width: 576px) {
+      .feedback-card {
+        width: 360px;
+      }
+    }
     .feedback-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 12px 35px rgba(15,23,42,0.18);
+      transform: translateY(-10px) rotateX(3deg) translateZ(10px);
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 1) inset,
+        0 22px 48px rgba(15, 23, 42, 0.15);
     }
     .feedback-card img {
       width: 120px;
@@ -286,6 +499,344 @@
     }
     .feedback-card .stars i {
       margin: 0 2px;
+    }
+    /* —— 3D image sections —— */
+    .showcase-3d-split {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(165deg, #f8fafc 0%, #e2e8f0 45%, #f1f5f9 100%);
+    }
+    .showcase-3d-split::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      right: -8%;
+      top: -25%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.12), transparent 68%);
+      pointer-events: none;
+    }
+    .showcase-3d-visual {
+      perspective: 1600px;
+      perspective-origin: 45% 45%;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+    .showcase-3d-stack {
+      position: relative;
+      width: min(100%, 460px);
+      height: 320px;
+      transform-style: preserve-3d;
+    }
+    .showcase-3d-stack:hover .showcase-3d-panel--rear {
+      transform: rotateY(18deg) rotateX(2deg) translateX(-28px) translateZ(-50px) scale(0.92);
+    }
+    .showcase-3d-stack:hover .showcase-3d-panel--front {
+      transform: rotateY(-14deg) rotateX(-3deg) translateX(24px) translateZ(40px) scale(1.02);
+    }
+    .showcase-3d-panel {
+      position: absolute;
+      margin: 0;
+      border-radius: 1.1rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.5) inset,
+        0 22px 48px rgba(15, 23, 42, 0.18);
+      transform-style: preserve-3d;
+      transition: transform 0.55s cubic-bezier(0.2, 0.85, 0.25, 1), box-shadow 0.55s ease;
+    }
+    .showcase-3d-panel img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+    .showcase-3d-panel--rear {
+      width: 78%;
+      left: 4%;
+      top: 12%;
+      transform: rotateY(14deg) translateX(-12px) translateZ(-35px) scale(0.94);
+      z-index: 1;
+    }
+    .showcase-3d-panel--front {
+      width: 82%;
+      right: 2%;
+      bottom: 4%;
+      transform: rotateY(-10deg) translateX(8px) translateZ(28px);
+      z-index: 2;
+    }
+    .showcase-3d-panel figcaption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.65rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #f8fafc;
+      background: linear-gradient(transparent, rgba(15, 23, 42, 0.75));
+    }
+    .triple-3d-gallery {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+    }
+    .triple-3d-col {
+      perspective: 1100px;
+    }
+    .triple-3d-card {
+      display: block;
+      text-decoration: none !important;
+      color: inherit;
+      border-radius: 1.15rem;
+      transform-style: preserve-3d;
+      transition: transform 0.45s cubic-bezier(0.2, 0.85, 0.25, 1);
+    }
+    .triple-3d-card:hover {
+      transform: translateY(-6px);
+    }
+    .triple-3d-inner {
+      position: relative;
+      border-radius: 1.1rem;
+      overflow: hidden;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      transform-style: preserve-3d;
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.95) inset,
+        0 18px 40px rgba(15, 23, 42, 0.12);
+      transition: transform 0.45s cubic-bezier(0.2, 0.85, 0.25, 1), box-shadow 0.45s ease;
+    }
+    .triple-3d-card--left .triple-3d-inner {
+      transform: perspective(900px) rotateY(8deg) rotateX(2deg);
+    }
+    .triple-3d-card--center .triple-3d-inner {
+      transform: perspective(900px) rotateY(0deg) rotateX(-2deg) translateZ(8px);
+    }
+    .triple-3d-card--right .triple-3d-inner {
+      transform: perspective(900px) rotateY(-8deg) rotateX(2deg);
+    }
+    .triple-3d-card:hover .triple-3d-inner {
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 1) inset,
+        0 28px 56px rgba(15, 23, 42, 0.14);
+    }
+    .triple-3d-card--left:hover .triple-3d-inner {
+      transform: perspective(900px) rotateY(4deg) rotateX(1deg) translateY(-4px) translateZ(12px);
+    }
+    .triple-3d-card--center:hover .triple-3d-inner {
+      transform: perspective(900px) rotateY(0deg) rotateX(-1deg) translateY(-6px) translateZ(20px);
+    }
+    .triple-3d-card--right:hover .triple-3d-inner {
+      transform: perspective(900px) rotateY(-4deg) rotateX(1deg) translateY(-4px) translateZ(12px);
+    }
+    .triple-3d-inner img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .triple-3d-card h3 {
+      color: #0f172a;
+      font-weight: 700;
+    }
+    .triple-3d-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+    /* Top books — auto marquee + 3D covers (same data as /topbooks/) */
+    .top-books-3d-section {
+      background: linear-gradient(180deg, #f1f5f9 0%, #e8edf5 100%);
+      border-top: 1px solid rgba(226, 232, 240, 0.9);
+    }
+    .top-books-3d-marquee-bleed {
+      width: 100%;
+      overflow: hidden;
+      padding: 10px 0 28px;
+    }
+    .top-books-3d-scroll-outer {
+      position: relative;
+      max-width: 100%;
+    }
+    .top-books-3d-scroll-outer::before,
+    .top-books-3d-scroll-outer::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 48px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .top-books-3d-scroll-outer::before {
+      left: 0;
+      background: linear-gradient(90deg, #f1f5f9 0%, transparent 100%);
+    }
+    .top-books-3d-scroll-outer::after {
+      right: 0;
+      background: linear-gradient(270deg, #e8edf5 0%, transparent 100%);
+    }
+    .top-books-3d-scroll-wrapper {
+      overflow: hidden;
+      padding: 8px 0 12px;
+      perspective: 2000px;
+    }
+    .top-books-3d-track {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      width: max-content;
+      padding: 8px 12px 16px;
+      min-height: 1px;
+      animation: topBooksMarquee 75s linear infinite;
+      will-change: transform;
+    }
+    .top-books-3d-scroll-wrapper:hover .top-books-3d-track {
+      animation-play-state: paused;
+    }
+    @keyframes topBooksMarquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .top-book-3d-card {
+      flex: 0 0 auto;
+      width: 220px;
+      transform-style: preserve-3d;
+    }
+    @media (min-width: 576px) {
+      .top-book-3d-card {
+        width: 248px;
+      }
+    }
+    @media (min-width: 992px) {
+      .top-book-3d-card {
+        width: 280px;
+      }
+    }
+    .top-book-3d-card__link {
+      display: block;
+      text-decoration: none !important;
+      color: inherit;
+      border-radius: 12px;
+    }
+    .top-book-3d-card__link:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 4px;
+    }
+    .top-book-3d-cover-wrap {
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      background: linear-gradient(145deg, #e2e8f0, #cbd5e1);
+      box-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.55) inset,
+        0 14px 28px rgba(15, 23, 42, 0.14),
+        0 0 0 1px rgba(15, 23, 42, 0.06);
+      transform: perspective(900px) rotateY(-7deg) rotateX(4deg) translateZ(0);
+      transition: transform 0.45s cubic-bezier(0.2, 0.85, 0.25, 1), box-shadow 0.45s ease;
+    }
+    .top-book-3d-card:nth-child(even) .top-book-3d-cover-wrap {
+      transform: perspective(900px) rotateY(7deg) rotateX(4deg) translateZ(0);
+    }
+    .top-book-3d-card:hover .top-book-3d-cover-wrap {
+      transform: perspective(900px) rotateY(0deg) rotateX(0deg) translateY(-8px) translateZ(18px);
+      box-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.65) inset,
+        0 22px 44px rgba(15, 23, 42, 0.18),
+        0 0 0 1px rgba(15, 23, 42, 0.05);
+    }
+    .top-book-3d-cover-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .top-book-3d-title {
+      font-family: "Roboto", sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.35;
+      margin: 0.85rem 0 0;
+      color: #0f172a;
+      font-weight: 600;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .top-books-3d-fallback {
+      max-width: 36rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .top-books-3d-track--fallback {
+      animation: none !important;
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-3d-img {
+        animation: none !important;
+      }
+      .hero-3d-img,
+      .feature-summary .feature-3d-card,
+      .glass-3d-panel,
+      .institute-card,
+      .feedback-card,
+      .hero-cta-3d .btn {
+        transition: none !important;
+      }
+      .feature-summary .feature-3d-card:hover,
+      .glass-3d-panel:hover,
+      .institute-card:hover,
+      .feedback-card:hover,
+      .btn-3d-primary:hover,
+      .btn-3d-outline:hover {
+        transform: none !important;
+      }
+      .showcase-3d-stack:hover .showcase-3d-panel--rear,
+      .showcase-3d-stack:hover .showcase-3d-panel--front {
+        transform: none !important;
+      }
+      .triple-3d-card,
+      .triple-3d-card:hover,
+      .triple-3d-inner,
+      .triple-3d-card--left:hover .triple-3d-inner,
+      .triple-3d-card--center:hover .triple-3d-inner,
+      .triple-3d-card--right:hover .triple-3d-inner {
+        transform: none !important;
+        transition: none !important;
+      }
+      .top-book-3d-card:hover .top-book-3d-cover-wrap,
+      .top-book-3d-card:nth-child(even) .top-book-3d-cover-wrap {
+        transform: none !important;
+        transition: none !important;
+      }
+      .top-books-3d-track {
+        animation: none !important;
+        transform: none !important;
+      }
+      .institutes-scroll,
+      .feedback-scroll {
+        animation: none !important;
+        transform: none !important;
+      }
+    }
+    @media (max-width: 767.98px) {
+      .triple-3d-card--left .triple-3d-inner,
+      .triple-3d-card--center .triple-3d-inner,
+      .triple-3d-card--right .triple-3d-inner {
+        transform: perspective(900px) rotateY(0deg) rotateX(0deg);
+      }
     }
   </style>
 
@@ -320,9 +871,9 @@
 
 </head>
 
-<body data-spy="scroll" data-target=".fixed-top">
+<body class="theme-3d" data-spy="scroll" data-target=".fixed-top">
   <!-- ================ Start Header Area ================= -->
-  <header class="default-header bg-white shadow-sm">
+  <header class="default-header header-3d bg-white shadow-sm">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="./">
@@ -349,10 +900,10 @@
   </header>
   <!-- ================ End Header Area ================= -->
 
-  <section class="professional-overview py-6">
+  <section class="professional-overview hero-3d-stage py-6">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="col-lg-6 mb-4 mb-lg-0 hero-copy-3d">
           <span class="eyebrow">JEE preparation made professional</span>
           <h1 class="display-4 mt-3">
             Curated IIT JEE resources for serious aspirants.
@@ -360,13 +911,15 @@
           <p class="lead text-muted mt-4">
             Access a clean, distraction-free study hub with curated books, practice tests, and exam strategy notes designed to help you prepare confidently.
           </p>
-          <div class="mt-5">
-            <a href="./books/" class="btn btn-primary btn-lg mr-3">Browse Free Books</a>
-            <a href="./connect/" class="btn btn-outline-secondary btn-lg">Contact Us</a>
+          <div class="mt-5 hero-cta-3d">
+            <a href="./books/" class="btn btn-primary btn-lg btn-3d-primary mr-3">Browse Free Books</a>
+            <a href="./connect/" class="btn btn-outline-secondary btn-lg btn-3d-outline">Contact Us</a>
           </div>
         </div>
         <div class="col-lg-6 text-center">
-          <img src="img/jee.png" alt="IIT JEE resources" class="img-fluid rounded shadow-lg" />
+          <div class="hero-float-3d">
+            <img src="img/jee.png" alt="IIT JEE resources" class="img-fluid hero-3d-img" />
+          </div>
         </div>
       </div>
     </div>
@@ -375,25 +928,54 @@
   <section class="feature-summary py-5 bg-white">
     <div class="container">
       <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100 p-4">
+        <div class="col-md-4 mb-4 feature-3d-col">
+          <div class="card border-0 shadow-sm h-100 p-4 feature-3d-card">
             <div class="icon mb-3 text-primary"><i class="fas fa-book-open fa-2x"></i></div>
             <h5 class="mb-3">Curated Study Material</h5>
             <p class="text-muted">High-quality JEE books and notes selected for clarity, syllabus coverage, and exam relevance.</p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100 p-4">
+        <div class="col-md-4 mb-4 feature-3d-col">
+          <div class="card border-0 shadow-sm h-100 p-4 feature-3d-card">
             <div class="icon mb-3 text-primary"><i class="fas fa-pencil-alt fa-2x"></i></div>
             <h5 class="mb-3">Focused Practice</h5>
             <p class="text-muted">Chapter-wise practice tests and solved examples help you build consistency and speed.</p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm h-100 p-4">
+        <div class="col-md-4 mb-4 feature-3d-col">
+          <div class="card border-0 shadow-sm h-100 p-4 feature-3d-card">
             <div class="icon mb-3 text-primary"><i class="fas fa-lightbulb fa-2x"></i></div>
             <h5 class="mb-3">Exam Strategy</h5>
             <p class="text-muted">Practical guidance from toppers and expert pointers to structure your preparation effectively.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase-3d-split py-5" aria-labelledby="showcase-3d-heading">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 order-lg-2">
+          <span class="d-inline-block text-uppercase small font-weight-bold text-primary mb-2" style="letter-spacing: 0.18em;">Spotlight</span>
+          <h2 id="showcase-3d-heading" class="display-5 font-weight-bold text-dark mb-3">Materials that feel within reach</h2>
+          <p class="lead text-muted mb-4">
+            Layered previews of notes and guides—built to look as clear on screen as they do on your desk. Open the library and pick up where you left off.
+          </p>
+          <a href="./books/" class="btn btn-primary btn-lg btn-3d-primary">Open free books</a>
+          <a href="./practicetest/" class="btn btn-outline-dark btn-lg ml-2 mt-2 mt-sm-0">Practice tests</a>
+        </div>
+        <div class="col-lg-6 order-lg-1 mb-2 mb-lg-0">
+          <div class="showcase-3d-visual">
+            <div class="showcase-3d-stack">
+              <figure class="showcase-3d-panel showcase-3d-panel--rear">
+                <img src="img/details-lightbox2.png" alt="" loading="lazy" width="640" height="400" />
+              </figure>
+              <figure class="showcase-3d-panel showcase-3d-panel--front">
+                <img src="img/details-lightbox1.jpg" alt="Preview of JEE study notes and diagrams" loading="lazy" width="640" height="400" />
+                <figcaption>Notes &amp; diagrams</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </div>
@@ -404,10 +986,13 @@
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="display-5 fw-bold">Top Institutes of India</h2>
-        <p class="lead text-muted mt-3">Dream big, work hard, and make it happen! These prestigious institutions are waiting for your excellence.</p>
+        <p class="lead text-muted mt-3 mb-0">Dream big, work hard, and make it happen! Campuses auto-scroll—hover to pause.</p>
       </div>
-      <div class="institutes-scroll-wrapper">
-        <div class="institutes-scroll">
+    </div>
+    <div class="marquee-bleed">
+      <div class="marquee-shell marquee-shell--slate">
+        <div class="marquee-viewport" role="region" aria-label="Top institutes of India, auto-scrolling. Pauses on hover.">
+          <div class="institutes-scroll">
           <div class="institute-card">
             <img src="img/IIT_Bombay.png" alt="IIT Bombay" />
             <p class="text-center mt-2 fw-semibold">IIT Bombay</p>
@@ -491,6 +1076,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -507,7 +1093,7 @@
           </ul>
         </div>
         <div class="col-lg-6">
-          <div class="bg-light rounded p-4 shadow-sm">
+          <div class="bg-light rounded p-4 shadow-sm glass-3d-panel">
             <h5 class="mb-4">Professional website essentials</h5>
             <p class="text-muted mb-3">A streamlined interface focused on resources without unnecessary distractions.</p>
             <p class="text-muted mb-3">Fast access to books, helpful navigation, and a clean reading experience.</p>
@@ -518,14 +1104,76 @@
     </div>
   </section>
 
+  <section class="triple-3d-gallery py-5" aria-labelledby="triple-3d-heading">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="d-inline-block text-uppercase small font-weight-bold text-primary mb-2" style="letter-spacing: 0.18em;">Gallery</span>
+        <h2 id="triple-3d-heading" class="display-5 font-weight-bold text-dark">Subject-wise JEE resources</h2>
+        <p class="lead text-muted mt-3 mb-0">Physics, Chemistry, and Mathematics—each angle is a doorway into the same focused prep hub.</p>
+      </div>
+      <div class="row text-center text-md-left">
+        <div class="col-md-4 mb-4 triple-3d-col">
+          <a class="triple-3d-card triple-3d-card--left" href="./books/">
+            <div class="triple-3d-inner">
+              <img src="img/details-lightbox1.jpg" alt="Physics-style problems and theory sheets" loading="lazy" width="640" height="400" />
+            </div>
+            <h3 class="h5 mt-3 mb-1">Physics depth</h3>
+            <p class="mb-0 small">Concept sheets and drill-friendly layouts.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4 triple-3d-col">
+          <a class="triple-3d-card triple-3d-card--center" href="./books/">
+            <div class="triple-3d-inner">
+              <img src="img/jee.png" alt="JEE preparation overview graphic" loading="lazy" width="640" height="400" />
+            </div>
+            <h3 class="h5 mt-3 mb-1">Full syllabus map</h3>
+            <p class="mb-0 small">One hub for PCM and exam rhythm.</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4 triple-3d-col">
+          <a class="triple-3d-card triple-3d-card--right" href="./toppertips/">
+            <div class="triple-3d-inner">
+              <img src="img/details-lightbox2.png" alt="Strategy notes and topper-style tips" loading="lazy" width="640" height="400" />
+            </div>
+            <h3 class="h5 mt-3 mb-1">Strategy layer</h3>
+            <p class="mb-0 small">Toppers, timing, and paper tactics.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="top-books-3d-section py-5" aria-labelledby="top-books-3d-heading">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="d-inline-block text-uppercase small font-weight-bold text-primary mb-2" style="letter-spacing: 0.18em;">Top books</span>
+        <h2 id="top-books-3d-heading" class="display-5 font-weight-bold text-dark">Curated picks from Top Books</h2>
+        <p class="lead text-muted mt-2 mb-3">
+          Same list as the Top Books page—covers auto-scroll; hover to pause and click any book for the official link (Amazon / publisher).
+        </p>
+        <a href="./topbooks/" class="btn btn-outline-primary btn-sm">View all on Top Books</a>
+      </div>
+    </div>
+    <div class="top-books-3d-marquee-bleed">
+      <div class="top-books-3d-scroll-outer">
+        <div class="top-books-3d-scroll-wrapper" role="region" aria-label="Top books carousel, auto-scrolling. Pauses on hover.">
+          <div id="top-books-3d-track" class="top-books-3d-track" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="students-feedback py-5 bg-white">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="display-5 fw-bold">Students Feedback</h2>
-        <p class="lead text-muted mt-3">Real stories from real achievers! See how our resources have helped students crack JEE and achieve their dreams.</p>
+        <p class="lead text-muted mt-3 mb-0">Real stories from real achievers! Cards auto-scroll—hover to pause.</p>
       </div>
-      <div class="feedback-scroll-wrapper">
-        <div class="feedback-scroll">
+    </div>
+    <div class="marquee-bleed">
+      <div class="marquee-shell marquee-shell--paper">
+        <div class="marquee-viewport" role="region" aria-label="Student feedback, auto-scrolling. Pauses on hover.">
+          <div class="feedback-scroll">
           <div class="feedback-card">
             <img src="img/details-lightbox1.jpg" alt="Suresh Babu" />
             <h4 class="mt-3">Suresh Babu</h4>
@@ -625,6 +1273,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -695,6 +1344,101 @@
   <script src="js/jquery.nice-select.min.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/chatbot.js" defer></script>
+  <script>
+    (function () {
+      var API = "https://api.npoint.io/35cafbb2687e46eb0204";
+      var FALLBACK = "./topbooks.json";
+
+      function resolveImg(src) {
+        if (!src) return "./img/logo.png";
+        var s = String(src).trim();
+        if (/^https?:\/\//i.test(s)) return s;
+        /* Top Books API uses paths relative to /topbooks/ (e.g. ../img/topbooks/book1.jpg) */
+        if (s.indexOf("../img/") === 0) {
+          return "./img/" + s.slice("../img/".length);
+        }
+        if (s.indexOf("img/") === 0) {
+          return "./" + s;
+        }
+        return "./" + s.replace(/^\.+\//, "").replace(/^\.\//, "");
+      }
+
+      function renderBooks(data) {
+        var track = document.getElementById("top-books-3d-track");
+        if (!track || !Array.isArray(data)) return;
+        track.className = "top-books-3d-track";
+        track.innerHTML = "";
+        var list = data.length ? data.concat(data) : data;
+        list.forEach(function (book) {
+          var url = book.url || "#";
+          var name = book.book_name || "Book";
+          var imgSrc = resolveImg(book.image);
+
+          var article = document.createElement("article");
+          article.className = "top-book-3d-card";
+
+          var a = document.createElement("a");
+          a.href = url;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          a.className = "top-book-3d-card__link";
+          a.setAttribute("aria-label", name + " (opens in new tab)");
+
+          var wrap = document.createElement("div");
+          wrap.className = "top-book-3d-cover-wrap";
+          var im = document.createElement("img");
+          im.src = imgSrc;
+          im.alt = "";
+          im.decoding = "async";
+          im.onerror = function () {
+            this.onerror = null;
+            this.src = "./img/logo.png";
+          };
+          wrap.appendChild(im);
+          a.appendChild(wrap);
+
+          var h3 = document.createElement("h3");
+          h3.className = "top-book-3d-title";
+          h3.textContent = name;
+          a.appendChild(h3);
+
+          article.appendChild(a);
+          track.appendChild(article);
+        });
+      }
+
+      function showFallback() {
+        var track = document.getElementById("top-books-3d-track");
+        if (track) {
+          track.className = "top-books-3d-track top-books-3d-track--fallback";
+          track.innerHTML =
+            '<p class="top-books-3d-fallback text-muted py-3 mb-0">Could not load the list. <a href="./topbooks/">Open Top Books</a> to browse covers and links.</p>';
+        }
+      }
+
+      function load() {
+        fetch(API)
+          .then(function (r) {
+            if (!r.ok) throw new Error("api");
+            return r.json();
+          })
+          .catch(function () {
+            return fetch(FALLBACK).then(function (r) {
+              if (!r.ok) throw new Error("fallback");
+              return r.json();
+            });
+          })
+          .then(renderBooks)
+          .catch(showFallback);
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", load);
+      } else {
+        load();
+      }
+    })();
+  </script>
 </body>
 
 </html>
