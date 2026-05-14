@@ -80,28 +80,6 @@
   <!-- Swiper CSS -->
   <link href="css/styles.css" rel="stylesheet" fetchpriority="high" />
   <style>
-    .navbar-nav a {
-      text-decoration: none !important;
-      color: #334155 !important;
-      font-weight: 600;
-      padding: 0.5rem 0.75rem;
-    }
-    .navbar-nav a:hover {
-      color: #0f172a !important;
-    }
-    .default-header {
-      position: relative;
-      z-index: 20;
-    }
-    .header-3d.default-header {
-      background: rgba(255, 255, 255, 0.78);
-      -webkit-backdrop-filter: blur(16px) saturate(1.25);
-      backdrop-filter: blur(16px) saturate(1.25);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.65);
-      box-shadow:
-        0 1px 0 rgba(255, 255, 255, 0.85) inset,
-        0 18px 48px rgba(15, 23, 42, 0.12);
-    }
     body.theme-3d {
       background:
         radial-gradient(1000px 700px at 8% -5%, rgba(99, 102, 241, 0.14), transparent 55%),
@@ -839,6 +817,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="css/header-3d-site.css" />
 
   <script type="application/ld+json">
   {
@@ -1344,6 +1323,7 @@
   <script src="js/jquery.nice-select.min.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/chatbot.js" defer></script>
+  <script src="js/header-3d-fixed.js" defer></script>
   <script>
     (function () {
       var API = "https://api.npoint.io/35cafbb2687e46eb0204";
