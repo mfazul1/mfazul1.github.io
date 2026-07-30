@@ -1,6 +1,6 @@
 /* Fixed glass header (site-wide). Requires body.theme-3d + header.default-header.header-3d. Load after main.css. */
 body.theme-3d {
-  padding-top: var(--header-3d-h, 76px);
+  padding-top: var(--header-3d-h, 56px);
 }
 
 .default-header.header-3d,
@@ -17,7 +17,9 @@ body.theme-3d {
   border-bottom: 1px solid rgba(255, 255, 255, 0.65);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.85) inset,
-    0 18px 48px rgba(15, 23, 42, 0.12);
+    0 12px 32px rgba(15, 23, 42, 0.1);
+  min-height: 56px;
+  padding: 0.35rem 0 !important;
 }
 
 .default-header.header-3d.header-scrolled,

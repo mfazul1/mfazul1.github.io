@@ -76,7 +76,7 @@
   <link rel="stylesheet" href="css/bootstrap.css" fetchpriority="high" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" crossorigin="anonymous" referrerpolicy="no-referrer" fetchpriority="high" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" fetchpriority="high" />
-  <link rel="stylesheet" href="css/main.css" fetchpriority="high" />
+  <link rel="stylesheet" href="css/main.css?v=7" fetchpriority="high" />
   <!-- Swiper CSS -->
   <link href="css/styles.css" rel="stylesheet" fetchpriority="high" />
   <style>
@@ -86,10 +86,10 @@
         radial-gradient(800px 560px at 92% 8%, rgba(56, 189, 248, 0.12), transparent 50%),
         linear-gradient(180deg, #eef2f7 0%, #e2e8f0 100%);
     }
-    .professional-overview {
+.professional-overview {
       color: #f8fafc;
-      padding-top: 5rem;
-      padding-bottom: 5rem;
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
     }
     .hero-3d-stage.professional-overview {
       position: relative;
@@ -266,22 +266,6 @@
     }
     .professional-services {
       background: #f8fafc;
-    }
-    .footer-area {
-      background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
-      color: #cbd5e1;
-      box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.25);
-      border-top: 1px solid rgba(148, 163, 184, 0.12);
-    }
-    .footer-area a {
-      color: #cbd5e1;
-      text-decoration: none;
-    }
-    .footer-area a:hover {
-      color: #ffffff;
-    }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
     }
     .btn-primary {
       background-color: #0f172a;
@@ -808,13 +792,155 @@
         animation: none !important;
         transform: none !important;
       }
-    }
-    @media (max-width: 767.98px) {
-      .triple-3d-card--left .triple-3d-inner,
-      .triple-3d-card--center .triple-3d-inner,
-      .triple-3d-card--right .triple-3d-inner {
-        transform: perspective(900px) rotateY(0deg) rotateX(0deg);
+      .float-3d,
+      .float-3d-slow,
+      .float-3d-medium,
+      .float-3d-fast {
+        animation: none !important;
       }
+    }
+    /* Floating 3D animations */
+    @keyframes float-3d-slow {
+      0%, 100% { transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg); }
+      25% { transform: translateY(-12px) translateZ(8px) rotateX(2deg) rotateY(-3deg); }
+      50% { transform: translateY(-6px) translateZ(16px) rotateX(-1deg) rotateY(2deg); }
+      75% { transform: translateY(-10px) translateZ(4px) rotateX(3deg) rotateY(-1deg); }
+    }
+    @keyframes float-3d-medium {
+      0%, 100% { transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg); }
+      33% { transform: translateY(-8px) translateZ(12px) rotateX(1.5deg) rotateY(-2deg); }
+      66% { transform: translateY(-4px) translateZ(6px) rotateX(-1deg) rotateY(1.5deg); }
+    }
+    @keyframes float-3d-fast {
+      0%, 100% { transform: translateY(0) translateZ(0); }
+      50% { transform: translateY(-6px) translateZ(4px); }
+    }
+    @keyframes float-3d-gentle {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(1deg); }
+    }
+    @keyframes float-3d-particle {
+      0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.4; }
+      25% { transform: translateY(-20px) translateX(10px) scale(1.1); opacity: 0.7; }
+      50% { transform: translateY(-10px) translateX(-8px) scale(0.9); opacity: 0.5; }
+      75% { transform: translateY(-18px) translateX(5px) scale(1.05); opacity: 0.6; }
+    }
+    .float-3d-slow {
+      animation: float-3d-slow 8s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    .float-3d-medium {
+      animation: float-3d-medium 6s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    .float-3d-fast {
+      animation: float-3d-fast 4s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    .float-3d-gentle {
+      animation: float-3d-gentle 10s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    .float-3d-particle {
+      animation: float-3d-particle 7s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    /* Parallax depth layers */
+    .parallax-layer {
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    .parallax-layer--back { transform: translateZ(-100px) scale(1.2); }
+    .parallax-layer--mid { transform: translateZ(-50px) scale(1.1); }
+    .parallax-layer--front { transform: translateZ(0); }
+    /* 3D glow pulse for buttons */
+    @keyframes btn-3d-glow {
+      0%, 100% { box-shadow: 0 10px 0 #020617, 0 18px 32px rgba(0,0,0,0.35); }
+      50% { box-shadow: 0 10px 0 #020617, 0 24px 48px rgba(56,189,248,0.3), 0 18px 32px rgba(0,0,0,0.35); }
+    }
+    .btn-3d-primary {
+      animation: btn-3d-glow 3s ease-in-out infinite;
+    }
+    /* 3D card stack hover enhancement */
+    .card-3d-stack {
+      perspective: 1200px;
+      perspective-origin: 50% 50%;
+    }
+    .card-3d-stack .card-3d-layer {
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.2, 0.85, 0.25, 1), box-shadow 0.6s ease;
+    }
+    .card-3d-stack:hover .card-3d-layer:nth-child(1) { transform: rotateY(-8deg) rotateX(3deg) translateZ(30px) scale(1.02); }
+    .card-3d-stack:hover .card-3d-layer:nth-child(2) { transform: rotateY(5deg) rotateX(-2deg) translateZ(15px) scale(0.98); }
+    .card-3d-stack:hover .card-3d-layer:nth-child(3) { transform: rotateY(-3deg) rotateX(1deg) translateZ(5px) scale(0.95); }
+    /* Floating particles background */
+    .floating-particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .floating-particles::before,
+    .floating-particles::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99,102,241,0.15), transparent 70%);
+      animation: float-3d-particle 12s ease-in-out infinite;
+    }
+    .floating-particles::before {
+      width: 120px; height: 120px;
+      top: 10%; left: 5%;
+      animation-delay: 0s;
+    }
+    .floating-particles::after {
+      width: 80px; height: 80px;
+      bottom: 15%; right: 8%;
+      background: radial-gradient(circle, rgba(56,189,248,0.12), transparent 70%);
+      animation-delay: -4s;
+    }
+    /* 3D text hover effect */
+    .text-3d-hover {
+      transform-style: preserve-3d;
+      transition: transform 0.4s cubic-bezier(0.2, 0.85, 0.25, 1), text-shadow 0.4s ease;
+    }
+    .text-3d-hover:hover {
+      transform: perspective(800px) rotateX(5deg) rotateY(-5deg) translateZ(20px);
+      text-shadow: 
+        0 4px 0 rgba(0,0,0,0.1),
+        0 8px 0 rgba(0,0,0,0.08),
+        0 16px 32px rgba(99,102,241,0.3),
+        0 32px 64px rgba(56,189,248,0.2);
+    }
+    /* Hero section floating particles */
+    .hero-3d-stage::before {
+      content: "";
+      position: absolute;
+      inset: -25%;
+      background:
+        radial-gradient(circle at 22% 28%, rgba(56, 189, 248, 0.22), transparent 42%),
+        radial-gradient(circle at 78% 62%, rgba(129, 140, 248, 0.18), transparent 48%),
+        radial-gradient(circle at 50% 100%, rgba(15, 23, 42, 0.5), transparent 55%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-3d-stage::after {
+      content: "";
+      position: absolute;
+      left: -15%;
+      right: -15%;
+      bottom: -18%;
+      height: 52%;
+      opacity: 0.42;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        linear-gradient(to top, rgba(7, 11, 20, 0.55), transparent 70%),
+        repeating-linear-gradient(90deg, rgba(148, 163, 184, 0.09) 0 1px, transparent 1px 52px),
+        repeating-linear-gradient(0deg, rgba(148, 163, 184, 0.07) 0 1px, transparent 1px 52px);
+      transform: perspective(720px) rotateX(64deg);
+      transform-origin: center bottom;
     }
   </style>
   <link rel="stylesheet" href="css/header-3d-site.css" />
@@ -852,11 +978,11 @@
 
 <body class="theme-3d" data-spy="scroll" data-target=".fixed-top">
   <!-- ================ Start Header Area ================= -->
-  <header class="default-header header-3d bg-white shadow-sm">
+  <header class="default-header header-3d bg-white shadow-sm" style="padding: 0.4rem 0;">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="./">
-          <img src="img/logo.png" alt="JEEIITianBooks logo" style="width: 150px; height: 30px;" />
+          <img src="img/logo.png" alt="JEEIITianBooks logo" style="width: 120px; height: 24px;" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -879,10 +1005,11 @@
   </header>
   <!-- ================ End Header Area ================= -->
 
-  <section class="professional-overview hero-3d-stage py-6">
+  <section class="professional-overview hero-3d-stage py-4">
+    <div class="floating-particles"></div>
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0 hero-copy-3d">
+        <div class="col-lg-6 mb-4 mb-lg-0 hero-copy-3d float-3d-medium text-3d-hover" style="animation-delay: 0.3s;">
           <span class="eyebrow">JEE preparation made professional</span>
           <h1 class="display-4 mt-3">
             Curated IIT JEE resources for serious aspirants.
@@ -896,7 +1023,7 @@
           </div>
         </div>
         <div class="col-lg-6 text-center">
-          <div class="hero-float-3d">
+          <div class="hero-float-3d float-3d-slow">
             <img src="img/jee.png" alt="IIT JEE resources" class="img-fluid hero-3d-img" />
           </div>
         </div>
@@ -904,25 +1031,26 @@
     </div>
   </section>
 
-  <section class="feature-summary py-5 bg-white">
+  <section class="feature-summary py-4 bg-white">
+    <div class="floating-particles" style="opacity: 0.3;"></div>
     <div class="container">
       <div class="row text-center">
         <div class="col-md-4 mb-4 feature-3d-col">
-          <div class="card border-0 shadow-sm h-100 p-4 feature-3d-card">
+          <div class="card border-0 shadow-sm h-100 p-4 feature-3d-card float-3d-medium" style="animation-delay: 0.2s;">
             <div class="icon mb-3 text-primary"><i class="fas fa-book-open fa-2x"></i></div>
             <h5 class="mb-3">Curated Study Material</h5>
             <p class="text-muted">High-quality JEE books and notes selected for clarity, syllabus coverage, and exam relevance.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4 feature-3d-col">
-          <div class="card border-0 shadow-sm h-100 p-4 feature-3d-card">
+          <div class="card border-0 shadow-sm h-100 p-4 feature-3d-card float-3d-medium" style="animation-delay: 0.6s;">
             <div class="icon mb-3 text-primary"><i class="fas fa-pencil-alt fa-2x"></i></div>
             <h5 class="mb-3">Focused Practice</h5>
             <p class="text-muted">Chapter-wise practice tests and solved examples help you build consistency and speed.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4 feature-3d-col">
-          <div class="card border-0 shadow-sm h-100 p-4 feature-3d-card">
+          <div class="card border-0 shadow-sm h-100 p-4 feature-3d-card float-3d-medium" style="animation-delay: 1s;">
             <div class="icon mb-3 text-primary"><i class="fas fa-lightbulb fa-2x"></i></div>
             <h5 class="mb-3">Exam Strategy</h5>
             <p class="text-muted">Practical guidance from toppers and expert pointers to structure your preparation effectively.</p>
@@ -932,7 +1060,8 @@
     </div>
   </section>
 
-  <section class="showcase-3d-split py-5" aria-labelledby="showcase-3d-heading">
+  <section class="showcase-3d-split py-4" aria-labelledby="showcase-3d-heading">
+    <div class="floating-particles" style="opacity: 0.2;"></div>
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0 order-lg-2">
@@ -945,7 +1074,7 @@
           <a href="./practicetest/" class="btn btn-outline-dark btn-lg ml-2 mt-2 mt-sm-0">Practice tests</a>
         </div>
         <div class="col-lg-6 order-lg-1 mb-2 mb-lg-0">
-          <div class="showcase-3d-visual">
+          <div class="showcase-3d-visual float-3d-slow">
             <div class="showcase-3d-stack">
               <figure class="showcase-3d-panel showcase-3d-panel--rear">
                 <img src="img/details-lightbox2.png" alt="" loading="lazy" width="640" height="400" />
@@ -961,7 +1090,7 @@
     </div>
   </section>
 
-  <section class="top-institutes py-5 bg-light">
+  <section class="top-institutes py-4 bg-light">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="display-5 fw-bold">Top Institutes of India</h2>
@@ -972,84 +1101,84 @@
       <div class="marquee-shell marquee-shell--slate">
         <div class="marquee-viewport" role="region" aria-label="Top institutes of India, auto-scrolling. Pauses on hover.">
           <div class="institutes-scroll">
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IIT_Bombay.png" alt="IIT Bombay" />
             <p class="text-center mt-2 fw-semibold">IIT Bombay</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IIT_Chennai.png" alt="IIT Chennai" />
             <p class="text-center mt-2 fw-semibold">IIT Chennai</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IIT_Khargpur.png" alt="IIT Khargpur" />
             <p class="text-center mt-2 fw-semibold">IIT Khargpur</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IITBombay.jpg" alt="IIT Bombay" />
             <p class="text-center mt-2 fw-semibold">IIT Bombay</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IITChennai.jpg" alt="IIT Chennai" />
             <p class="text-center mt-2 fw-semibold">IIT Chennai</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IITDelhi.jpg" alt="IIT Delhi" />
             <p class="text-center mt-2 fw-semibold">IIT Delhi</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IITDharwad.jpg" alt="IIT Dharwad" />
             <p class="text-center mt-2 fw-semibold">IIT Dharwad</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IITHyderabad.jpg" alt="IIT Hyderabad" />
             <p class="text-center mt-2 fw-semibold">IIT Hyderabad</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/NITCalicut.jpg" alt="NIT Calicut" />
             <p class="text-center mt-2 fw-semibold">NIT Calicut</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/NITSurathkal.jpg" alt="NIT Surathkal" />
             <p class="text-center mt-2 fw-semibold">NIT Surathkal</p>
           </div>
           <!-- Duplicate for seamless infinite scroll -->
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IIT_Bombay.png" alt="IIT Bombay" />
             <p class="text-center mt-2 fw-semibold">IIT Bombay</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IIT_Chennai.png" alt="IIT Chennai" />
             <p class="text-center mt-2 fw-semibold">IIT Chennai</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IIT_Khargpur.png" alt="IIT Khargpur" />
             <p class="text-center mt-2 fw-semibold">IIT Khargpur</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IITBombay.jpg" alt="IIT Bombay" />
             <p class="text-center mt-2 fw-semibold">IIT Bombay</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IITChennai.jpg" alt="IIT Chennai" />
             <p class="text-center mt-2 fw-semibold">IIT Chennai</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IITDelhi.jpg" alt="IIT Delhi" />
             <p class="text-center mt-2 fw-semibold">IIT Delhi</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IITDharwad.jpg" alt="IIT Dharwad" />
             <p class="text-center mt-2 fw-semibold">IIT Dharwad</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/IITHyderabad.jpg" alt="IIT Hyderabad" />
             <p class="text-center mt-2 fw-semibold">IIT Hyderabad</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/NITCalicut.jpg" alt="NIT Calicut" />
             <p class="text-center mt-2 fw-semibold">NIT Calicut</p>
           </div>
-          <div class="institute-card">
+          <div class="institute-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.3s);">
             <img src="img/NITSurathkal.jpg" alt="NIT Surathkal" />
             <p class="text-center mt-2 fw-semibold">NIT Surathkal</p>
           </div>
@@ -1059,7 +1188,8 @@
     </div>
   </section>
 
-  <section class="professional-services py-5">
+  <section class="professional-services py-4">
+    <div class="floating-particles" style="opacity: 0.15;"></div>
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
@@ -1083,7 +1213,7 @@
     </div>
   </section>
 
-  <section class="triple-3d-gallery py-5" aria-labelledby="triple-3d-heading">
+  <section class="triple-3d-gallery py-4" aria-labelledby="triple-3d-heading">
     <div class="container">
       <div class="text-center mb-5">
         <span class="d-inline-block text-uppercase small font-weight-bold text-primary mb-2" style="letter-spacing: 0.18em;">Gallery</span>
@@ -1092,7 +1222,7 @@
       </div>
       <div class="row text-center text-md-left">
         <div class="col-md-4 mb-4 triple-3d-col">
-          <a class="triple-3d-card triple-3d-card--left" href="./books/">
+          <a class="triple-3d-card triple-3d-card--left float-3d-slow" href="./books/" style="animation-delay: 0.2s;">
             <div class="triple-3d-inner">
               <img src="img/details-lightbox1.jpg" alt="Physics-style problems and theory sheets" loading="lazy" width="640" height="400" />
             </div>
@@ -1101,7 +1231,7 @@
           </a>
         </div>
         <div class="col-md-4 mb-4 triple-3d-col">
-          <a class="triple-3d-card triple-3d-card--center" href="./books/">
+          <a class="triple-3d-card triple-3d-card--center float-3d-slow" href="./books/" style="animation-delay: 0.6s;">
             <div class="triple-3d-inner">
               <img src="img/jee.png" alt="JEE preparation overview graphic" loading="lazy" width="640" height="400" />
             </div>
@@ -1110,7 +1240,7 @@
           </a>
         </div>
         <div class="col-md-4 mb-4 triple-3d-col">
-          <a class="triple-3d-card triple-3d-card--right" href="./toppertips/">
+          <a class="triple-3d-card triple-3d-card--right float-3d-slow" href="./toppertips/" style="animation-delay: 1s;">
             <div class="triple-3d-inner">
               <img src="img/details-lightbox2.png" alt="Strategy notes and topper-style tips" loading="lazy" width="640" height="400" />
             </div>
@@ -1153,7 +1283,7 @@
       <div class="marquee-shell marquee-shell--paper">
         <div class="marquee-viewport" role="region" aria-label="Student feedback, auto-scrolling. Pauses on hover.">
           <div class="feedback-scroll">
-          <div class="feedback-card">
+          <div class="feedback-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.4s);">
             <img src="img/details-lightbox1.jpg" alt="Suresh Babu" />
             <h4 class="mt-3">Suresh Babu</h4>
             <p class="text-muted">"This website provided me with the perfect study materials and practice tests. The structured approach helped me crack JEE Advanced with flying colors!"</p>
@@ -1165,7 +1295,7 @@
               <i class="fas fa-star text-warning"></i>
             </div>
           </div>
-          <div class="feedback-card">
+          <div class="feedback-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.4s);">
             <img src="img/details-lightbox2.png" alt="Priya Ghosh" />
             <h4 class="mt-3">Priya Ghosh</h4>
             <p class="text-muted">"The curated books and topper tips were game-changers for my preparation. I secured AIR 156 in JEE Main thanks to this amazing platform!"</p>
@@ -1177,7 +1307,7 @@
               <i class="fas fa-star text-warning"></i>
             </div>
           </div>
-          <div class="feedback-card">
+          <div class="feedback-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.4s);">
             <img src="img/details-lightbox1.jpg" alt="Amal Panday" />
             <h4 class="mt-3">Amal Panday</h4>
             <p class="text-muted">"The practice tests and solved examples helped me improve my speed and accuracy. Highly recommend this website to all JEE aspirants!"</p>
@@ -1189,7 +1319,7 @@
               <i class="fas fa-star text-warning"></i>
             </div>
           </div>
-          <div class="feedback-card">
+          <div class="feedback-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.4s);">
             <img src="img/details-lightbox2.png" alt="Neha Malhotra" />
             <h4 class="mt-3">Neha Malhotra</h4>
             <p class="text-muted">"The clean interface and well-organized resources made my preparation journey smooth. I got into my dream IIT thanks to JEEIITianBooks!"</p>
@@ -1202,7 +1332,7 @@
             </div>
           </div>
           <!-- Duplicate for seamless infinite scroll -->
-          <div class="feedback-card">
+          <div class="feedback-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.4s);">
             <img src="img/details-lightbox1.jpg" alt="Suresh Babu" />
             <h4 class="mt-3">Suresh Babu</h4>
             <p class="text-muted">"This website provided me with the perfect study materials and practice tests. The structured approach helped me crack JEE Advanced with flying colors!"</p>
@@ -1214,7 +1344,7 @@
               <i class="fas fa-star text-warning"></i>
             </div>
           </div>
-          <div class="feedback-card">
+          <div class="feedback-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.4s);">
             <img src="img/details-lightbox2.png" alt="Priya Ghosh" />
             <h4 class="mt-3">Priya Ghosh</h4>
             <p class="text-muted">"The curated books and topper tips were game-changers for my preparation. I secured AIR 156 in JEE Main thanks to this amazing platform!"</p>
@@ -1226,7 +1356,7 @@
               <i class="fas fa-star text-warning"></i>
             </div>
           </div>
-          <div class="feedback-card">
+          <div class="feedback-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.4s);">
             <img src="img/details-lightbox1.jpg" alt="Amal Panday" />
             <h4 class="mt-3">Amal Panday</h4>
             <p class="text-muted">"The practice tests and solved examples helped me improve my speed and accuracy. Highly recommend this website to all JEE aspirants!"</p>
@@ -1238,7 +1368,7 @@
               <i class="fas fa-star text-warning"></i>
             </div>
           </div>
-          <div class="feedback-card">
+          <div class="feedback-card float-3d-slow" style="animation-delay: calc(var(--i, 0) * 0.4s);">
             <img src="img/details-lightbox2.png" alt="Neha Malhotra" />
             <h4 class="mt-3">Neha Malhotra</h4>
             <p class="text-muted">"The clean interface and well-organized resources made my preparation journey smooth. I got into my dream IIT thanks to JEEIITianBooks!"</p>
@@ -1256,34 +1386,42 @@
     </div>
   </section>
 
-  <footer class="footer-area py-5 bg-dark text-white">
+  <footer class="footer-area">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 mb-4">
-          <h5>About JEEIITianBooks</h5>
-          <p class="text-muted">A professional study hub offering curated IIT JEE content for aspirants who want focused preparation without clutter.</p>
+        <div class="col-lg-4 col-md-6 single-footer-widget">
+          <h4>About JEEIITianBooks</h4>
+          <p>A professional study hub offering curated IIT JEE content for aspirants who want focused preparation without clutter.</p>
         </div>
-        <div class="col-md-3 mb-4">
-          <h5>Quick links</h5>
-          <ul class="list-unstyled text-muted">
+        <div class="col-lg-2 col-md-6 single-footer-widget">
+          <h4>Quick Links</h4>
+          <ul>
             <li><a href="./books/">Free Books</a></li>
             <li><a href="./topbooks/">Top Books</a></li>
             <li><a href="./about/">About</a></li>
-            <li><a href="./connect/">Contact</a></li>
+            <li><a href="./connect/">Connect</a></li>
           </ul>
         </div>
-        <div class="col-md-3 mb-4">
-          <h5>Contact</h5>
-          <p class="text-muted mb-1">Email: fazulwork25@gmail.com</p>
-          <p class="text-muted">Website: jeeiitianbooks.in</p>
+        <div class="col-lg-3 col-md-6 single-footer-widget">
+          <h4>Contact</h4>
+          <p>Email: fazulwork25@gmail.com</p>
+          <p>Website: jeeiitianbooks.in</p>
+        </div>
+        <div class="col-lg-3 col-md-6 single-footer-widget">
+          <h4>Subjects</h4>
+          <ul>
+            <li><a href="./books/">Physics</a></li>
+            <li><a href="./books/">Chemistry</a></li>
+            <li><a href="./books/">Mathematics</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom border-top border-secondary pt-3 mt-4 text-muted d-flex justify-content-between flex-column flex-md-row">
+      <div class="footer-bottom d-flex justify-content-between flex-column flex-md-row align-items-center">
         <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> JEEIITianBooks. All rights reserved.</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/profile.php?id=61566435388534#" target="_blank" class="text-muted mr-3">Facebook</a>
-          <a href="https://www.linkedin.com/company/110216522/admin/dashboard/" class="text-muted mr-3">LinkedIn</a>
-          <a href="#" class="text-muted">YouTube</a>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61566435388534#" target="_blank" class="mr-3">Facebook</a>
+          <a href="https://www.linkedin.com/company/110216522/admin/dashboard/" class="mr-3">LinkedIn</a>
+          <a href="#">YouTube</a>
         </div>
       </div>
     </div>

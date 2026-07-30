@@ -1565,8 +1565,8 @@ input[type='checkbox'] {
 /*     20. Extra Pages     */
 /***************************/
 .ex-header {
-	padding-top: 8rem;
-	padding-bottom: 5rem;
+	padding-top: 2.5rem;
+	padding-bottom: 1.5rem;
 	background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/header-background.jpg') center center no-repeat;
 	background-size: cover;
 	text-align: center;
@@ -2342,49 +2342,91 @@ input[type='checkbox'] {
 
 .colorful-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   margin: 25px 0;
-  font-size: 0.9em;
+  font-size: 0.95em;
   font-family: 'Roboto', sans-serif;
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
 .colorful-table thead tr {
-  background: -webkit-linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
-  background: linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   color: #ffffff;
   text-align: left;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .colorful-table th,
 .colorful-table td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #dddddd;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .colorful-table tbody tr {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
 }
 
 .colorful-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
+  background-color: #f8fafc;
 }
 
 .colorful-table tbody tr:hover {
-  background-color: #e9ecef;
-  color: #7c32ff;
+  background-color: #eef2ff;
+  color: #4f46e5;
   font-weight: 500;
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+.colorful-table td:last-child a {
+  display: inline-block;
+  padding: 6px 18px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff !important;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.colorful-table td:last-child a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.colorful-table td:last-child a:active {
+  transform: translateY(0);
 }
 
 .books-table-wrap .form-control {
-    border-radius: 20px;
-    border: 1px solid #ddd;
+    border-radius: 999px;
+    border: 2px solid #e5e7eb;
     box-shadow: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.books-table-wrap .form-control:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.books-table-wrap {
+  font-family: 'Roboto', sans-serif;
+  color: #334155;
+  line-height: 1.7;
 }
 
 .books-grid {
