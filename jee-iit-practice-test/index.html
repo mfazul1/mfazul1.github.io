@@ -41,7 +41,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="../css/exam.css?v=2" />
+    <link rel="stylesheet" href="../css/exam.css?v=3" />
   <link rel="stylesheet" href="../css/main.css?v=7" />
   <link rel="stylesheet" href="../css/header-3d-site.css?v=7" />
 
@@ -181,6 +181,14 @@
             </div>
         </div>
 
+        <div class="timer-bar" id="timer-bar" style="display:none;">
+            <span class="timer-icon">&#9202;</span>
+            <span class="timer-text" id="timer-text">30:00</span>
+            <div class="timer-progress">
+                <div class="timer-progress-fill" id="timer-progress-fill"></div>
+            </div>
+        </div>
+
         <div class="question-box" id="question-box">
             Your Questions...
         </div>
@@ -188,7 +196,27 @@
         <div class="submit-container">
             <button class="submit-btn" id="submit-btn" disabled>Submit</button>
             <span id="score-display"></span>
+        </div>
+
+        <!-- Explanation Modal -->
+        <div class="modal fade" id="explanationModal" tabindex="-1" role="dialog" aria-labelledby="explanationModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="explanationModalLabel">Explanation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="explanation-body">
+                        Loading explanation...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
                 </div>
+            </div>
+        </div>
         
                 <!-- Score Modal -->
                 <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
