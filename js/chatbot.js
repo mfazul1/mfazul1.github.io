@@ -33,14 +33,17 @@ document.addEventListener('DOMContentLoaded', function () {
         "default": "I'm sorry, I'm not sure how to answer that. I can help with questions about the best books for JEE/IIT, how to download them, or information about this website. For more complex queries, you may need to consult a human expert."
     };
 
-    const DefaultBooksLink ="<br><br>You can find all the essential books for JEE/IIT preparation on our <b><a href='https://jeeiitianbooks.in/books/'>Free Books</a></b> page. Happy studying!";
+    const DefaultBooksLink ="<br><br>You can find all the essential books for JEE/IIT preparation on our <b><a href='https://jeeiitianbooks.in/jee-iit-free-books/'>Free Books</a></b> page. Happy studying!";
 
     // --- Chatbot Functions ---
 
+    let greetingShown = false;
+
     function toggleChat() {
         chatPopup.classList.toggle('show');
-        if (chatPopup.classList.contains('show')) {
+        if (chatPopup.classList.contains('show') && !greetingShown) {
             addMessage('bot', knowledgeBase.greeting);
+            greetingShown = true;
         }
     }
 
