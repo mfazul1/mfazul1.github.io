@@ -4,47 +4,53 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://jeeiitianbooks.in/</loc>
-  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <lastmod>2026-08-01</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://jeeiitianbooks.in/About</loc>
-  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <loc>https://jeeiitianbooks.in/jee-iit-free-books/</loc>
+  <lastmod>2026-08-01</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/jee-iit-top-books/</loc>
+  <lastmod>2026-08-01</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/jee-iit-practice-test/</loc>
+  <lastmod>2026-08-01</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://jeeiitianbooks.in/jee-iit-topper-tips/</loc>
+  <lastmod>2026-08-01</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://jeeiitianbooks.in/books</loc>
-  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
+  <loc>https://jeeiitianbooks.in/jee-iit-faqs/</loc>
+  <lastmod>2026-08-01</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://jeeiitianbooks.in/topbooks</loc>
-  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://jeeiitianbooks.in/about/</loc>
+  <lastmod>2026-08-01</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
-  <loc>https://jeeiitianbooks.in/Toppertips</loc>
-  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jeeiitianbooks.in/Practicetest</loc>
-  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jeeiitianbooks.in/faqs</loc>
-  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jeeiitianbooks.in/connect</loc>
-  <lastmod>2024-10-27T10:00:00+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://jeeiitianbooks.in/connect/</loc>
+  <lastmod>2026-08-01</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.60</priority>
 </url>
 </urlset>
