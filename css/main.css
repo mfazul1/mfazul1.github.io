@@ -4522,3 +4522,73 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-1px);
 }
+
+/* ── Professional Topper Tips Page ── */
+.topper-page-area {
+  padding: 3rem 0;
+}
+.topper-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.95) inset, 0 4px 12px rgba(15, 23, 42, 0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+.topper-card:hover {
+  transform: translateY(-6px);
+  border-color: #d8dffa;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+}
+.topper-card .rank-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1.1rem;
+}
+.topper-card .avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 3px solid #eef2ff;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.15);
+  display: block;
+}
+.topper-card .avatar-fallback {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  color: #4f46e5;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+.topper-card h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+.topper-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+.topper-card p strong {
+  color: #4f46e5;
+  font-weight: 700;
+}
