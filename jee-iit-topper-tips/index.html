@@ -69,97 +69,6 @@
 	
 	</script>
 
-<style> 
-	table {
-border-collapse: collapse;
-width: 100%;
-box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
- 0px 10px 20px rgba(0,0,0,0.05),
- 0px 20px 20px rgba(0,0,0,0.05),
- 0px 30px 20px rgba(0,0,0,0.05);
- font-family: 'Arial';
-margin: 25px auto;
-border: 1px solid #eee;
-/* border-bottom: 2px solid #00cccc; */
-}
-
-#myInput {
-background-image: url('"../imgsearch.png');
-background-position: 10px 10px;
-background-repeat: no-repeat;
-width: 100%;
-font-size: 16px;
-padding: 8px 8px 8px 40px;
-border: 1px solid #ddd;
-}
-
-th, td {
-padding: 8px;
-text-align: left;
-border-bottom: 3px solid #DDD;
-width: 30px; overflow: hidden;
-}
-th {
-background: #00cccc;
-color: #fff;
-text-transform: uppercase;
-font-size: 12px;    
-}
-
-tr:hover {background-color: #d8d6ee;}
-
-.hide-bg{
-mix-blend-mode: multiply;
-filter: contrast(2);/*edit to 2 to see effect*/
-width: 80px;
-align:left;
-height:20px;
-}
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: #fff;
-            padding: 16px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .name {
-            font-weight: bold;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .tip {
-            margin-top: 8px;
-            font-size: 14px;
-            color: #333;
-        }
-    </style>
-<!-- Mobile Specific Meta -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
-  <!-- Favicon -->
-  <!-- <link rel="shortcut icon" href="../img/favicon.png" /> -->
-  <!-- Author Meta -->
-  <!-- <meta name="author" content="colorlib" /> -->
-  <!-- Meta Description -->
-  <!-- <meta name="description" content="" /> -->
-  <!-- Meta Keyword -->
-  <!-- <meta name="keywords" content="" /> -->
-  <!-- meta character set -->
-  <!-- <meta charset="UTF-8" /> -->
-  <!-- Site Title -->
-  <!-- <title>Jeeiitian Books</title> -->
-
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700" rel="stylesheet" />
   <!--
       CSS
@@ -172,11 +81,11 @@ height:20px;
   <link rel="stylesheet" href="../css/owl.carousel.css" />
   <link rel="stylesheet" href="../css/nice-select.css">
   <link rel="stylesheet" href="../css/hexagons.min.css" />
-  <link rel="stylesheet" href="../css/main.css?v=7" />
+  <link rel="stylesheet" href="../css/main.css?v=12" />
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../css/header-3d-site.css?v=7" />
+  <link rel="stylesheet" href="../css/header-3d-site.css?v=12" />
 </head>
 
 <body class="theme-3d">
@@ -233,132 +142,198 @@ height:20px;
 	</section>
 	<!-- ================ End banner Area ================= -->
 
-	<!-- Start Sample Area -->
-	<section class="sample-text-area">
-		<div class="grid">
-        <!-- 20 Real Topper Cards (JEE Advanced AIR as reported in 2024 result sources) -->
+	<!-- Start Topper Tips Area -->
+	<section class="topper-page-area" aria-labelledby="topper-tips-heading">
+		<div class="container">
+			<div class="section-heading">
+				<span class="eyebrow-pill">Straight from the rank holders</span>
+				<h2 id="topper-tips-heading">What JEE Advanced Toppers Did Differently</h2>
+				<div class="divider"></div>
+				<p>Nineteen real toppers share the study habits, schedules and exam-day tactics that helped them crack the JEE Advanced.</p>
+			</div>
 
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Ved Lahoti</div>
-            <div class="tip">JEE Advanced (AIR): 1<br>Tip: Create a disciplined study schedule and revise core concepts multiple times.</div>
-        </div>
+			<div class="row">
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 1</span>
+						<img src="../img/topper.png" alt="Ved Lahoti" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">VL</div>
+						<h5>Ved Lahoti</h5>
+						<p><strong>Tip:</strong> Create a disciplined study schedule and revise core concepts multiple times.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 2</span>
+						<img src="../img/topper.png" alt="Aditya" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">AD</div>
+						<h5>Aditya</h5>
+						<p><strong>Tip:</strong> Prioritise understanding over rote learning; practice concept application.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 3</span>
+						<img src="../img/topper.png" alt="Bhogalapalli Sandesh" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">BS</div>
+						<h5>Bhogalapalli Sandesh</h5>
+						<p><strong>Tip:</strong> Solve previous years' papers to recognise patterns and question styles.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 4</span>
+						<img src="../img/topper.png" alt="Rhythm Kedia" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">RK</div>
+						<h5>Rhythm Kedia</h5>
+						<p><strong>Tip:</strong> Take timed mock tests to improve speed and accuracy under pressure.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 5</span>
+						<img src="../img/topper.png" alt="Putti Kushal Kumar" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">PK</div>
+						<h5>Putti Kushal Kumar</h5>
+						<p><strong>Tip:</strong> Maintain short notes for last-minute revisions and quick recall.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 6</span>
+						<img src="../img/topper.png" alt="Rajdeep Mishra" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">RM</div>
+						<h5>Rajdeep Mishra</h5>
+						<p><strong>Tip:</strong> Analyse every mock test error and correct the underlying conceptual gap.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 7</span>
+						<img src="../img/topper.png" alt="Dwija Dharmeshkumar Patel" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">DP</div>
+						<h5>Dwija Dharmeshkumar Patel</h5>
+						<p><strong>Tip:</strong> Balance all subjects; give weak areas targeted daily practice.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 8</span>
+						<img src="../img/topper.png" alt="Koduru Tejeswar" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">KT</div>
+						<h5>Koduru Tejeswar</h5>
+						<p><strong>Tip:</strong> Keep your study space tidy and distraction-free for focused sessions.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 9</span>
+						<img src="../img/topper.png" alt="Dhruvin Hemant Doshi" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">DD</div>
+						<h5>Dhruvin Hemant Doshi</h5>
+						<p><strong>Tip:</strong> Simulate exam conditions for practice tests to build stamina and focus.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 10</span>
+						<img src="../img/topper.png" alt="Alladaboina S S D B Sidhvik Suhas" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">AS</div>
+						<h5>Alladaboina S S D B Sidhvik Suhas</h5>
+						<p><strong>Tip:</strong> Revise formulas and key derivations daily for quick recall during exams.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 11</span>
+						<img src="../img/topper.png" alt="Parth Bawankule" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">PB</div>
+						<h5>Parth Bawankule</h5>
+						<p><strong>Tip:</strong> Mark difficult problems and revisit them regularly to reduce fear of tough questions.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 12</span>
+						<img src="../img/topper.png" alt="Raghav Sharma" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">RS</div>
+						<h5>Raghav Sharma</h5>
+						<p><strong>Tip:</strong> Break large topics into smaller tasks; small wins keep motivation high.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 13</span>
+						<img src="../img/topper.png" alt="Matcha Balaaditya" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">MB</div>
+						<h5>Matcha Balaaditya</h5>
+						<p><strong>Tip:</strong> Use error logs to track recurring mistakes and focus revisions there.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 14</span>
+						<img src="../img/topper.png" alt="Bibaswan Biswas" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">BB</div>
+						<h5>Bibaswan Biswas</h5>
+						<p><strong>Tip:</strong> Teach tough concepts to a peer or to yourself — teaching reveals gaps fast.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 15</span>
+						<img src="../img/topper.png" alt="Sumukh M G" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">SM</div>
+						<h5>Sumukh M G</h5>
+						<p><strong>Tip:</strong> Keep mock-test review sessions longer than the test itself to deeply analyse performance.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 16</span>
+						<img src="../img/topper.png" alt="Chunchikala Sreecharan" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">CS</div>
+						<h5>Chunchikala Sreecharan</h5>
+						<p><strong>Tip:</strong> Trust a small set of good-quality books instead of flipping many resources.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 17</span>
+						<img src="../img/topper.png" alt="Gunda Joshmitha" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">GJ</div>
+						<h5>Gunda Joshmitha</h5>
+						<p><strong>Tip:</strong> Maintain consistent sleep and short exercise breaks to keep the mind fresh.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 18</span>
+						<img src="../img/topper.png" alt="Hemant Godve" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">HG</div>
+						<h5>Hemant Godve</h5>
+						<p><strong>Tip:</strong> Practice mixed-topic question sets to learn switching between concepts fast.</p>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-3 mb-4">
+					<div class="topper-card">
+						<span class="rank-badge">AIR 19</span>
+						<img src="../img/topper.png" alt="Sangye Norphel Sherpa" class="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+						<div class="avatar-fallback">SS</div>
+						<h5>Sangye Norphel Sherpa</h5>
+						<p><strong>Tip:</strong> Avoid last-minute new topics; focus on consolidation and accuracy instead.</p>
+					</div>
+				</div>
+			</div>
 
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Aditya</div>
-            <div class="tip">JEE Advanced (AIR): 2<br>Tip: Prioritise understanding over rote learning; practice concept application.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Bhogalapalli Sandesh</div>
-            <div class="tip">JEE Advanced (AIR): 3<br>Tip: Solve previous years’ papers to recognise patterns and question styles.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Rhythm Kedia</div>
-            <div class="tip">JEE Advanced (AIR): 4<br>Tip: Take timed mock tests to improve speed and accuracy under pressure.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Putti Kushal Kumar</div>
-            <div class="tip">JEE Advanced (AIR): 5<br>Tip: Maintain short notes for last-minute revisions and quick recall.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Rajdeep Mishra</div>
-            <div class="tip">JEE Advanced (AIR): 6<br>Tip: Analyse every mock test error and correct the underlying conceptual gap.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Dwija Dharmeshkumar Patel</div>
-            <div class="tip">JEE Advanced (AIR): 7<br>Tip: Balance all subjects; give weak areas targeted daily practice.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Koduru Tejeswar</div>
-            <div class="tip">JEE Advanced (AIR): 8<br>Tip: Keep your study space tidy and distraction-free for focused sessions.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Dhruvin Hemant Doshi</div>
-            <div class="tip">JEE Advanced (AIR): 9<br>Tip: Simulate exam conditions for practice tests to build stamina and focus.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Alladaboina S S D B Sidhvik Suhas</div>
-            <div class="tip">JEE Advanced (AIR): 10<br>Tip: Revise formulas and key derivations daily for quick recall during exams.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Parth Bawankule</div>
-            <div class="tip">JEE Advanced (AIR): 11<br>Tip: Mark difficult problems and revisit them regularly to reduce fear of tough questions.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Raghav Sharma</div>
-            <div class="tip">JEE Advanced (AIR): 12<br>Tip: Break large topics into smaller tasks; small wins keep motivation high.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Matcha Balaaditya</div>
-            <div class="tip">JEE Advanced (AIR): 13<br>Tip: Use error logs to track recurring mistakes and focus revisions there.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Bibaswan Biswas</div>
-            <div class="tip">JEE Advanced (AIR): 14<br>Tip: Teach tough concepts to a peer or to yourself — teaching reveals gaps fast.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Sumukh M G</div>
-            <div class="tip">JEE Advanced (AIR): 15<br>Tip: Keep mock-test review sessions longer than the test itself to deeply analyse performance.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Chunchikala Sreecharan</div>
-            <div class="tip">JEE Advanced (AIR): 16<br>Tip: Trust a small set of good-quality books instead of flipping many resources.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Gunda Joshmitha</div>
-            <div class="tip">JEE Advanced (AIR): 17<br>Tip: Maintain consistent sleep and short exercise breaks to keep the mind fresh.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Hemant Godve</div>
-            <div class="tip">JEE Advanced (AIR): 18<br>Tip: Practice mixed-topic question sets to learn switching between concepts fast.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Sangye Norphel Sherpa</div>
-            <div class="tip">JEE Advanced (AIR): 19<br>Tip: Avoid last-minute new topics; focus on consolidation and accuracy instead.</div>
-        </div>
-
-        <div class="card">
-            <img src="../img/topper.png" />
-            <div class="name">Rajdeep Mishra</div>
-            <div class="tip">JEE Advanced (AIR): 20<br>Tip: Keep a calm exam-day routine — small rituals (breakfast, setup) reduce anxiety.</div>
-        </div>
-	</div>
-	<!-- End Align Area -->
+			<div class="faq-cta">
+				<h4>Ready to put these tips into practice?</h4>
+				<p>Start with timed mock tests and free books built for JEE preparation.</p>
+				<a href="../jee-iit-practice-test/" class="btn-cta">Take a Practice Test</a>
+			</div>
+		</div>
+	</section>
+	<!-- End Topper Tips Area -->
 
 <!-- ================ start footer Area ================= -->
   <footer class="footer-area section-gap">
