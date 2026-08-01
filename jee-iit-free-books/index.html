@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="../css/main.css?v=7" />
+  <link rel="stylesheet" href="../css/main.css?v=8" />
   <link rel="stylesheet" href="../css/header-3d-site.css?v=7" />
 
 </head>
@@ -186,8 +186,9 @@ data-aos-duration="1000">
         const authorTd = document.createElement("td"); authorTd.innerHTML = item.Author || "";
         const downloadTd = document.createElement("td");
         let downloadHTML = item.Download || "";
-        downloadHTML = downloadHTML.replace('class="fas fa-download"', 'class="lnr lnr-download"');
-        downloadTd.innerHTML = downloadHTML;
+        const hrefMatch = downloadHTML.match(/href=['"]([^'"]+)['"]/);
+        const href = hrefMatch ? hrefMatch[1] : "#";
+        downloadTd.innerHTML = '<a class="btn-download" href="' + href + '" target="_blank" rel="noopener noreferrer"><i class="lnr lnr-download"></i> Download</a>';
         tr.appendChild(nameTd); tr.appendChild(authorTd); tr.appendChild(downloadTd);
         tableBody.appendChild(tr);
       });

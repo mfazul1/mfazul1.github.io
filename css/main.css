@@ -3727,20 +3727,44 @@ body {
   font-weight: 500;
 }
 
-.colorful-table td:last-child a {
-  display: inline-block;
-  padding: 5px 16px;
-  background-color: #4f46e5;
+.colorful-table td:last-child a,
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   color: #ffffff !important;
-  border-radius: 6px;
+  border-radius: 999px;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
 }
 
-.colorful-table td:last-child a:hover {
-  background-color: #4338ca;
+.colorful-table td:last-child a:hover,
+.btn-download:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+  transform: translateY(-1px);
+  color: #ffffff !important;
+}
+
+.colorful-table td:last-child a:active,
+.btn-download:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+}
+
+.colorful-table td:last-child a i,
+.btn-download i {
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 .books-table-wrap .form-control {

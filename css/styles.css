@@ -2387,25 +2387,37 @@ input[type='checkbox'] {
 }
 
 .colorful-table td:last-child a {
-  display: inline-block;
-  padding: 6px 18px;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   color: #ffffff !important;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 600;
+  letter-spacing: 0.3px;
   text-decoration: none;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+  transition: all 0.2s ease;
 }
 
 .colorful-table td:last-child a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+  background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+  transform: translateY(-1px);
+  color: #ffffff !important;
 }
 
 .colorful-table td:last-child a:active {
   transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+}
+
+.colorful-table td:last-child a i {
+  font-size: 0.95rem;
+  line-height: 1;
 }
 
 .books-table-wrap .form-control {
