@@ -1,35 +1,35 @@
 /* AdSense helper
    Keeps ad slots enabled (so they start serving automatically once the
-   AdSense account is approved) but hides any slot that stays empty so it
-   does not render as a blank/broken box on the page. */
+   AdSense account is approved) but hides any slot that did not fill with
+   a real ad (blocked, unfilled, pending approval, etc.) so it does not
+   render as a blank/broken box on the page.
+
+   Detection uses Google's own data-ad-status attribute on the <ins>
+   element: it only equals "filled" when a real ad is showing. Anything
+   else (no attribute, "unfilled", "unfill-optimized", or the "This
+   content is blocked" error iframe) is treated as empty and hidden. */
 (function () {
   "use strict";
 
-  var DONE_ATTR = "data-ad-checked";
-
-  function hideEmptyAdContainers() {
+  function updateAdContainers() {
     var containers = document.querySelectorAll(".ad-container");
     for (var i = 0; i < containers.length; i++) {
       var container = containers[i];
-      if (container.getAttribute(DONE_ATTR) === "true") {
-        continue;
-      }
       var ins = container.querySelector("ins.adsbygoogle");
       if (!ins) {
         continue;
       }
-      var served = ins.querySelector("iframe");
-      var hasText = ins.textContent && ins.textContent.trim().length > 0;
-      if (!served && !hasText) {
+      if (ins.getAttribute("data-ad-status") === "filled") {
+        container.style.display = "";
+      } else {
         container.style.display = "none";
       }
-      container.setAttribute(DONE_ATTR, "true");
     }
   }
 
   function schedule() {
     var run = function () {
-      window.setTimeout(hideEmptyAdContainers, 2500);
+      window.setTimeout(updateAdContainers, 2500);
     };
     if (document.readyState === "complete") {
       run();
@@ -40,6 +40,6 @@
 
   schedule();
   // Re-check a few times in case ads render late.
-  window.setTimeout(hideEmptyAdContainers, 6000);
-  window.setTimeout(hideEmptyAdContainers, 12000);
+  window.setTimeout(updateAdContainers, 6000);
+  window.setTimeout(updateAdContainers, 12000);
 })();
