@@ -4,6 +4,27 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+# Legacy pages (moved via redirect). These are given noindex in the HTML
+# and should not be crawled as separate content.
+Disallow: /About.html
+Disallow: /readfiles.html
+Disallow: /Wyg.html
+Disallow: /Faqs.html
+Disallow: /Connect.html
+Disallow: /Topbooks.html
+Disallow: /Toppertips.html
+Disallow: /Practicetest.html
+Disallow: /exam.html
+Disallow: /contacts.html
+Disallow: /books.html
 Disallow: /index_old.html
+Disallow: /books/
+Disallow: /faqs/
+Disallow: /topbooks/
+Disallow: /toppertips/
+Disallow: /practicetest/
+Disallow: /contacts/
+Disallow: /offline.html
+Disallow: /offline/
 
 Sitemap: https://jeeiitianbooks.in/sitemap.xml
